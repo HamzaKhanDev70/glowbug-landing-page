@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Right Grotesk';
+    src: url('/fonts/right-grotesk/RightGrotesk-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Right Grotesk';
+    src: url('/fonts/right-grotesk/RightGrotesk-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+  @font-face {
+    font-family: "Inter"; 
+    src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Right Grotesk";
+    src: local("Right Grotesk"),
+      /* Use local() to reference a locally installed version */
+        url("../../public/fonts/right-grotesk/RightGrotesk-CompactBlack.otf") format("opentype"),
+      url("../../public/fonts/right-grotesk/RightGrotesk-CompactBlack.otf") format("opentype"),
+      url("../../public/fonts/right-grotesk/RightGrotesk-NarrowLight.otf") format("opentype"),
+      url("../../public/fonts/right-grotesk/RightGrotesk-SpatialBlack.otf") format("opentype"),
+      url("../../public/fonts/right-grotesk/RightGrotesk-TallFine.otf") format("opentype"),
+      url("../../public/fonts/right-grotesk/RightGrotesk-TightMedium.otf") format("opentype"),
+      url("../../public/fonts/right-grotesk/RightGrotesk-WideMedium.otf") format("opentype"),
+      url("../../public/fonts/right-grotesk/RightGrotesk-Dark.ttf"),
+      url("../../public/fonts/right-grotesk/RightGrotesk-WideRegular.ttf")
+  }
+  @font-face {
+    font-family: "Right Grotesk";
+    src: url("../../public/fonts/right-grotesk/RightGrotesk-Dark.ttf") format("opentype");
+    font-weight: 900; /* Assuming 'CompactBlack' is the heaviest weight */
+  }
+  @font-face {
+    font-family: "Right Grotesk";
+    src: url("../../public/fonts/right-grotesk/RightGrotesk-Medium.otf") format("opentype");
+    font-weight: 500; /* Assuming 'Medium' weight */
+  }
+  @font-face {
+    font-family: "Right Grotesk";
+    src: url("../../public/fonts/right-grotesk/RightGrotesk-NarrowLight.otf")
+      format("opentype");
+    font-weight: 300; /* Assuming 'NarrowLight' is light weight */
+  }
+  @font-face {
+    font-family: "Right Grotesk";
+    src: url("../../public/fonts/right-grotesk/RightGrotesk-NarrowLight.otf")
+      format("opentype");
+    font-weight: 400; /* Assuming 'NarrowLight' is light weight */
+  }
+  @font-face {
+    font-family: "Right Grotesk Dark";
+    src: url("../../public/fonts/right-grotesk/RightGrotesk-Dark.ttf")
+      format("opentype");
+    font-weight: 400; /* Assuming 'NarrowLight' is light weight */
+  }
+  @font-face {
+    font-family: "Right Grotesk Medium";
+    src: url("../../public/fonts/right-grotesk/RightGrotesk-Medium.ttf")
+      format("opentype");
+    font-weight: 400; /* Assuming 'NarrowLight' is light weight */
+  }
+  @font-face {
+    font-family: "Right Grotesk Wide Medium";
+    src: url("../../public/fonts/right-grotesk/RightGrotesk-WideMedium.otf")
+      format("opentype");
+    font-weight: 400; /* Assuming 'NarrowLight' is light weight */
+  }
+  @font-face {
+    font-family: "Right Grotesk Compact Regular";
+    src: url("../../public/fonts/right-grotesk/RightGrotesk-CompactRegular.ttf")
+      format("opentype");
+    font-weight: 400; /* Assuming 'NarrowLight' is light weight */
+  }
+  /* ... additional @font-face rules for other weights */
+  @font-face {
+    font-family: "Inter"; /* Inter is a separate font, define it separately */
+    src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
