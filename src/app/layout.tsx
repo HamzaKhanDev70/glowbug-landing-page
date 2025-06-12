@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/sections/Navbar";
 import "../styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "800"] });
 
 export default function RootLayout({
   children,

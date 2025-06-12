@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
         fontFamily: {
+            inter: ["Inter", "sans-serif"],
             grotesk: ['"Right Grotesk"', 'sans-serif'],
           },
       colors: {
