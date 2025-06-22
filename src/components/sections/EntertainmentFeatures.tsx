@@ -61,14 +61,14 @@ const features = [
 
 export default function EntertainmentFeatures() {
   return (
-    <section className="relative w-full py-20 bg-black">
-      <div className="relative z-10 max-w-[1400px] mx-auto px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-[64px] font-grotesk leading-[1] mb-0 text-[#FFD700]">
+    <section className="relative w-full py-16 md:py-20 bg-black">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-[48px] lg:text-[64px] font-grotesk leading-[1] mb-0 text-[#FFD700]">
             ONBOARD & IN LOUNGE
           </h2>
-          <h3 className="text-[48px] font-grotesk leading-[1] mb-8 text-white">
-            ENTERTAINMENT
+          <h3 className="text-[36px] lg:text-[48px] font-grotesk leading-[1] mb-8 text-white">
+            ENTERTAINTAINMENT
           </h3>
           <p className="text-lg max-w-[800px] mx-auto text-white">
             Dream Stream is the only engagement platform that's ubiquitously available
@@ -81,13 +81,13 @@ export default function EntertainmentFeatures() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="rounded-[32px] p-8 flex flex-col items-center text-center"
+              className="rounded-[32px] p-6 md:p-8 flex flex-col items-center text-center"
               style={{
                 background: 'linear-gradient(180deg, #4A1D00 0%, #2A1100 100%)'
               }}
             >
               <div className="mb-6">{feature.icon}</div>
-              <h3 className="text-[32px] font-grotesk text-white mb-4">{feature.title}</h3>
+              <h3 className="text-2xl lg:text-[32px] font-grotesk text-white mb-4">{feature.title}</h3>
               <div className="flex flex-col gap-2">
                 {feature.items.map((item, idx) => (
                   <p key={idx} className="text-[#FFD700]">{item}</p>

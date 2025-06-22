@@ -44,15 +44,14 @@ export default function TravelSlider() {
 
   return (
     <section className="relative z-10">
-      <div className="relative w-full py-20">
-        <div className="absolute left-10 md:left-40 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-[64px]" />
+      <div className="relative w-full py-16 md:py-20">
+        <div className="absolute left-10 md:left-40 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-3xl lg:rounded-l-[64px]" />
         
         <div className="max-w-[1400px] mx-auto relative">
           <div className="overflow-visible pl-5 md:pl-20">
             <Swiper
               modules={[Pagination, Navigation]}
               spaceBetween={24}
-              slidesPerView="auto"
               initialSlide={0}
               loop={true}
               grabCursor={true}
@@ -75,13 +74,12 @@ export default function TravelSlider() {
                 1024: {
                   slidesPerView: 3,
                   spaceBetween: 24,
-                  initialSlide: 0
                 }
               }}
               className="!pb-16 !overflow-visible"
             >
               {slides.map((slide, index) => (
-                <SwiperSlide key={index} className="!w-[384px]">
+                <SwiperSlide key={index}>
                   <div className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group">
                     <img
                       src={slide.image}
@@ -90,7 +88,7 @@ export default function TravelSlider() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
                     <div className="absolute bottom-0 left-0 right-0 p-8">
-                      <h3 className="text-[40px] font-bold text-white mb-3 font-grotesk">{slide.title}</h3>
+                      <h3 className="text-3xl lg:text-[40px] font-bold text-white mb-3 font-grotesk">{slide.title}</h3>
                       <p className="text-gray-200 text-base leading-relaxed font-inter max-w-[90%]">{slide.description}</p>
                     </div>
                   </div>

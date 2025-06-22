@@ -11,7 +11,7 @@ export default function TravelCompanion() {
     <div className="overflow-x-hidden w-full">
       <div className="px-5 md:px-20 mt-10 md:mt-22">
         <div 
-          className="relative bg-cover bg-center rounded-[64px] overflow-hidden"
+          className="relative bg-cover bg-center rounded-3xl lg:rounded-[64px] overflow-hidden"
           style={{ 
             backgroundImage: "url('/images/MainHeader.png')",
             backgroundSize: "cover",
@@ -20,7 +20,7 @@ export default function TravelCompanion() {
           }}
         >
           <section
-            className="w-full py-30 flex items-center justify-center bg-dark-900/50 text-white"
+            className="w-full py-16 lg:py-30 flex items-center justify-center bg-dark-900/50 text-white"
           >
             <div className="w-full flex flex-col items-center">
               <TravelHero />
@@ -30,13 +30,13 @@ export default function TravelCompanion() {
             </div>
           </section>
 
-          <div className="relative h-[650px]">
+          <div className="relative h-[500px] lg:h-[650px]">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
           </div>
         </div>
       </div>
 
-      <div className="relative -mt-[650px]">
+      <div className="relative -mt-[500px] lg:-mt-[650px]">
         <TravelSlider />
         <TravelTypes />
         <Entertainment />

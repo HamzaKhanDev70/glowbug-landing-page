@@ -1,9 +1,8 @@
-
 export default function TravelFeatures() {
   return (
-    <div className="w-full flex flex-row justify-between px-20 py-36 gap-10">
-      <div className="flex-1 text-right">
-        <h2 className="text-4xl font-bold mb-4">
+    <div className="w-full flex flex-col md:flex-row justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-16 md:py-24 lg:py-36 gap-12 md:gap-10">
+      <div className="flex-1 text-center md:text-right">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Elevate your
           <br />
           entertainment
@@ -13,8 +12,8 @@ export default function TravelFeatures() {
         </p>
       </div>
 
-      <div className="flex-1">
-        <h2 className="text-4xl font-bold mb-4">
+      <div className="flex-1 text-center md:text-left">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Experience
           <br />
           magic in motion
