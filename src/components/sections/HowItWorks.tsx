@@ -38,14 +38,14 @@ x        <div
         <div className="relative z-10">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 md:mb-16 gap-8 pt-40">
             <div>
-              <h2 className="text-4xl md:text-[56px] font-grotesk font-bold text-[#FFD700] leading-tight">
+              <h2 className="text-4xl md:text-[56px] font-grotesk font-bold text-[#FFD700] leading-tight" style={{ fontFamily: 'Right-grostek' }}>
                 HOW IT WORKS IN
               </h2>
-              <div className="text-2xl md:text-[40px] font-grotesk text-white tracking-wide">
+              <div className="text-2xl md:text-[40px] font-grotesk text-white tracking-wide" style={{ fontFamily: 'Right-grostek' }}>
                 3 SIMPLE STEPS
               </div>
             </div>
-            <div className="max-w-xl text-white text-lg md:text-2xl font-inter">
+            <div className="max-w-xl text-white text-lg md:text-2xl font-inter" style={{ fontFamily: 'Inter, sans-serif' }}>
               DreamStream is the only engagement platform that's ubiquitously
               available
               <br />

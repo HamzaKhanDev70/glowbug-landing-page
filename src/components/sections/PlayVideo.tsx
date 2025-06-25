@@ -12,7 +12,8 @@ export default function PlayVideo() {
             src="/images/playVideo.png"
             alt="Play Video"
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
+            objectPosition="center"
           />
         </div>
       </div>

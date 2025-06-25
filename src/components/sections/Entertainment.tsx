@@ -1,4 +1,3 @@
-
 export default function Entertainment() {
   const informationList = [
     "Information goes here",
@@ -30,9 +29,9 @@ export default function Entertainment() {
             />
             <div className="absolute top-8 left-0 right-0 px-4 md:px-8">
               <div 
-                className="rounded-[10px] mt-2 md:mt-20 lg:mt-40 overflow-hidden shadow-xl max-w-[1000px] mx-auto"
+                className="rounded-[10px] mt-2 md:mt-20 lg:mt-40 overflow-hidden shadow-xl max-w-[1100px] mx-auto"
                 style={{
-                  transform: 'perspective(2100px) rotateY(-45deg) rotateZ(-1deg) skewY(1deg)',
+                  transform: 'perspective(2450px) rotateY(-45deg) rotateZ(-1deg) skewY(1deg)',
                   transformOrigin: 'left center',
                   boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.3)'
                 }}
@@ -48,21 +47,21 @@ export default function Entertainment() {
                 <h2 className="text-3xl md:text-4xl lg:text-[64px] font-grotesk leading-[1] mb-0 text-black">
                   ONBOARD & IN LOUNGE
                 </h2>
-                <h3 className="text-2xl md:text-3xl lg:text-[48px] font-grotesk leading-[1] mb-8 lg:mb-16 text-black">
+                <h3 className="text-2xl md:text-3xl lg:text-[48px] font-grotesk leading-[1] mb-8 lg:mb-16 text-black tracking-[.38em]">
                   ENTERTAINMENT
                 </h3>
 
-                <p className="text-base md:text-lg mb-8 lg:mb-16 max-w-[800px] mx-auto text-black">
+                <p className="text-base md:text-lg mb-8 lg:mb-16 max-w-[800px] mx-auto text-black" style={{ fontFamily: 'Inter, sans-serif', fontSize: '20px' }}>
                   Dream Stream is the only engagement platform that's ubiquitously available
                   without download or the internet, for travellers across the World who want
                   freedom, choice, and control of the.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-24 gap-y-4 text-left max-w-[800px] mx-auto text-black">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-24 gap-y-4 text-left max-w-[800px] mx-auto text-black" style={{ fontFamily: 'Inter, sans-serif' }}>
                   {informationList.map((info, index) => (
                     <div key={index} className="flex items-center">
                       <span className="w-1.5 h-1.5 bg-black rounded-full mr-3" />
-                      <span className="text-base md:text-lg text-black">{info}</span>
+                      <span className="text-normal md:text-lg text-black" style={{ fontFamily: 'Inter, sans-serif', fontSize: '24px' }}>{info}</span>
                     </div>
                   ))}
                 </div>

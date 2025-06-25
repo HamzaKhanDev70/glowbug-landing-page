@@ -10,7 +10,7 @@ export default function AccessDevice() {
         </svg>
       ),
       title: "Bring your own device",
-      description: "For travelers across the World who want freedom, choice, and control of their entertainment."
+      description: "For travellers across the World who want freedom, choice, and control of their entertainment."
     },
     {
       icon: (
@@ -20,7 +20,7 @@ export default function AccessDevice() {
         </svg>
       ),
       title: "No wifi or download",
-      description: "For travelers across the World who want freedom, choice, and control of their entertainment."
+      description: "For travellers across the World who want freedom, choice, and control of their entertainment."
     },
     {
       icon: (
@@ -30,47 +30,43 @@ export default function AccessDevice() {
         </svg>
       ),
       title: "Free access during travel",
-      description: "For travelers across the World who want freedom, choice, and control of their entertainment."
+      description: "For travellers across the World who want freedom, choice, and control of their entertainment."
     }
   ];
 
   return (
-    <section className="relative w-full bg-black overflow-hidden py-16 lg:py-0 lg:min-h-screen lg:flex lg:items-center">
-      <div className="max-w-[1400px] mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="relative w-full max-w-lg mx-auto aspect-square">
-          <div className="absolute inset-0 rounded-3xl lg:rounded-[48px] bg-[#003366]">
-            <Image
-              src="/images/flash.png"
-              alt="Entertainment Interface"
-              fill
-              className="object-cover rounded-[18px]"
-              priority
-            />
-      
-            <div className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 items-center">
-              <div className="text-white text-sm">KHI</div>
-              <div className="h-24 md:h-32 w-0.5 bg-yellow-400"></div>
-              <div className="text-white text-sm">ISB</div>
-            </div>
-          </div>
+    <section className="relative w-full min-h-[600px] bg-black overflow-hidden flex flex-col lg:flex-row">
+      <div className="relative w-full lg:w-1/2 flex items-center justify-center bg-black">
+        <div className="relative w-full lg:w-[60%] h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+          <Image
+            src="/images/flash.png"
+            alt="Entertainment Interface"
+            fill
+            className="object-cover object-right"
+            priority
+          />
         </div>
+      </div>
 
-        <div className="text-center lg:text-left">
-          <h2 className="text-4xl md:text-5xl lg:text-[64px] font-grotesk leading-none mb-4 text-white">
-            ACCESS ON YOUR OWN DEVICE:
-            <span className="block text-[#00A3FF]">ANYWHERE. ANY TIME.</span>
-          </h2>
-          <p className="text-white text-lg mb-8 lg:mb-16 max-w-md lg:max-w-[600px] mx-auto lg:mx-0">
-            Dream Stream is the only engagement platform that's ubiquitously available without download or
-            the internet, for travellers across the World who want freedom, choice, and control of the.
+      <div className="relative w-full lg:w-[40%] flex items-center justify-center px-4 py-12 lg:py-0" style={{background: 'linear-gradient(120deg, #002127 60%, #000D11 100%)', clipPath: 'polygon(8% 0, 100% 0, 100% 100%, 0 100%)'}}>
+        <div className="max-w-xl w-full text-left">
+          <div className="w-full overflow-x-auto">
+            <h2 className="uppercase font-grotesk text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal  mb-4" style={{ letterSpacing: '0.04em', fontWeight:"500" }}>
+              <span className="whitespace-nowrap">Access on your own device:</span>
+            </h2>
+            <h2 className="uppercase font-grotesk text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal  mb-4" style={{ letterSpacing: '0.29em', fontWeight:"500" }}>
+              <span className="block text-[#00A3FF] font-bold">ANYWHERE. ANY TIME.</span>
+            </h2>
+          </div>
+          <p className="text-white text-base sm:text-lg md:text-xl mb-8 max-w-xl" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Dream Stream is the only engagement platform that's ubiquitously available without download or the internet, for travellers across the World who want freedom, choice, and control of the.
           </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="flex flex-col sm:flex-row gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="mb-6">{feature.icon}</div>
-                <h3 className="text-white text-xl font-medium mb-4">{feature.title}</h3>
-                <p className="text-white/60 text-sm">{feature.description}</p>
+              <div key={index} className="flex-1 flex flex-col items-start text-left">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-white text-lg font-semibold mb-2 leading-tight" style={{ fontFamily: 'Right-grostek', fontWeight:"800" }}>{feature.title}</h3>
+                <p className="text-white/60 text-sm leading-snug" style={{ fontFamily: 'Inter, sans-serif' }}>{feature.description}</p>
               </div>
             ))}
           </div>

@@ -9,7 +9,7 @@ function TravelType({ title, type, image, description }: TravelTypeProps) {
   return (
     <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center mb-24 lg:mb-40 last:mb-0">
       <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] flex-shrink-0">
-        <div className="absolute inset-0 overflow-hidden rounded-[32px] transform rotate-6">
+        <div className="absolute inset-0 overflow-hidden">
           <img 
             src={image} 
             alt={title} 
@@ -18,9 +18,9 @@ function TravelType({ title, type, image, description }: TravelTypeProps) {
         </div>
       </div>
       <div className="flex-1 text-center lg:text-left">
-        <h3 className="flex flex-col mb-6">
+        <h3 className="flex items-center mb-6 gap-2">
           <span className="text-4xl lg:text-[64px] font-grotesk leading-none text-white">{title}</span>
-          <span className="text-xl lg:text-2xl font-grotesk text-gray-400 mt-2">{type}</span>
+          <span className="text-4xl lg:text-[64px] font-normal font-grotesk">{type}</span>
         </h3>
         <p className="text-gray-200 text-lg leading-relaxed max-w-[600px] mx-auto lg:mx-0">{description}</p>
       </div>
@@ -68,7 +68,7 @@ export default function TravelTypes() {
         <div 
           className="absolute top-0 left-0 right-0 h-[150%] bg-gradient-to-b from-[#4A1D00] to-black"
           style={{
-            clipPath: 'polygon(120px 0, 100% 0, 100% 100%, 0 100%, 0 120px)'
+            clipPath: 'polygon(530px 0, 100% 0, 100% 100%, 0 100%, 0 120px)'
           }}
         />
       </div>
