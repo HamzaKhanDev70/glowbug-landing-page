@@ -33,13 +33,19 @@ export default function Entertainment() {
                 style={{
                   transform: 'perspective(2450px) rotateY(-45deg) rotateZ(-1deg) skewY(1deg)',
                   transformOrigin: 'left center',
-                  boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.3)'
+                  boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.3)',
+                  maxWidth: '90%',
+                  maxHeight: '60%',
                 }}
               >
                 <img
                   src="/images/passenger.png"
                   alt="Entertainment Interface"
-                  className="w-full h-auto max-h-[200px] sm:max-h-[300px] md:max-h-[400px] object-cover scale-[1.15]"
+                  className="w-full h-auto object-cover scale-[1.15]"
+                  style={{
+                    maxHeight: 'calc(100vh - 500px)',
+                    maxWidth: '100%',
+                  }}
                 />
               </div>
 

@@ -41,7 +41,7 @@ x        <div
               <h2 className="text-4xl md:text-[56px] font-grotesk font-bold text-[#FFD700] leading-tight" style={{ fontFamily: 'Right-grostek' }}>
                 HOW IT WORKS IN
               </h2>
-              <div className="text-2xl md:text-[40px] font-grotesk text-white tracking-wide" style={{ fontFamily: 'Right-grostek' }}>
+              <div className="text-2xl md:text-[40px] font-grotesk text-white tracking-wide" >
                 3 SIMPLE STEPS
               </div>
             </div>

@@ -14,7 +14,6 @@ export default function Home() {
       <AccessDevice />
       <ListenMusic />
       <HowItWorks />
-      {/* <PlayVideo /> */}
       <Footer />
     </main>
   );

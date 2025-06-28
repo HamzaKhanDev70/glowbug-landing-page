@@ -7,7 +7,7 @@ export default function ListenMusic() {
         className="max-w-[1400px] mx-auto px-8 w-full justify-center items-center"
         style={{
           background: 'linear-gradient(90deg, #002127 0%, #000D11 100%)',
-          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 120px 100%, 0 calc(100% - 120px))'
+          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 120px 100%, 0 calc(100% - 60px))'
         }}
       >
         <div className="w-full max-w-6xl pt-40 pb--30 overflow-hidden">

@@ -4,30 +4,21 @@ export default function AccessDevice() {
   const features = [
     {
       icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M26 4H6C4.89543 4 4 4.89543 4 6V26C4 27.1046 4.89543 28 6 28H26C27.1046 28 28 27.1046 28 26V6C28 4.89543 27.1046 4 26 4Z" stroke="#00A3FF" strokeWidth="2"/>
-          <path d="M10 12H22M10 16H22M10 20H16" stroke="#00A3FF" strokeWidth="2"/>
-        </svg>
+        <Image src="/images/icon1.png" alt="Bring your own device" width={32} height={32} />
       ),
       title: "Bring your own device",
       description: "For travellers across the World who want freedom, choice, and control of their entertainment."
     },
     {
       icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 4C19.713 4 23.274 5.475 25.8995 8.1005C28.525 10.726 30 14.287 30 18C30 21.713 28.525 25.274 25.8995 27.8995C23.274 30.525 19.713 32 16 32" stroke="#00A3FF" strokeWidth="2"/>
-          <path d="M16 28C12.287 28 8.726 26.525 6.1005 23.8995C3.475 21.274 2 17.713 2 14C2 10.287 3.475 6.726 6.1005 4.1005C8.726 1.475 12.287 0 16 0" stroke="#00A3FF" strokeWidth="2" strokeDasharray="2 2"/>
-        </svg>
+        <Image src="/images/icon2.png" alt="No wifi or download" width={32} height={32} />
       ),
       title: "No wifi or download",
       description: "For travellers across the World who want freedom, choice, and control of their entertainment."
     },
     {
       icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="#00A3FF" strokeWidth="2"/>
-          <path d="M16 10V16L20 20" stroke="#00A3FF" strokeWidth="2"/>
-        </svg>
+        <Image src="/images/icon3.png" alt="Free access during travel" width={32} height={32} />
       ),
       title: "Free access during travel",
       description: "For travellers across the World who want freedom, choice, and control of their entertainment."
@@ -48,25 +39,25 @@ export default function AccessDevice() {
         </div>
       </div>
 
-      <div className="relative w-full lg:w-[40%] flex items-center justify-center px-4 py-12 lg:py-0" style={{background: 'linear-gradient(120deg, #002127 60%, #000D11 100%)', clipPath: 'polygon(8% 0, 100% 0, 100% 100%, 0 100%)'}}>
-        <div className="max-w-xl w-full text-left">
-          <div className="w-full overflow-x-auto">
-            <h2 className="uppercase font-grotesk text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal  mb-4" style={{ letterSpacing: '0.04em', fontWeight:"500" }}>
-              <span className="whitespace-nowrap">Access on your own device:</span>
+      <div className="relative w-full lg:w-[40%] flex items-center justify-center px-4 sm:px-12 py-8 sm:py-12 lg:py-0" style={{background: 'linear-gradient(200deg, #002127 15%, #000D11 100%)', clipPath: 'polygon(2% 0, 100% 0, 100% 100%, 0 100%)', overflow: 'visible'}}>
+        <div className="w-auto md:w-full max-w-none md:max-w-full text-left" style={{overflow: 'visible'}}>
+          <div className="w-full">
+            <h2 className="uppercase font-grotesk text-white text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-normal mb-2 sm:mb-4" style={{ letterSpacing: '0.04em', fontWeight: 500 }}>
+              <span className="whitespace-normal md:whitespace-nowrap" style={{ textWrap: 'balance' }}>Access on your own device:</span>
             </h2>
-            <h2 className="uppercase font-grotesk text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal  mb-4" style={{ letterSpacing: '0.29em', fontWeight:"500" }}>
-              <span className="block text-[#00A3FF] font-bold">ANYWHERE. ANY TIME.</span>
+            <h2 className="uppercase font-grotesk text-white text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-normal mb-2 sm:mb-4" style={{ letterSpacing: '0.29em', fontWeight: 500 }}>
+              <span className="block text-[#00A3FF] font-bold ">ANYWHERE. ANY TIME.</span>
             </h2>
           </div>
-          <p className="text-white text-base sm:text-lg md:text-xl mb-8 max-w-xl" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-white text-xs sm:text-base md:text-lg mb-4 sm:mb-8 max-w-full" style={{ fontFamily: 'Inter, sans-serif', wordBreak: 'break-word' }}>
             Dream Stream is the only engagement platform that's ubiquitously available without download or the internet, for travellers across the World who want freedom, choice, and control of the.
           </p>
-          <div className="flex flex-col sm:flex-row gap-8">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex-1 flex flex-col items-start text-left">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-white text-lg font-semibold mb-2 leading-tight" style={{ fontFamily: 'Right-grostek', fontWeight:"800" }}>{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-snug" style={{ fontFamily: 'Inter, sans-serif' }}>{feature.description}</p>
+              <div key={index} className="flex-1 flex flex-col items-start text-left min-w-0">
+                <div className="mb-2 sm:mb-4">{feature.icon}</div>
+                <h3 className="text-white text-sm sm:text-lg font-semibold mb-1 sm:mb-2 leading-tight" style={{ fontFamily: 'Right-grostek', fontWeight: 800 }}>{feature.title}</h3>
+                <p className="text-white/60 text-xs sm:text-sm leading-snug" style={{ fontFamily: 'Inter, sans-serif', wordBreak: 'break-word' }}>{feature.description}</p>
               </div>
             ))}
           </div>
