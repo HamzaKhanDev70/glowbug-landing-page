@@ -18,85 +18,106 @@ export default function TravelSlider() {
     {
       title: "Passengers",
       image: "/images/slide1.png",
-      description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s"
+      description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s",
     },
     {
       title: "Operators",
       image: "/images/slide2.png",
-      description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s"
+      description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s",
     },
     {
       title: "Advertisers",
       image: "/images/slide3.png",
-      description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s"
+      description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s",
     },
     {
       title: "Passengers",
       image: "/images/slide1.png",
-      description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s"
+      description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s",
     },
     {
       title: "Operators",
       image: "/images/slide2.png",
-      description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s"
-    }
+      description:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s",
+    },
   ];
 
   return (
     <section className="relative z-10">
-      <div className="relative w-full py-20">
-        <div className="absolute left-10 md:left-40 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-[64px]" />
+      <div className="relative w-full py-16 md:py-20">
+        <div className="absolute left-10 md:left-40 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-3xl lg:rounded-l-[64px]" />
         
-        <div className="max-w-[1400px] mx-auto relative">
+        <div className="max-w-[1200px] mx-auto relative">
           <div className="overflow-visible pl-5 md:pl-20">
-            <Swiper
-              modules={[Pagination, Navigation]}
-              spaceBetween={24}
-              slidesPerView="auto"
-              initialSlide={0}
-              loop={true}
-              grabCursor={true}
-              pagination={{
-                el: '.custom-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                  return '<span class="' + className + ' w-2.5 h-2.5 rounded-full inline-block mx-1 cursor-pointer opacity-50"></span>';
-                },
-              }}
-              breakpoints={{
-                320: {
-                  slidesPerView: 1,
-                  spaceBetween: 24
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 24
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 24,
-                  initialSlide: 0
-                }
-              }}
-              className="!pb-16 !overflow-visible"
-            >
-              {slides.map((slide, index) => (
-                <SwiperSlide key={index} className="!w-[384px]">
-                  <div className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group">
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
-                    <div className="absolute bottom-0 left-0 right-0 p-8">
-                      <h3 className="text-[40px] font-bold text-white mb-3 font-grotesk">{slide.title}</h3>
-                      <p className="text-gray-200 text-base leading-relaxed font-inter max-w-[90%]">{slide.description}</p>
+            <div className="mx-auto max-w-[1400px]">
+              <Swiper
+                modules={[Pagination, Navigation]}
+                spaceBetween={100}
+                loop={false}
+                grabCursor={true}
+                slidesPerView={3}
+                pagination={{
+                  el: '.custom-pagination',
+                  clickable: true,
+                  renderBullet: function (index, className) {
+                    return (
+                      '<span class="' +
+                      className +
+                      ' w-2.5 h-2.5 rounded-full inline-block mx-1 cursor-pointer opacity-50"></span>'
+                    );
+                  },
+                }}
+                breakpoints={{
+                  320: {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 100,
+                  },
+                  1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 100,
+                  },
+                  1600: {
+                    slidesPerView: 3,
+                    spaceBetween: 100,
+                  },
+                }}
+                className="!pb-16 !overflow-visible"
+              >
+                {slides.map((slide, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group w-[400px] md:w-[420px] lg:w-[450px]">
+                      <img
+                        src={slide.image}
+                        alt={slide.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
+                      <div className="absolute bottom-0 left-0 right-0 p-8">
+                        <h3 className="text-3xl lg:text-[40px] font-normal text-white mb-3 font-grotesk">
+                          {slide.title}
+                        </h3>
+                        <p className="text-gray-200 text-base leading-relaxed font-inter max-w-[90%]">
+                          {slide.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
             <div className="custom-pagination flex justify-center gap-2 mt-8" />
           </div>
         </div>
@@ -116,4 +137,4 @@ export default function TravelSlider() {
       `}</style>
     </section>
   );
-} 
+}

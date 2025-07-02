@@ -4,7 +4,7 @@ export default function TravelIllustration() {
       <img
         src="/images/ListenMusic.png"
         alt="Header Illustration"
-        className="w-[80%] mx-10 pt-60"
+        className="w-[80%] mx-auto pt-24 md:pt-40 lg:pt-60"
       />
     </div>
   );
