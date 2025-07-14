@@ -61,21 +61,21 @@ const features = [
 
 export default function EntertainmentFeatures() {
   return (
-    <section className="relative w-full py-16 md:py-20 bg-black">
+    <section className="relative w-full pt-16 md:pt-20">
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-start justify-between mb-12 md:mb-20 gap-8 text-center lg:text-left">
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-            <div className="block w-full overflow-x-auto">
-              <span className="block text-[#FFD700] text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[64px] font-grotesk font-normal leading-none tracking-[-0.08em] whitespace-nowrap " style={{fontWeight:"500", fontFamily: 'Right Grotesk, sans-serif'}}>
+            <div className="block w-full overflow-hidden">
+              <span className="block text-[#FFD700] heading-m md:heading-l lg:heading-xl  font-normal leading-none tracking-[-0.04em] whitespace-wrap ">
                 ONBOARD & IN LOUNGE
               </span>
-              <span className="block text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[64px] font-grotesk font-normal leading-none mt-2 tracking-[0.32em] break-words">
+              <span className="block text-white heading-m md:heading-l lg:heading-xl font-normal leading-none mt-2 sm:tracking-[0.12em] ">
                 ENTERTAINMENT
               </span>
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex items-start">
-            <p className="text-base sm:text-lg max-w-[800px] mx-auto text-white lg:mx-0 lg:max-w-full" style={{fontWeight:"500", fontFamily: 'Inter, sans-serif', paddingTop:"10px"}}>
+            <p className="body-normal pt-4 lg:mx-0 lg:max-w-full" >
               Dream Stream is the only engagement platform that's ubiquitously available
               without download or the internet, for travellers across the World who want
               freedom, choice, and control of the.
@@ -95,10 +95,10 @@ export default function EntertainmentFeatures() {
               <div className="mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
                 <span className="w-full h-full block">{feature.icon}</span>
               </div>
-              <h3 className="text-xl sm:text-2xl lg:text-[32px] font-grotesk text-white mb-2 sm:mb-4" style={{fontWeight:"500"}}>{feature.title}</h3>
+              <h3 className="heading-m lg:heading-l text-white font-bold mb-2 sm:mb-4">{feature.title}</h3>
               <div className="flex flex-col gap-1 sm:gap-2">
                 {feature.items.map((item, idx) => (
-                  <p key={idx} className="text-[#FFD700] text-base sm:text-lg" style={{font:"Inter, san-serif"}}>{item}</p>
+                  <p key={idx} className="text-[#FFD700] body-normal">{item}</p>
                 ))}
               </div>
             </div>

@@ -17,12 +17,12 @@ function TravelType({ title, type, image, description }: TravelTypeProps) {
           />
         </div>
       </div>
-      <div className="flex-1 text-center lg:text-left">
+      <div className="flex-1 text-center lg:text-left px-4">
         <h3 className="flex items-center mb-6 gap-2">
-          <span className="text-4xl lg:text-[64px] font-grotesk leading-none text-white">{title}</span>
-          <span className="text-4xl lg:text-[64px] font-normal font-grotesk">{type}</span>
+          <span className="heading-l sm:heading-s md:heading-l lg:heading-xl leading-none font-bold text-words  whitespace-normal text-wrap">{title}</span>
+          <span className="heading-l sm:heading-s md:heading-l lg:heading-xl font-normal">{type}</span>
         </h3>
-        <p className="text-gray-200 text-lg leading-relaxed max-w-[600px] mx-auto lg:mx-0">{description}</p>
+        <p className="body-normal leading-relaxed max-w-[600px] mx-auto lg:mx-0">{description}</p>
       </div>
     </div>
   );
