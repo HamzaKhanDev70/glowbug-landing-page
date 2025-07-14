@@ -39,13 +39,100 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative w-full"
-
+      className="relative"
       style={{
-        border:'1px solid red',
-        margin:'0 50px'
+        // border: "1px solid yellow",
+        position: "relative",
       }}
     >
+      <div style={{}}>
+        <div style={{ backgroundColor: "black", height: "400px" }}></div>
+
+        <div
+          style={{
+            height: "700px",
+            width: "95%",
+            // border: "1px solid red",
+            position: "absolute",
+            top: "4%",
+            left: "2.5%",
+            zIndex: 100,
+            backgroundImage: "url('/images/side-view-woman.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {/* <Image
+            src="/images/vector-1.png"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
+          /> */}
+          <div style={{ border: "1px solid red", padding: "3%" }}>
+            <div
+              style={{
+                border: "1px solid red",
+                backgroundImage: "url('/images/rectangle-38.png')",
+                zIndex: 990,
+                height: "600px",
+                width: "60%",
+                clipPath: "polygon(0 9%, 100% 30%, 100% 65%, 0 80%)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                
+              }}
+            >
+              <p>bkjkhbjbjbgjbjbjmbm</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="relative z-30 mt-20 px-4 md:px-20 mx-auto space-y-24"
+          style={{
+            paddingTop: "550px",
+            backgroundImage: "url('/images/vector-1.png')",
+          }}
+        >
+          {servicesData.map((service, index) => {
+            const isEven = index % 2 === 1;
+            return (
+              <div
+                key={index}
+                className={`flex flex-col md:flex-row gap-6 ${
+                  isEven ? "md:flex-row-reverse" : ""
+                } items-center md:items-start`}
+              >
+                <div className="w-full md:w-1/2 min-h-[320px] flex items-center">
+                  <div>
+                    <h4 className="text-[#FFD300] heading-m mb-4">
+                      {service.title}
+                    </h4>
+                    <p className="body-normal text-gray-300">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="w-full md:w-4/5 h-[420px] relative rounded-xl overflow-hidden shadow-xl">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className={`object-contain ${
+                      isEven ? "object-left" : "object-right"
+                    }`}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
       {/* 🔹 Background Image */}
       {/* <div className="absolute inset-0 z-0">
         <Image
@@ -101,7 +188,7 @@ const Services = () => {
       </div> */}
 
       {/* content */}
-      {/* <div className="relative z-30 mt-20 px-4 md:px-20 max-w-7xl mx-auto space-y-24">
+      {/* <div className="relative z-30 mt-20 px-4 md:px-20 max-w-7xl mx-auto space-y-24" style={{ marginTop: "400px" }}>
         {servicesData.map((service, index) => {
           const isEven = index % 2 === 1;
           return (

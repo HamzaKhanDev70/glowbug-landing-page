@@ -15,9 +15,9 @@
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-800" >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-800"  style={{height:'110px'}}>
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between" >
             <div className="flex-shrink-0 md:hidden mt-4">
               <Link href="/" aria-label="Home">
                 <Image
