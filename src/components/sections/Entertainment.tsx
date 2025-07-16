@@ -50,14 +50,14 @@ export default function Entertainment() {
               </div>
 
               <div className="mt-8 md:mt-20 lg:mt-40 text-center max-w-[900px] mx-auto text-black">
-                <h2 className="text-3xl md:text-4xl lg:text-[64px] font-grotesk leading-[1] mb-0 text-black">
+                <h2 className="heading-m md:heading-l lg:heading-xl font-bold leading-[1] mb-0 text-black">
                   ONBOARD & IN LOUNGE
                 </h2>
-                <h3 className="text-2xl md:text-3xl lg:text-[48px] font-grotesk leading-[1] mb-8 lg:mb-16 text-black tracking-[.38em]">
+                <h3 className="heading-s md:heading-m font-normal leading-[1] mb-8 lg:mb-16 text-black sm:tracking-[.38em]">
                   ENTERTAINMENT
                 </h3>
 
-                <p className="text-base md:text-lg mb-8 lg:mb-16 max-w-[800px] mx-auto text-black" style={{ fontFamily: 'Inter, sans-serif', fontSize: '20px' }}>
+                <p className="body-normal mb-8 lg:mb-16 max-w-[800px] mx-auto text-black">
                   Dream Stream is the only engagement platform that's ubiquitously available
                   without download or the internet, for travellers across the World who want
                   freedom, choice, and control of the.
@@ -67,7 +67,7 @@ export default function Entertainment() {
                   {informationList.map((info, index) => (
                     <div key={index} className="flex items-center">
                       <span className="w-1.5 h-1.5 bg-black rounded-full mr-3" />
-                      <span className="text-normal md:text-lg text-black" style={{ fontFamily: 'Inter, sans-serif', fontSize: '24px' }}>{info}</span>
+                      <span className="heading-xs text-bold text-black">{info}</span>
                     </div>
                   ))}
                 </div>

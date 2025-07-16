@@ -1,19 +1,24 @@
 import TravelCompanion from "@/components/sections/TravelCompanion";
-import EntertainmentFeatures from '@/components/sections/EntertainmentFeatures';
-import AccessDevice from '@/components/sections/AccessDevice';
-import ListenMusic from '@/components/sections/ListenMusic';
-import HowItWorks from '@/components/sections/HowItWorks';
-import PlayVideo from '@/components/sections/PlayVideo';
+import EntertainmentFeatures from "@/components/sections/EntertainmentFeatures";
+import AccessDevice from "@/components/sections/AccessDevice";
 import Footer from "@/components/sections/Footer";
+import Passenger from "./../components/sections/Passenger";
+import Services from "@/components/sections/Services";
+import AboutUs from "./../components/sections/AboutUs";
+import Experience from './../components/sections/Experience';
+import ContactUs from "@/components/sections/ContactUS";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black">
       <TravelCompanion />
       <EntertainmentFeatures />
       <AccessDevice />
-      <ListenMusic />
-      <HowItWorks />
+      {/* <Passenger/> */}
+      {/* <Services/> */}
+      {/* <AboutUs /> */}
+      {/* <Experience/> */}
+      {/* <ContactUs/> */}
       <Footer />
     </main>
   );

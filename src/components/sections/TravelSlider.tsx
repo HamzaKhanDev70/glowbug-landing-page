@@ -2,10 +2,11 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { useState } from 'react';
+import InfoModal from './InfoModal';
 
 interface SlideData {
   title: string;
@@ -46,7 +47,18 @@ export default function TravelSlider() {
         "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s",
     },
   ];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSlide, setSelectedSlide] = useState<SlideData | null>(null);
 
+  const openModal = (slide: SlideData) => {
+    setSelectedSlide(slide);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedSlide(null);
+  };
   return (
     <section className="relative z-10">
       <div className="relative w-full py-16 md:py-20">
@@ -98,7 +110,7 @@ export default function TravelSlider() {
               >
                 {slides.map((slide, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group w-[400px] md:w-[420px] lg:w-[450px]">
+                    <div className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group w-[400px] md:w-[420px] lg:w-[450px]" onClick={() => openModal(slide)}>
                       <img
                         src={slide.image}
                         alt={slide.title}
@@ -106,10 +118,10 @@ export default function TravelSlider() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
                       <div className="absolute bottom-0 left-0 right-0 p-8">
-                        <h3 className="text-3xl lg:text-[40px] font-normal text-white mb-3 font-grotesk">
+                        <h3 className="heading-m sm:heading-s md:heading-m lg:heading-xl font-bold text-white mb-3 ">
                           {slide.title}
                         </h3>
-                        <p className="text-gray-200 text-base leading-relaxed font-inter max-w-[90%]">
+                        <p className="body-normal leading-relaxed max-w-[90%]">
                           {slide.description}
                         </p>
                       </div>
@@ -122,7 +134,7 @@ export default function TravelSlider() {
           </div>
         </div>
       </div>
-
+ <InfoModal isOpen={isModalOpen} onClose={closeModal} data={selectedSlide} />
       <style jsx global>{`
         .swiper-pagination-bullet {
           background-color: #D946EF !important;

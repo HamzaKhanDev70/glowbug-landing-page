@@ -1,34 +1,46 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
-  darkMode: "class",
+const config:Config={
+
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
-        fontFamily: {
-            inter: ["Inter", "sans-serif"],
-            grotesk: ['"Right Grotesk"', 'sans-serif'],
-          },
-      colors: {
-        dark: {
-          100: "#d4d4d8",
-          200: "#a1a1aa",
-          300: "#71717a",
-          400: "#52525b",
-          500: "#3f3f46",
-          600: "#2a2a2f",
-          700: "#1f1f23",
-          800: "#18181b",
-          900: "#121214",
-        },
-      },
+      // screens: {
+      //   sm: '480px',
+      //   md: '768px',
+      //   lg: '1024px',
+      //   xl: '1280px',
+      //   '2xl': '1536px',
+      // },
+      // fontFamily: {
+      //   grotesk: ['"Right Grotesk"', 'sans-serif'],
+      //   groteskDark: ['"Right Grotesk Dark"', 'sans-serif'],
+      //   groteskMedium: ['"Right Grotesk Medium"', 'sans-serif'],
+      //   inter: ['"Inter"', 'sans-serif'],
+      // },
+      // fontSize: {
+      //   headingXL: ['72px', { lineHeight: '1.1' }],
+      //   headingL: ['56px', { lineHeight: '1.2' }],
+      //   headingM: ['48px', { lineHeight: '1.3' }],
+      //   headingS: ['26px', { lineHeight: '1.4' }],
+      //   headingXS: ['22px', { lineHeight: '1.4' }],
+      //   body: ['16px', { lineHeight: '1.7' }],
+      // },
+      // colors: {
+      //   brand: '#FFE300',
+      //   white: '#FFFFFF',
+      //   lightText: '#D9D9D9',
+      // },
+      
     },
+    variants: {
+      extend: {},
+      fontSize: ['responsive', 'hover', 'focus'],},
+    
   },
   plugins: [],
-};
-
+}
 export default config;
