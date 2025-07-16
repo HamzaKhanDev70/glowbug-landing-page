@@ -91,9 +91,7 @@ export default function TravelCompanion() {
 
           <div className="relative h-[500px] lg:h-[650px] z-10">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
-          </div>
-
-       
+          </div>       
         </div>
       </div>
 

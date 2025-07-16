@@ -50,10 +50,10 @@ export default function Entertainment() {
               </div>
 
               <div className="mt-8 md:mt-20 lg:mt-40 text-center max-w-[900px] mx-auto text-black">
-                <h2 className="heading-m sm:heading-s md:heading-l lg:heading-xl font-bold leading-[1] mb-0 text-black">
+                <h2 className="heading-m md:heading-l lg:heading-xl font-bold leading-[1] mb-0 text-black">
                   ONBOARD & IN LOUNGE
                 </h2>
-                <h3 className="heading-m md:heading-m font-normal leading-[1] mb-8 lg:mb-16 text-black sm:tracking-[.38em]">
+                <h3 className="heading-s md:heading-m font-normal leading-[1] mb-8 lg:mb-16 text-black sm:tracking-[.38em]">
                   ENTERTAINMENT
                 </h3>
 

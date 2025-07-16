@@ -25,12 +25,12 @@ export default function TeamSection() {
       </div>
 
       {/* 🔸 Content */}
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-8xl mx-auto">
         <h2 className="text-[#FEE300] heading-s md:heading-m lg:heading-l text-center mb-12">
           OUR TEAM
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 justify-items-center">
           {teamMembers.map((member, idx) => (
             <div
               key={idx}

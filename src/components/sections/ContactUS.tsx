@@ -54,14 +54,16 @@ export default function ContactUs() {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-12 overflow-visible">
       {/* Top Image */}
-
-      <div className="relative aspect-[16/6] w-full mb-12">
-        <Image
-          src="/images/contactus-hero.png"
-          alt="Contact Us"
-          fill
-          className="object-contain rounded-xl"
-        />
+      <div className="flex justify-center mb-6">
+        <div className="relative w-[95vw] aspect-[18/9]">
+          <Image
+            src="/images/contactus-hero.png"
+            alt="contact Us"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 90vw, 90vw"
+          />
+        </div>
       </div>
 
       {/* Content & Form */}
@@ -98,7 +100,7 @@ export default function ContactUs() {
                 value={formData.fullName}
                 onChange={handleChange}
                 required
-                className="w-full bg-black text-white pl-10 p-3 rounded border border-gray-600"
+                className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
               />
             </div>
           </div>
@@ -115,7 +117,7 @@ export default function ContactUs() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-black text-white pl-10 p-3 rounded border border-gray-600"
+                className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
               />
             </div>
           </div>
@@ -132,7 +134,7 @@ export default function ContactUs() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full bg-black text-white pl-10 p-3 rounded border border-gray-600"
+                className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
               />
             </div>
           </div>
@@ -147,7 +149,7 @@ export default function ContactUs() {
                 value={formData.reason}
                 onChange={handleChange}
                 required
-                className="w-full bg-black text-white pl-10 p-3 rounded border border-gray-600"
+                className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
               >
                 <option value="" disabled>
                   Select reason...
@@ -170,7 +172,7 @@ export default function ContactUs() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
-                className="w-full bg-black text-white pl-10 pt-3 p-3 rounded border border-gray-600 resize-none"
+                className="w-full bg-black text-white pl-10 pt-3 p-3 rounded-xl border border-gray-600 resize-none"
                 required
               />
             </div>
@@ -209,24 +211,37 @@ export default function ContactUs() {
 
       {/* success modal */}
       {showSuccessModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-          <div className=" rounded-l p-6 w-[65%] max-w-md text-center relative border border-green-600 shadow-lg">
-            {/* Close button */}
-            <button
-              onClick={() => setShowSuccessModal(false)}
-              className="absolute top-3 right-3 text-gray-400 hover:text-white"
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+          <div className="relative w-full max-w-4xl mx-auto">
+           
+            <div
+              className="relative z-10 w-full min-h-[510px] rounded-lg overflow-hidden"
+              style={{
+                backgroundImage: "url('/images/rectangle-59.png')",
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            
+              }}
             >
-              ✕
-            </button>
-
-            {/* Success Image */}
-            <div className="w-full h-80 relative mb-4">
-              <Image
-                src="/images/success.png"
-                alt="Success"
-                fill
-                className="object-contain"
-              />
+            
+              <button
+                onClick={() => setShowSuccessModal(false)}
+                className="absolute top-[10%] right-[13%] z-30 text-white hover:text-gray-400 text-xl bg-black/50 hover:bg-black/80 rounded-full w-8 h-8 flex items-center justify-center transition-all"
+              >
+                ✕
+              </button>
+              <div className="absolute inset-0 flex items-center justify-center p-4 ">
+                <div className="relative w-full h-full max-w-3xl">
+                  <Image
+                    src="/images/success.png"
+                    alt="Success"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

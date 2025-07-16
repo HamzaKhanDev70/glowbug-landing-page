@@ -50,7 +50,7 @@ export default function AccessDevice() {
       <div
         className="relative z-10 w-full h-12[px] lg:h-[1100px] "
         style={{
-           backgroundImage: "url('/images/rectangle-20.png')",
+          backgroundImage: "url('/images/rectangle-20.png')",
           backgroundSize: "contain",
           backgroundPosition: "top right",
           backgroundRepeat: "no-repeat",
@@ -58,14 +58,12 @@ export default function AccessDevice() {
           // height: "80%",
           // height: "1100px",
           // width: "1474px",
-      
         }}
-       
       >
-        <div className="flex flex-col lg:flex-row items-center justify-center pt-10 sm:pt-16 md:pt-24 lg:pt-[196px] gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-center pt-10 sm:pt-16 md:pt-24 lg:pt-[96px]  gap-8 xl:gap-0 ">
           {/* Left: Image */}
-          <div className="relative w-[100%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[670px] lg:w-1/2 flex items-center justify-center lg:bg-black">
-            <div className="relative w-full md:w-[60%] lg:w-[75%] h-full overflow-hidden">
+          <div className="relative w-[100%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[699px] lg:w-[61%] lg:mt-[4%] xl:mt-[5%]    flex items-center justify-center lg:bg-black ">
+            <div className="relative w-full md:w-[60%] lg:w-[100%] xl:w-[80%] h-[100%] overflow-hidden ">
               <Image
                 src="/images/flash.png"
                 alt="Entertainment Interface"
@@ -86,10 +84,7 @@ export default function AccessDevice() {
               style={{ overflow: "visible" }}
             >
               <div className="w-full">
-                <h2
-                  className="uppercase heading-l lg:heading-xl font-normal mb-2 sm:mb-4"
-                  
-                >
+                <h2 className="uppercase heading-m lg:heading-l xl:heading-xl font-normal mb-2 sm:mb-4">
                   <span
                     className="whitespace-normal md:whitespace-nowrap"
                     style={{ textWrap: "balance" }}
@@ -114,10 +109,10 @@ export default function AccessDevice() {
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex-1 flex flex-col items-center md:items-start text-left min-w-0"
+                    className="flex-1 flex flex-col items-center  text-left min-w-0"
                   >
                     <div className="mb-2 sm:mb-4">{feature.icon}</div>
-                    <h3 className="heading-s sm:heading-xs md:heading-s lg:heading-m mb-1 sm:mb-2 leading-tight">
+                    <h3 className="heading-s sm:heading-xs md:heading-s  mb-1 sm:mb-2 leading-tight">
                       {feature.title}
                     </h3>
                     <p className="text-white/60 body-normal break-words whitespace-normal text-center">
@@ -140,7 +135,7 @@ export default function AccessDevice() {
           backgroundSize: "cover",
           backgroundPosition: "top right",
           backgroundRepeat: "no-repeat",
-          // right: "45px",
+          // right: "13rem",
           left: "2rem",
           width: "95%",
           height: "100%",

@@ -3,13 +3,13 @@ import Image from "next/image";
 export default function MobileAppShowcase() {
   return (
     <section className="relative w-full flex items-center justify-center bg-transparent z-20 py-16 px-4 md:px-8">
-      <div className="max-w-[1200px] w-full mx-auto">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10">
+      <div className="max-w-[1600px] w-full mx-auto">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-0 xl:gap-10  lg:px-12">
           
           {/* Left Block */}
           <div className="flex-1 flex justify-end">
             <div className="text-white text-center lg:text-right self-center lg:mt-22">
-              <h1 className="heading-m md:heading-l lg:heading-xl font-bold mb-4">
+              <h1 className="heading-m md:heading-l font-bold mb-4">
                 Elevate your entertainment
               </h1>
               <p className="body-normal leading-relaxed max-w-[500px]">
@@ -32,7 +32,7 @@ export default function MobileAppShowcase() {
           {/* Right Block */}
           <div className="flex-1 flex justify- lg:mt-22">
             <div className="text-white text-center lg:text-left self-center ">
-              <h1 className="heading-m md:heading-l lg:heading-xl font-bold mb-4">
+              <h1 className="heading-m md:heading-l font-bold mb-4">
                 Experience magic in motion
               </h1>
               <p className="body-normal leading-relaxed max-w-[500px]">

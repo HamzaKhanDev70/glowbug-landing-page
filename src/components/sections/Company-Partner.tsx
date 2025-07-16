@@ -27,7 +27,7 @@ const  CompanyPartner:React.FC<CompanyPartnerProp>=({heading})=> {
 
   return (
     <section className={`w-full py-16 px-4 ${heading?"bg-black":"bg-transparent opacity-50"} text-white`}>
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-9xl mx-auto text-center">
         <h2 className="text-[#FEE300] heading-s md:heading-m mb-8">
   {heading}
         </h2>
@@ -41,13 +41,13 @@ const  CompanyPartner:React.FC<CompanyPartnerProp>=({heading})=> {
           autoplay={{ delay: 0, disableOnInteraction: false }}
           loop={true}
           speed={3000}
-          slidesPerView="auto"
-          spaceBetween={10}
+          slidesPerView={7}
+          spaceBetween={8}
           className="w-full"
         >
           {partners.map((partner, index) => (
-            <SwiperSlide key={index} className="w-auto">
-              <div className={`flexitems-center px-2 ${heading?"":"m-4 border"}`}>
+            <SwiperSlide key={index} className="flex justify-center ">
+              <div className={`flex items-center px-1 ${heading?"":" border"}`}>
                 <div className="w-24 h-24 relative mb-2">
                   <Image
                     src={partner.logo}
