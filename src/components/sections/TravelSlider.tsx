@@ -60,8 +60,8 @@ export default function TravelSlider() {
     setSelectedSlide(null);
   };
   return (
-    <section className="relative z-10">
-      <div className="relative w-full py-16 md:py-20">
+    <section className="relative ">
+      <div className="relative z-10 w-full py-16 md:py-20">
         <div className="absolute left-10 md:left-40 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-3xl lg:rounded-l-[64px]" />
         
         <div className="max-w-[1200px] mx-auto relative">

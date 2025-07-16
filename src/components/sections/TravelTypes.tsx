@@ -28,11 +28,16 @@ function TravelType({
       className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center mb-24 lg:mb-40 last:mb-0 cursor-pointer hover:opacity-90 transition-opacity"
       onClick={onClick}
     >
-      <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] flex-shrink-0">
-        <div className="absolute inset-0 overflow-hidden">
-          <img src={image} alt={title} className="w-full h-full object-cover" />
-        </div>
-      </div>
+   <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] flex-shrink-0">
+  <div className="absolute inset-0 overflow-hidden ">
+    <img
+      src={image}
+      alt={title}
+      className="w-full h-full object-cover rounded-xl [clip-path:polygon(0_16%,100%_0%,100%_100%,0_100%)] "
+    />
+  </div>
+</div>
+
       <div className="flex-1 text-center lg:text-left mx-4">
         <h3 className="flex items-center mb-6 gap-2 leading-tight md:leading-none text-words whitespace-normal text-wrap break-words">
           <span className="heading-s sm:heading-l lg:heading-xl font-bold">

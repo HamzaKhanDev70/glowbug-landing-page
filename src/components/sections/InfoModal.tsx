@@ -18,8 +18,8 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data, link = "/co
   if (!isOpen || !data) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="relative w-[90%] max-w-5xl h-[75%]">
+    <div className=" fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
+      <div className="relative w-[90%] max-w-5xl h-[88%]">
         {/* SVG Background */}
         <svg
           viewBox="0 0 100 100"
@@ -37,7 +37,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data, link = "/co
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-[1%] z-30 w-8 h-8 hover:bg-black/70 text-white hover:text-gray-500 flex items-center justify-center text-lg"
+          className="absolute top-5 right-[1%] z-60 w-8 h-8 hover:bg-black/70 text-white hover:text-gray-500 flex items-center justify-center text-lg"
         >
           ✕
         </button>
@@ -45,13 +45,13 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data, link = "/co
         {/* Content */}
         <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center px-6 py-4 gap:4 sm:gap-14 z-10">
           {/* Left Image */}
-          <div className="w-full sm:w-1/4 h-[30%] sm:h-[60%] flex items-center justify-center overflow-hidden" style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}}>
+             <div className="flex items-center justify-center h-[48%] sm:h-[88%] rounded-tl-2xl rounded-tr-2xl overflow-hidden   ">
             <img
               src={data.image}
               alt={data.title}
-              // height={"1892rem"}
-              // width={"1782px"}
-              className="max-h-full max-w-full object-cover "
+             height={"1032px"}
+              width={"366px"}
+              className="max-h-full max-w-full object-contain [clip-path:polygon(0_15%,100%_5%,100%_96%,0_96%)]"
             />
           </div>
 
