@@ -3,11 +3,16 @@ import { useState } from "react";
 import Button from "../ui/Button";
 import InfoModal from "./InfoModal";
 
-interface TravelTypeProps {
+// Reusable for the data
+interface TravelTypeData {
   title: string;
   type: string;
   image: string;
   description: string;
+}
+
+// Props for the TravelType component
+interface TravelTypeProps extends TravelTypeData {
   onClick: () => void;
 }
 
@@ -51,7 +56,7 @@ function TravelType({
 }
 
 export default function TravelTypes() {
-  const [selectedType, setSelectedType] = useState<TravelTypeProps | null>(
+  const [selectedType, setSelectedType] = useState<TravelTypeData  | null>(
     null
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,7 +99,7 @@ export default function TravelTypes() {
     },
   ];
 
-  const handleTypeClick = (type: TravelTypeProps) => {
+  const handleTypeClick = (type: TravelTypeData) => {
     setSelectedType(type);
     setIsModalOpen(true);
   };

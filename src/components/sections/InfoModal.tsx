@@ -45,7 +45,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data, link = "/co
         {/* Content */}
         <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center px-6 py-4 gap:4 sm:gap-14 z-10">
           {/* Left Image */}
-          <div className="w-full sm:w-1/4 h-[30%] sm:h-[60%] flex items-center justify-center overflow-hidden border-2 border-red-800" style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}}>
+          <div className="w-full sm:w-1/4 h-[30%] sm:h-[60%] flex items-center justify-center overflow-hidden" style={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}}>
             <img
               src={data.image}
               alt={data.title}
