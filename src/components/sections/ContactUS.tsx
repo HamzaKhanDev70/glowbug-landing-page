@@ -217,27 +217,36 @@ const handleChange = (
 
       {/* success modal */}
       {showSuccessModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
-          <div className="relative w-full max-w-4xl mx-auto">
-           
-            <div
-              className="relative z-10 w-full min-h-[510px] rounded-lg overflow-hidden"
-              style={{
-                backgroundImage: "url('/images/rectangle-59.png')",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-            
-              }}
-            >
-            
-              <button
-                onClick={() => setShowSuccessModal(false)}
-                className="absolute top-[10%] right-[13%] z-30 text-white hover:text-gray-400 text-xl bg-black/50 hover:bg-black/80 rounded-full w-8 h-8 flex items-center justify-center transition-all"
-              >
-                ✕
-              </button>
-              <div className="absolute inset-0 flex items-center justify-center p-4 ">
+     
+
+            <div className=" fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
+      <div className="relative w-[90%] max-w-5xl h-[88%]">
+        {/* SVG Background */}
+        <svg
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          className="absolute inset-0 w-full h-full z-0"
+        >
+          <polygon
+            points="0,9 100,2 100,98 0,90"
+            fill="#040404B2"
+            stroke="#00774F"
+            strokeWidth="0.8"
+          />
+        </svg>
+
+        {/* Close Button */}
+        <button
+           onClick={() => setShowSuccessModal(false)}
+          className="absolute top-5 right-[1%] z-60 w-8 h-8 hover:bg-black/70 text-white hover:text-gray-500 flex items-center justify-center text-lg"
+        >
+          ✕
+        </button>
+
+        {/* Content */}
+        <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center px-6 py-4 gap:4 sm:gap-14 z-10">
+        
+           <div className="absolute inset-0 flex items-center justify-center p-4 ">
                 <div className="relative w-full h-full max-w-3xl">
                   <Image
                     src="/images/success.png"
@@ -248,9 +257,9 @@ const handleChange = (
                   />
                 </div>
               </div>
-            </div>
-          </div>
         </div>
+      </div>
+    </div>
       )}
     </section>
   );

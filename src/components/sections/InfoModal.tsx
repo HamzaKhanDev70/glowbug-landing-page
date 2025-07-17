@@ -6,15 +6,16 @@ interface InfoModalProps {
   isOpen: boolean;
   onClose: () => void;
   data: {
-    image: string;
-    title: string;
+    image?: string;
+    title?: string;
     type?: string;
     description: string;
   } | null;
   link?: string;
   buttonLabel?: string;
+  layoutColor?:"string"
 }
-const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data, link = "/contact-us", buttonLabel = "Contact Us" }) => {
+const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data, link = "/contact-us", buttonLabel = "Contact Us",layoutColor = "#4B1D00" }) => {
   if (!isOpen || !data) return null;
 
   return (
@@ -29,7 +30,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data, link = "/co
           <polygon
             points="0,9 100,2 100,98 0,90"
             fill="#040404B2"
-            stroke="#4B1D00"
+            stroke={layoutColor}
             strokeWidth="0.8"
           />
         </svg>
@@ -44,17 +45,26 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data, link = "/co
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center px-6 py-4 gap:4 sm:gap-14 z-10">
-          {/* Left Image */}
-             <div className="flex items-center justify-center h-[48%] sm:h-[88%] rounded-tl-2xl rounded-tr-2xl overflow-hidden   ">
+          {/* Left Image not rounded*/}
+             {/* <div className="flex items-center justify-center h-[48%] sm:h-[400px] rounded-tl-2xl rounded-tr-2xl overflow-hidden   ">
             <img
               src={data.image}
               alt={data.title}
-             height={"1032px"}
-              width={"366px"}
-              className="max-h-full max-w-full object-contain [clip-path:polygon(0_15%,100%_5%,100%_96%,0_96%)]"
+            //  height={"1032px"}
+              width={"286px"}
+              className="max-h-full max-w-full object-cover [clip-path:polygon(0_15%,100%_5%,100%_96%,0_96%)] "
             />
+          </div> */}
+      {/* Left Image  rounded*/}
+          <div className="relative w-44 h-54 sm:w-80 sm:h-80 lg:w-[280px] lg:h-[350px] flex-shrink-0 ">
+            <div className="absolute inset-0 overflow-hidden ">
+              <img
+                src={data.image}
+                alt={data.title}
+                className="w-full h-full object-cover rounded-xl [clip-path:polygon(0_16%,100%_0%,100%_100%,0_100%)] "
+              />
+            </div>
           </div>
-
           {/* Right Text */}
           <div className="w-full sm:w-1/2 text-center sm:text-left">
             <h2 className="text-xl md:text-2xl font-bold sm:mb-2 text-yellow-300 tracking-[.25rem]">

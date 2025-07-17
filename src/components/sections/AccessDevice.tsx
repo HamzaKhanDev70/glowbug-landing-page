@@ -48,19 +48,19 @@ export default function AccessDevice() {
   return (
     <section className="relative w-full min-h-screen bg-black lg:-mt-13 z-2">
       <div
-        className="relative z-10 w-full h-12[px] lg:h-[1100px] "
+        className="relative z-10 w-full  lg:h-[1100px] "
         style={{
           backgroundImage: "url('/images/rectangle-20.png')",
           backgroundSize: "contain",
           backgroundPosition: "top right",
           backgroundRepeat: "no-repeat",
           width: "97%",
-          // height: "80%",
+          // height: "100%",
           // height: "1100px",
           // width: "1474px",
         }}
       >
-        <div className="flex flex-col lg:flex-row items-center justify-center pt-10 sm:pt-16 md:pt-24 lg:pt-[96px]  gap-8 xl:gap-0 ">
+        <div className="flex flex-col lg:flex-row items-center justify-center pt-10 sm:pt-16 md:pt-24 lg:pt-[96px]   ">
           {/* Left: Image */}
           <div className="relative w-[100%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[699px] lg:w-[61%] lg:mt-[4%] xl:mt-[5%]    flex items-center justify-center lg:bg-black ">
             <div className="relative w-full md:w-[60%] lg:w-[100%] xl:w-[80%] h-[100%] overflow-hidden ">
@@ -76,23 +76,23 @@ export default function AccessDevice() {
 
           {/* Right: Text Content */}
           <div
-            className="relative w-full lg:w-[60%] flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12 lg:py-0"
+            className="relative w-full lg:w-[60%] flex items-center justify-center px-4  py-8 sm:py-12 lg:py-0"
             style={{ overflow: "visible" }}
           >
             <div
               className="w-full text-center md:text-left"
               style={{ overflow: "visible" }}
             >
-              <div className="w-full">
-                <h2 className="uppercase heading-m lg:heading-l xl:heading-xl font-normal mb-2 sm:mb-4">
+              <div className="w-full text-center md:text-start">
+                <h2 className="uppercase heading-m lg:heading-l xl:heading-xl font-normal ">
                   <span
                     className="whitespace-normal md:whitespace-nowrap"
-                    style={{ textWrap: "balance" }}
+                    // style={{ textWrap: "balance" }}  
                   >
                     Access on your own device:
                   </span>
                 </h2>
-                <h2 className="uppercase heading-l sm:heading-s md:heading-m lg:heading-xl mb-2 sm:mb-4">
+                <h2 className="uppercase heading-l sm:heading-s md:heading-m lg:heading-xl">
                   <span className="block text-[#00A3FF] font-bold">
                     ANYWHERE. ANY TIME.
                   </span>
@@ -125,11 +125,13 @@ export default function AccessDevice() {
           </div>
         </div>
 
-        <MobileAppShowcase />
+       <div className="pl-8">
+         <MobileAppShowcase />
+       </div>
       </div>
 
       <div
-        className="relative z-1 w-full -mt-4"
+        className="relative z-1 w-full -mt-4 "
         style={{
           backgroundImage: "url('/images/rectangle-20.png')",
           backgroundSize: "cover",
@@ -141,7 +143,7 @@ export default function AccessDevice() {
           height: "100%",
         }}
       >
-        <div className="flex items-center justify-center lg:pt-50">
+        <div className="flex items-center justify-center lg:pt-50 ">
           <HowItWorks />
         </div>
       </div>

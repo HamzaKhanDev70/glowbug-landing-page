@@ -65,11 +65,11 @@ export default function EntertainmentFeatures() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-start justify-between mb-12 md:mb-20 gap-8 text-center lg:text-left">
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-            <div className="block w-full overflow-hidden">
-              <span className="block text-[#FFD700] heading-m md:heading-l lg:heading-xl  font-normal leading-none tracking-[-0.04em] whitespace-wrap ">
+            <div className="block w-full overflow-hidden leading-[1.05]">
+              <span className="block text-[#FFD700] heading-m md:heading-l lg:heading-xl  font-normal leading-[1.05] tracking-[-0.04em] whitespace-wrap hei ">
                 ONBOARD & IN LOUNGE
               </span>
-              <span className="block text-white heading-m md:heading-l lg:heading-xl font-normal leading-none mt-2 sm:tracking-[0.12em] ">
+              <span className="block text-white heading-m md:heading-l lg:heading-xl font-normal leading-[1.05] mt-2 sm:tracking-[0.12em] ">
                 ENTERTAINMENT
               </span>
             </div>
