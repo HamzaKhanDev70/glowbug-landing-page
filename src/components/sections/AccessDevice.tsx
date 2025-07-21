@@ -87,7 +87,7 @@ export default function AccessDevice() {
                 <h2 className="uppercase heading-m lg:heading-l xl:heading-xl font-normal ">
                   <span
                     className="whitespace-normal md:whitespace-nowrap"
-                    // style={{ textWrap: "balance" }}  
+                    // style={{ textWrap: "balance" }}
                   >
                     Access on your own device:
                   </span>
@@ -100,9 +100,11 @@ export default function AccessDevice() {
               </div>
 
               <p className="text-white body-normal lg:heading-xs font-normal mb-4 sm:mb-8 break-words whitespace-normal">
-                Dream Stream is the only engagement platform that's ubiquitously
-                available without download or the internet, for travellers
-                across the World who want freedom, choice, and control of the.
+                Here the experience for DreamStream should be embedded that by
+                clicking the “Tablet” the user shall be redirected to the DSPK
+                sandbox experience. Insertion of Motion Reel created through
+                different screens and use cases combining web portal and web
+                app.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 ">
@@ -125,9 +127,9 @@ export default function AccessDevice() {
           </div>
         </div>
 
-       <div className="pl-8">
-         <MobileAppShowcase />
-       </div>
+        <div className="pl-8">
+          <MobileAppShowcase />
+        </div>
       </div>
 
       <div

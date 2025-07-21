@@ -83,8 +83,8 @@ const handleChange = (
             Let’s Get In Touch.
           </h2>
           <p className="body-normal">
-            Or just reach out manually to{" "}
-            <span className="text-[#FEE300]">hello@dreamstream.com</span>
+            Please provide a form and email contact in this one and other details (if necessary).
+            {/* <span className="text-[#FEE300]">hello@dreamstream.com</span> */}
           </p>
         </div>
 

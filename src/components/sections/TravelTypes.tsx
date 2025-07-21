@@ -1,6 +1,5 @@
-import Link from "next/link";
+
 import { useState } from "react";
-import Button from "../ui/Button";
 import InfoModal from "./InfoModal";
 
 // Reusable for the data
@@ -9,6 +8,7 @@ interface TravelTypeData {
   type: string;
   image: string;
   description: string;
+  brief: string;
 }
 
 // Props for the TravelType component
@@ -21,6 +21,7 @@ function TravelType({
   type,
   image,
   description,
+  brief,
   onClick,
 }: TravelTypeProps) {
   return (
@@ -39,10 +40,11 @@ function TravelType({
 </div>
 
       <div className="flex-1 text-center lg:text-left mx-4">
-        <h3 className="flex items-center mb-6 gap-2 leading-tight md:leading-none text-words whitespace-normal text-wrap break-words">
+        <h3 className="flex items-center mb-3 gap-2 leading-tight md:leading-none text-words whitespace-normal text-wrap break-words">
           <span className="heading-s sm:heading-l lg:heading-xl font-bold">
             {title}
           </span>
+       
           {type && (
             <>
               <br />
@@ -52,6 +54,9 @@ function TravelType({
             </>
           )}
         </h3>
+           <span className="block heading-s font-bold mb-6">
+            {brief}
+          </span>
         <p className="body-normal leading-relaxed max-w-[600px] mx-auto lg:mx-0">
           {description}
         </p>
@@ -71,36 +76,44 @@ export default function TravelTypes() {
       title: "PLANE",
       type: "TRAVEL",
       image: "/images/airplane.png",
+      brief:"Where magic boards early.",
       description:
-        "Loremm ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "From gate lounge to cruising altitude, DreamStream keeps passengers immersed in entertainment without relying on inflight connectivity. One scan on single login, and their journey lifts off long before take-off.",
     },
     {
       title: "BUS",
       type: "TRAVEL",
       image: "/images/buss.png",
+       brief:"Big-screen stories on every road.",
       description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Even on the longest highways and remote stretches, DreamStream transforms daily commutes into cinematic escapes. BYOD access makes every seat feel personal—and every mile more meaningful.",
     },
     {
       title: "BOAT",
       type: "TRAVEL",
       image: "/images/ship.png",
+      
+       brief:"Journeys with rhythm, powered by story.",
       description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Ferries, cruises, or island-hoppers, DreamStream fills the offline silence with choice and comfort. Passengers sail with music, films, and travel tips; all without touching open waters of the internet.",
     },
     {
       title: "TRAIN",
       type: "TRAVEL",
       image: "/images/train.png",
+     
+       brief:" When the sea disconnects, we reconnect.",
       description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Whether it’s a daily route or a scenic ride, DreamStream turns train time into screen time. Passengers scan, stream, and settle in, no apps, no waiting, just moments that move with them.",
     },
     {
       title: "HOTEL",
       type: "",
       image: "/images/hotel.png",
+    
+       brief:"  A companion that checks in with you.",
       description:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "After the ride, DreamStream stays close. In-room access extends the journey, letting guests unwind, pick up where they left off, or discover something new; all from the comfort of their own device.",
     },
   ];
 
