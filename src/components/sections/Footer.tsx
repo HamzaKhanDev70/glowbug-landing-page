@@ -68,12 +68,52 @@ export default function Footer() {
           <p className="body-normal mt-4 md:mt-0">
             &copy;2025 DreamStream
           </p>
-          <div className="flex space-x-4">
-            {socialLinks.map((social, index) => (
-              <Link key={index} href={social.href} className="text-gray-400 hover:text-white transition-colors text-xl">
-                {social.icon}
-              </Link>
-            ))}
+           <div className="flex space-x-4 items-center">
+            <Link href="https://x.com/Dream_Stream_23" target="_blank">
+              <Image
+                src="/images/vector.png"
+                alt="X"
+                width={18}
+                height={16}
+                className="hover:brightness-125 transition"
+              />
+            </Link>
+            <Link href="https://www.tiktok.com/@dreamstream_magic" target="_blank">
+              <Image
+                src="/images/fi_3046120.png"
+                alt="TikTok"
+                width={18}
+                height={16}
+                className="hover:brightness-125 transition"
+              />
+            </Link>
+            <Link href="https://youtube.com" target="_blank">
+              <Image
+                src="/images/utube.png"
+                alt="YouTube"
+                 width={18}
+                height={16}
+                className="hover:brightness-125 transition"
+              />
+            </Link>
+            <Link href="https://www.threads.net" target="_blank">
+              <Image
+                src="/images/thread.png"
+                alt="Threads"
+                  width={18}
+                height={16}
+                className="hover:brightness-125 transition"
+              />
+            </Link>
+            <Link href="https://www.instagram.com/dreamstream_magic_in_motion/" target="_blank">
+              <Image
+                src="/images/Group 60.png"
+                alt="Instagram"
+                  width={18}
+                height={16}
+                className="hover:brightness-125 transition"
+              />
+            </Link>
           </div>
         </div>
       </div>

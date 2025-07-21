@@ -3,51 +3,82 @@ import Image from "next/image"; // ✅ use next/image, not lucide-react Image
 
 export default function HowItWorksPage() {
   return (
-    <main className="relative pt-25 p-10">
-      {/* <ComingSoon /> */}
+//     <main className="relative pt-25 p-10">
+//       {/* <ComingSoon /> */}
 
-      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50">
-        <div className="relative w-[90%] max-w-5xl h-[68%] ">
-          {/* SVG with red outline */}
-          <svg
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            className="absolute inset-0 w-full h-full z-0"
-          >
-            <polygon
-              points="0,9 100,2 100,98 0,90"
-              fill="white"
-              stroke="brown"
-              strokeWidth="0.8"
-            />
-          </svg>
-          <button className="absolute top-4 right-[3%] z-30 w-8 h-8   hover:bg-black/70 text-black flex items-center justify-center text-lg">
-            ✕
-          </button>
-          {/* Content inside clipped shape */}
-          <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center px-6 py-4 gap-4 z-10">
-            {/* Left side image */}
-            <div className="w-full sm:w-1/2 h-40 sm:h-full flex items-center justify-center">
-              <img
-                src="/images/train.png"
-                alt="Preview"
-                className="max-h-full max-w-full object-contain"
-              />
-            </div>
+// <>
+//   {/* SVG filter definition */}
+//   <svg
+//     style={{ visibility: 'hidden', position: 'absolute' }}
+//     width="0"
+//     height="0"
+//     xmlns="http://www.w3.org/2000/svg"
+//     version="1.1"
+//   >
+//     <defs>
+//       <filter id="goo">
+//         <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+//         <feColorMatrix
+//           in="blur"
+//           mode="matrix"
+//           values="1 0 0 0 0  
+//                   0 1 0 0 0  
+//                   0 0 1 0 0  
+//                   0 0 0 19 -9"
+//           result="goo"
+//         />
+//         <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+//       </filter>
+//     </defs>
+//   </svg>
 
-            {/* Right side text */}
-            <div className="w-full sm:w-1/2 text-center sm:text-left">
-              <h2 className="text-xl md:text-2xl font-bold mb-2">
-                Modal Heading
-              </h2>
-              <p className="text-sm md:text-base text-gray-700">
-                This is a paragraph inside a clipped shape modal with a red
-                outline.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+//   {/* Filtered section */}
+//   <div className="overflow-hidden rounded-2xl" style={{ filter: 'url(#goo)' }}>
+//     <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] [clip-path:polygon(0_21%,100%_0,100%_100%,0_79%)]">
+//       <img
+//         src="/images/mbl.png"
+//         alt="Clipped"
+//         className="absolute inset-0 w-full h-full object-fit"
+//       />
+//     </div>
+//   </div>
+// </>
+
+
+
+//     </main>
+
+<div className="relative w-full overflow-visible  flex flex-col items-center justify-center p-0 m-0">
+  {/* First Div - Coming Soon */}
+  <div
+    className="overflow-hidden w-full h-[900px]"
+    style={{
+      // clipPath: "polygon(0 0, 100% 0, 100% 80%, 0% 100%)",
+    }}
+  >
+    <div
+      className="w-full h-[900px] bg-cover bg-no-repeat bg-center"
+      style={{
+        backgroundImage: "url('/images/coming-soon.png')",
+      }}
+    ></div>
+  </div>
+
+  {/* Second Div - Vector 1 */}
+  <div
+    className="overflow-hidden w-full -mt-[1px] h-[900px]" 
+    style={{
+      // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 90%)", 
+    }}
+  >
+    <div
+      className="w-full h-[900px] bg-cover bg-no-repeat bg-center"
+      style={{
+        backgroundImage: "url('/images/vector-1.png')",
+      }}
+    ></div>
+  </div>
+</div>
+
   );
 }

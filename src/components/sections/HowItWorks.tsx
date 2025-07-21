@@ -35,7 +35,7 @@ export default function HowItWorks() {
           //   paddingBottom: '200px'
           // }}
         />
-
+        
         <div className="relative z-10 lg:mt-18">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 md:mb-16 gap-8 pt-40">
             <div>
@@ -78,7 +78,7 @@ export default function HowItWorks() {
         </div>
       </div>
 
-      <div className="relative w-full px-4 md:px-8 bg-transparent pt-5">
+      <div className="relative w-full px-4 md:px-8 bg-transparent pt-5 ">
         <div className="max-w-[1600px] mx-auto">
           <PlayVideo />
         </div>
