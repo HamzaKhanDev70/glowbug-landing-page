@@ -46,7 +46,7 @@ export default function Navbar() {
                     className={`body-normal transition-colors whitespace-nowrap ${
                       pathname === item.href
                         ? "text-white font-semibold"
-                        : "text-red-800 hover:text-white"
+                        : "text-green-800 hover:text-white"
                     }`}
                   >
                     {item.name}
