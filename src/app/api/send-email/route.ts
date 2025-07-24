@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { NextResponse } from "next/server";
