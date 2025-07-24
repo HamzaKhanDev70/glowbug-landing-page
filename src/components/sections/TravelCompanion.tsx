@@ -24,7 +24,7 @@ export default function TravelCompanion() {
 
       heading: "Inlounge & Onboard ",
       description:
-        "Offering an unforgettable experience offline, when there is no other service available.e",
+        "Offering an unforgettable experience offline, when there is no other service available.",
     },
     {
       image: "/images/MainHeader.png",
@@ -62,7 +62,7 @@ export default function TravelCompanion() {
   }, [slides.length]);
 
   return (
-    <div className="overflow-x-hidden w-full">
+    <div className="overflow-x-hidden w-full overflow-y-clip">
       <div className="px-5 md:px-10 mt-10 md:mt-22">
         <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100vh-200px)]">
           <div className="absolute inset-0 w-full h-full">

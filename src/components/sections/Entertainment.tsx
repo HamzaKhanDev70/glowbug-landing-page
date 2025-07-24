@@ -47,7 +47,7 @@ export default function  Entertainment() {
 
   return (
     <>
-      <section className="relative w-full pt-20 md:pt-40 lg:pt-80  ">
+      <section className="relative w-full pt-20 md:pt-40 lg:pt-80 ">
         <img
           src="/images/bluebg.png"
           alt="Blue background"

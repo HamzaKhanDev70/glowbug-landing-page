@@ -169,7 +169,7 @@ const Services = () => {
               <div
                 key={index}
                 className={`flex flex-col md:flex-row gap-10 md:gap-20 ${
-                  isEven ? "md:flex-row-reverse" : ""
+                  isEven ? "md:flex-row-reverse md:text-end" : ""
                 } items-center md:items-start`}
               >
                 {/* Text Content */}

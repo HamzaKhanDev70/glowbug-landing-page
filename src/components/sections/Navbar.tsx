@@ -3,21 +3,24 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "../ui/Button";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "HOW IT WORKS", href: "/how-it-works" },
   { name: "SERVICES", href: "/services" },
-  { name: "WHO IT'S FOR", href: "/test" },
+  { name: "WHO IT'S FOR", href: "" },
   { name: "ABOUT US", href: "/about-us" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-dark-800"
-      style={{ height: "110px" }}
+      // className="fixed top-0 left-0 right-0 z-50 bg-dark-800"
+      className="bg-dark-800 "
+      style={{ height: "5px" }}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between">
@@ -31,7 +34,6 @@ export default function Navbar() {
               />
             </Link>
           </div>
-
           <div className="hidden md:flex w-full relative items-center justify-center px-6">
             {/* Centered navbar container */}
             <div className="flex items-center justify-center space-x-8 lg:space-x-20">
@@ -41,13 +43,16 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-green-800 hover:text-white body-normal transition-colors whitespace-nowrap"
+                    className={`body-normal transition-colors whitespace-nowrap ${
+                      pathname === item.href
+                        ? "text-white font-semibold"
+                        : "text-green-800 hover:text-white"
+                    }`}
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
-
               {/* Center logo */}
               <div className="flex-shrink-0 mt-4">
                 <Link href="/" aria-label="Home" className="flex items-center">
@@ -60,21 +65,23 @@ export default function Navbar() {
                   />
                 </Link>
               </div>
-
               {/* Right nav items */}
               <div className="flex items-center space-x-8 lg:space-x-32">
                 {navItems.slice(2).map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-green-800 hover:text-white body-normal transition-colors whitespace-nowrap"
+                    className={`body-normal transition-colors whitespace-nowrap ${
+                      pathname === item.href
+                        ? "text-white font-semibold"
+                        : "text-green-800 hover:text-white"
+                    }`}
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
             </div>
-
             {/* Button positioned absolutely */}
             <div className="hidden md:block absolute -right-2 md:top-[4.4rem] lg:top-[4.5rem] xl:top-1/2 -translate-y-1/2">
               <Link href="/contact-us" aria-label="Contact Us">
@@ -148,7 +155,11 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-green-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  pathname === item.href
+                    ? "text-white font-semibold"
+                    : "text-green-800 hover:text-white"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

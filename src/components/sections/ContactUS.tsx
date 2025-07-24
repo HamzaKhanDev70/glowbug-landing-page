@@ -6,7 +6,10 @@ import { useRouter } from "next/navigation";
 
 export default function ContactUs() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
   const router = useRouter();
   const [formData, setFormData] = useState({
     fullName: "",
@@ -23,24 +26,26 @@ export default function ContactUs() {
     return text.trim().split(/\s+/).filter(Boolean).length;
   };
 
- 
-const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-) => {
-  const { name, value, type } = e.target;
-  const isCheckbox = type === "checkbox";
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value, type } = e.target;
+    const isCheckbox = type === "checkbox";
 
-  setFormData((prev) => ({
-    ...prev,
-    [name]: isCheckbox && e.target instanceof HTMLInputElement
-      ? e.target.checked
-      : value,
-  }));
-};
+    setFormData((prev) => ({
+      ...prev,
+      [name]:
+        isCheckbox && e.target instanceof HTMLInputElement
+          ? e.target.checked
+          : value,
+    }));
+  };
 
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!formData.agree) {
       setError("You must agree to the terms.");
       return;
@@ -52,9 +57,67 @@ const handleChange = (
       return;
     }
 
-    setError("");
-    console.log("Form Data:", formData);
-    setShowSuccessModal(true);
+    setLoading(true);
+    const payload = {
+      to: formData.email,
+      subject: "You're on the list – DreamStream is LIVE!",
+      body: `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #ffffff; color: #333; border: 1px solid #eee;">
+      <h2 style="color: #2B2D42;">Welcome to <span style="color: #F72585;">DreamStream</span> </h2>
+
+      <p>Hi ${formData.fullName || "there"},</p>
+
+      <p>Thanks for joining us on this exciting journey.</p>
+
+      <p>We're thrilled to welcome you to <strong>DreamStream – Magic in Motion</strong>.</p>
+
+      <p>We’re bringing you a next-generation platform that transforms your travel experience with:</p>
+      <ul>
+        <li> Seamless entertainment across buses, trains, ferries, and flights</li>
+        <li> Entertainment you’ll love, anywhere you go</li>
+      </ul>
+
+      <p>Our mission is to keep you connected and entertained, no matter where your journey takes you.</p>
+
+      <p>Thanks for being a part of the future of travel.</p>
+
+      <p>Stay tuned,</p>
+
+      <p style="font-weight: bold;">The DreamStream Team<br/>Powered by NKU Technologies</p>
+
+      <hr style="margin: 40px 0;"/>
+
+      <small style="color: #888;">You received this email because you signed up on our website.<br/>
+      If you didn’t, you can ignore this email.</small>
+    </div>
+  `,
+   fullName: formData.fullName,
+  phone: formData.phone,
+  reason: formData.reason,
+  message: formData.message,
+    };
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error("Failed to send email");
+      const data = await res.json();
+      setSuccessMsg("Email sent successfully ");
+      setShowSuccessModal(true);
+
+      setEmail("");
+    } catch (err: any) {
+      console.error(err);
+      setErrorMsg("Something went wrong ");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -83,7 +146,8 @@ const handleChange = (
             Let’s Get In Touch.
           </h2>
           <p className="body-normal">
-            Please provide a form and email contact in this one and other details (if necessary).
+            Please provide a form and email contact in this one and other
+            details (if necessary).
             {/* <span className="text-[#FEE300]">hello@dreamstream.com</span> */}
           </p>
         </div>
@@ -208,45 +272,43 @@ const handleChange = (
           {/* Submit */}
           <button
             type="submit"
+            disabled={loading}
             className="w-full bg-yellow-400 text-black text-xl py-3 rounded font-normal hover:bg-yellow-500 transition"
           >
-            Submit Form
+            {loading ? "Submitting..." : "Submit Form"}
           </button>
         </form>
       </div>
 
       {/* success modal */}
       {showSuccessModal && (
-     
+        <div className=" fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
+          <div className="relative w-[90%] max-w-5xl h-[88%]">
+            {/* SVG Background */}
+            <svg
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              className="absolute inset-0 w-full h-full z-0"
+            >
+              <polygon
+                points="0,9 100,2 100,98 0,90"
+                fill="#040404B2"
+                stroke="#00774F"
+                strokeWidth="0.8"
+              />
+            </svg>
 
-            <div className=" fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="relative w-[90%] max-w-5xl h-[88%]">
-        {/* SVG Background */}
-        <svg
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="absolute inset-0 w-full h-full z-0"
-        >
-          <polygon
-            points="0,9 100,2 100,98 0,90"
-            fill="#040404B2"
-            stroke="#00774F"
-            strokeWidth="0.8"
-          />
-        </svg>
+            {/* Close Button */}
+            <button
+              onClick={() => setShowSuccessModal(false)}
+              className="absolute top-5 right-[1%] z-60 w-8 h-8 hover:bg-black/70 text-white hover:text-gray-500 flex items-center justify-center text-lg"
+            >
+              ✕
+            </button>
 
-        {/* Close Button */}
-        <button
-           onClick={() => setShowSuccessModal(false)}
-          className="absolute top-5 right-[1%] z-60 w-8 h-8 hover:bg-black/70 text-white hover:text-gray-500 flex items-center justify-center text-lg"
-        >
-          ✕
-        </button>
-
-        {/* Content */}
-        <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center px-6 py-4 gap:4 sm:gap-14 z-10">
-        
-           <div className="absolute inset-0 flex items-center justify-center p-4 ">
+            {/* Content */}
+            <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center px-6 py-4 gap:4 sm:gap-14 z-10">
+              <div className="absolute inset-0 flex items-center justify-center p-4 ">
                 <div className="relative w-full h-full max-w-3xl">
                   <Image
                     src="/images/success.png"
@@ -257,9 +319,9 @@ const handleChange = (
                   />
                 </div>
               </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
       )}
     </section>
   );
