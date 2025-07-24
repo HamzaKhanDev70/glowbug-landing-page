@@ -3,6 +3,8 @@ import { Mail, Phone, User, MessageSquare, List } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 export default function ContactUs() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -91,10 +93,10 @@ export default function ContactUs() {
       If you didn’t, you can ignore this email.</small>
     </div>
   `,
-   fullName: formData.fullName,
-  phone: formData.phone,
-  reason: formData.reason,
-  message: formData.message,
+      fullName: formData.fullName,
+      phone: formData.phone,
+      reason: formData.reason,
+      message: formData.message,
     };
 
     try {
@@ -195,18 +197,26 @@ export default function ContactUs() {
           {/* Phone */}
           <div className="relative">
             <label className="body-normal">Phone Number</label>
-            <div className="relative mt-2">
-              <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2  w-5 h-5" />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
-              />
-            </div>
+            <PhoneInput
+              country={"pk"}
+              value={formData.phone}
+              onChange={(phone) => setFormData((prev) => ({ ...prev, phone }))}
+              inputStyle={{
+                width: "100%",
+                backgroundColor: "black",
+                color: "gray",
+                paddingLeft: "48px",
+                height: "48px",
+                borderRadius: "12px",
+                // border: "1px solid #4B5563", // Tailwind's border-gray-600
+              }}
+              buttonStyle={{
+                backgroundColor: "black",
+                borderRight: "1px solid #4B5563",
+              }}
+              dropdownStyle={{ backgroundColor: "gray", color: "white" }}
+              containerStyle={{ width: "100%" }}
+            />
           </div>
 
           {/* Reason for Contact - Dropdown */}

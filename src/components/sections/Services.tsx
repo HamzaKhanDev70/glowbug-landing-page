@@ -69,12 +69,12 @@ const Services = () => {
                   sizes="(max-width: 768px) 80vw, 40vw"
                 />
                 {/* Text Overlay on second image */}
-                <div className="absolute top-1/2 -left-1  md:left-4 -translate-y-1/2 z-40 text-white max-w-md px-4">
+                <div className="absolute top-1/2 -left-1  md:left-4 -translate-y-1/2 z-40 text-white max-w-3xl px-4">
                   <h3 className="text-[#FFD300] text-2xl font-bold sm:text-4xl md:text-6xl mb-0 sm:mb-6 tracking-wider uppercase">
                     <span className="text-white">our</span>
                     <span className="text-[#FFD300]"> Services</span>
                   </h3>
-                  <div className="flex flex-end md:flex-start">
+                  <div className="">
                     <p className="text-white mb-4 text-xs sm:text-base md:text-lg lg:text-2xl">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Illo maxime aperiam ducimus blanditiis.
@@ -152,7 +152,7 @@ const Services = () => {
         <div
           className="
     relative z-10  
-    pt-[140px] sm:pt-[140px] md:pt-[240px] lg:pt-[260px] xl:pt-[380px] 
+   pt-[30%]
     px-4 sm:px-10 md:px-20 lg:px-32 xl:px-40 
     mx-auto space-y-24
   "
@@ -183,18 +183,6 @@ const Services = () => {
                     </p>
                   </div>
                 </div>
-
-                {/* Image Section */}
-                {/* <div className="w-full md:w-4/5 lg:w-[55%] h-[340px] sm:h-[400px] md:h-[480px] lg:h-[460px] xl:h-[500px] relative rounded-xl overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className={`object-fit xl:object-cover ${
-                      isEven ? "object-left" : "object-right"
-                    }`}
-                  />
-                </div> */}
 
                 <div className={`relative w-64  h-64 sm:w-80 sm:h-80 lg:w-[470px] lg:h-[470px] `}>
                   <div className="absolute inset-0 overflow-hidden">

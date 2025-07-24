@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/sections/Navbar";
 import "../styles/globals.css";
 import Footer from "@/components/sections/Footer";
+import 'react-phone-input-2/lib/style.css';
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "800"] });
 
