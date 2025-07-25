@@ -53,7 +53,7 @@ const Services = () => {
           <div className="flex justify-center ">
             <div className="relative w-[95vw] aspect-[21/9] z-20">
               <Image
-                src="/images/seamless.png"
+                src="/images/plane.png"
                 alt="About Us"
                 fill
                 className="object-cover"
@@ -200,56 +200,67 @@ const Services = () => {
           })}
         </div> */}
         <div
-  className="
+          className="
     relative z-10  
     pt-[30%]
     px-4 sm:px-10 md:px-20 lg:px-32 xl:px-40 
-    mx-auto space-y-24
+    mx-auto space-y-24  flex flex-col items-center justify-center gap-20
   "
-  style={{
-    backgroundImage: "url('/images/vector-1.png')",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "top center",
-  }}
->
-  {servicesData.map((service, index) => {
-    const isEven = index % 2 === 1;
+          style={{
+            backgroundImage: "url('/images/vector-1.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+          }}
+        >
+          {servicesData.map((service, index) => {
+            const isEven = index % 2 === 1;
 
-    return (
-      <div
-        key={index}
-        className={`
-          grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0 items-center  xl:mx-28
+            return (
+              <div
+                key={index}
+                className={`
+          grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0 items-center  xl:mx-28 
         `}
-      >
-        {/* Left Cell */}
-        <div className={`${isEven ? "md:order-2 md:justify-end text-right" : "md:order-1 md:justify-start"} flex justify-center `}>
-          <div className="w-full max-w-[500px]">
-            <h4 className="text-[#FFD300] heading-s xl:heading-m mb-4">
-              {service.title}
-            </h4>
-            <p className="body-normal  text-gray-300">
-              {service.description}
-            </p>
-          </div>
-        </div>
+              >
+                {/* Left Cell */}
+                <div
+                  className={`${
+                    isEven
+                      ? "md:order-2 md:justify-end text-right"
+                      : "md:order-1 md:justify-start"
+                  } flex justify-center `}
+                >
+                  <div className="w-full max-w-[500px]">
+                    <h4 className="text-[#FFD300] heading-s xl:heading-m mb-4">
+                      {service.title}
+                    </h4>
+                    <p className="body-normal  text-gray-300">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
 
-        {/* Right Cell */}
-        <div className={`${isEven ? "md:order-1 md:justify-start" : "md:order-2 md:justify-end"} flex justify-center `}>
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[410px] lg:h-[470px]  overflow-hidden">
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-full object-contain "
-            />
-          </div>
+                {/* Right Cell */}
+                <div
+                  className={`${
+                    isEven
+                      ? "md:order-1 md:justify-start"
+                      : "md:order-2 md:justify-end"
+                  } flex justify-center `}
+                >
+                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[410px] lg:h-[470px]  overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-contain "
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
-    );
-  })}
-</div>
-
       </div>
     </section>
   );

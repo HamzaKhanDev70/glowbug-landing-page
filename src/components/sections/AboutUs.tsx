@@ -30,7 +30,7 @@ const AboutUs = () => {
                 <span className="text-[#FFD300]"> US</span>
               </h3>
               <div className="  ">
-                <p className="text-white mb-4 text-xs sm:text-base md:text-lg lg:text-2xl">
+                <p className="text-white mb-4 body-normal">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
                   maxime aperiam ducimus blanditiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
                   maxime aperiam ducimus blanditiis.
