@@ -98,25 +98,36 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
         <div className="absolute inset-0 bg-black bg-opacity-70" />
       </div>
 
-      {/* 🔸 Content */}
-      <div className="relative z-10 max-w-8xl mx-auto">
-        <h2 className="text-[#FEE300] heading-s md:heading-m lg:heading-l text-center mb-12">
-          OUR TEAM
-        </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 justify-items-center">
+     <div className="relative w-full pt-20 overflow-visible">
+  {/* Background Gradient with Clip-Path */}
+  <div
+    className="absolute inset-0 z-0 pointer-events-none"
+    style={{
+      clipPath: "polygon(0 0, 100% 19%, 100% 100%, 0% 100%)",
+      background: "linear-gradient(180deg, rgba(75, 29, 0, 0.35) 0%, rgba(28, 11, 2, 0) 100%)",
+      // transform: "matrix(-1, 0, 0, 1, 0, 0)",
+    }}
+  />
+    {/* 🔸 Content */}
+    <div className="relative z-10 max-w-8xl mx-auto pt-35">
+      <h2 className="text-[#FEE300] heading-s md:heading-m lg:heading-l text-center mb-12">
+        OUR TEAM
+      </h2>
+
+   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3  gap-4 justify-items-center">
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="w-[280px] flex flex-col    bg-opacity-5 rounded-xl shadow-lg hover:bg-opacity-10 transition"
+              className="w-[400px] flex flex-col  bg-opacity-5 rounded-xl shadow-lg hover:bg-opacity-10 transition"
             >
               {/* Image */}
-              <div className="w-full h-[250px] relative overflow-hidden">
+              <div className=" w-[400px] h-[330px] relative overflow-hidden ">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-contain"
+                  className="object-contain "
                 />
               </div>
 
@@ -141,6 +152,8 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
             </div>
           ))}
         </div>
+</div>
+
       </div>
       <InfoModal
         isOpen={isModalOpen}

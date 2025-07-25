@@ -45,7 +45,7 @@ const Services = () => {
         position: "relative",
       }}
     >
-      <div style={{}}>
+      <div>
         <div
           style={{ backgroundColor: "black" }}
           className="h-[70px] sm:h-[150px] md:h-[170px] lg:h-[300px] xl:h-[400px]  overflow-visible"
@@ -70,12 +70,12 @@ const Services = () => {
                 />
                 {/* Text Overlay on second image */}
                 <div className="absolute top-1/2 -left-1  md:left-4 -translate-y-1/2 z-40 text-white max-w-3xl px-4">
-                  <h3 className="text-[#FFD300] text-2xl font-bold sm:text-4xl md:text-6xl mb-0 sm:mb-6 tracking-wider uppercase">
+                  <h3 className="text-[#FFD300] heading-s font-bold sm:heading-xl mb-0 sm:mb-6 tracking-wider uppercase">
                     <span className="text-white">our</span>
                     <span className="text-[#FFD300]"> Services</span>
                   </h3>
                   <div className="">
-                    <p className="text-white mb-4 text-xs sm:text-base md:text-lg lg:text-2xl">
+                    <p className="text-white mb-4 body-normal">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Illo maxime aperiam ducimus blanditiis.
                     </p>
@@ -149,7 +149,7 @@ const Services = () => {
         {/* </div> */}
         {/* -------------------------------------- */}
 
-        <div
+        {/* <div
           className="
     relative z-10  
    pt-[30%]
@@ -172,7 +172,7 @@ const Services = () => {
                   isEven ? "md:flex-row-reverse md:text-end" : ""
                 } items-center md:items-start`}
               >
-                {/* Text Content */}
+                
                 <div className="w-full md:w-1/2 min-h-[320px] sm:min-h-[470px] flex items-center justify-center">
                   <div>
                     <h4 className="text-[#FFD300] heading-s  xl:heading-l   mb-4">
@@ -189,7 +189,7 @@ const Services = () => {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className={`w-full h-full object-cover ${
+                      className={`w-full h-full object-contain ${
                         isEven ? "object-left" : "object-right"
                       }`}
                     />
@@ -198,7 +198,58 @@ const Services = () => {
               </div>
             );
           })}
+        </div> */}
+        <div
+  className="
+    relative z-10  
+    pt-[30%]
+    px-4 sm:px-10 md:px-20 lg:px-32 xl:px-40 
+    mx-auto space-y-24
+  "
+  style={{
+    backgroundImage: "url('/images/vector-1.png')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "top center",
+  }}
+>
+  {servicesData.map((service, index) => {
+    const isEven = index % 2 === 1;
+
+    return (
+      <div
+        key={index}
+        className={`
+          grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0 items-center  xl:mx-28
+        `}
+      >
+        {/* Left Cell */}
+        <div className={`${isEven ? "md:order-2 md:justify-end text-right" : "md:order-1 md:justify-start"} flex justify-center `}>
+          <div className="w-full max-w-[500px]">
+            <h4 className="text-[#FFD300] heading-s xl:heading-l mb-4">
+              {service.title}
+            </h4>
+            <p className="body-normal xl:text-xl text-gray-300">
+              {service.description}
+            </p>
+          </div>
         </div>
+
+        {/* Right Cell */}
+        <div className={`${isEven ? "md:order-1 md:justify-start" : "md:order-2 md:justify-end"} flex justify-center `}>
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[410px] lg:h-[470px]  overflow-hidden">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full h-full object-contain "
+            />
+          </div>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
       </div>
     </section>
   );

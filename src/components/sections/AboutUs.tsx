@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import TeamSection from "./TeamSection";
 import CompanyPartner from "./Company-Partner";
-import Link from "next/link";
 const AboutUs = () => {
   return (
     <section className="w-full px-2">
@@ -43,7 +42,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="text-center max-w-5xl mx-auto px-4 py-16">
+      <div className="text-center max-w-5xl mx-auto px-4 pt-16">
   <h1 className="text-[#FEE300] text-3xl md:text-4xl lg:text-5xl font-semibold mb-10 tracking-tight">
     OUR STORY
   </h1>

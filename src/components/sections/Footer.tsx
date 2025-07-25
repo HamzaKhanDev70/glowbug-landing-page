@@ -71,7 +71,7 @@ export default function Footer() {
            <div className="flex space-x-4 items-center">
             <Link href="https://x.com/Dream_Stream_23" target="_blank">
               <Image
-                src="/images/vector.png"
+                src="/images/Vector.png"
                 alt="X"
                 width={18}
                 height={16}
