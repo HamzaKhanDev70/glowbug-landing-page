@@ -39,10 +39,10 @@ export default function HowItWorks() {
         <div className="relative z-10 lg:mt-18">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 md:mb-16 md:mx-8 pt-40 ">
             <div>
-              <h2 className="heading-l sm:heading-s md:heading-l lg:grotesk-tight text-[#FFD700] "  style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
+              <h2 className="grotesk-tight text-[#FFD700] "  style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
                 HOW IT WORKS IN
               </h2>
-              <div className="heading-m sm:heading-s md:heading-l lg:grotesk-light-narrow "  style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}>
+              <div className="grotesk-light-narrow "  style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}>
                 3 SIMPLE STEPS
               </div>
             </div>

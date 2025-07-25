@@ -225,11 +225,11 @@ body {
  
 @utility grotesk-tight {
     font-family: "Right Grotesk", sans-serif;
-    font-size: 72px;
+    /* font-size: 72px; */
   }
 @utility grotesk-light {
     font-family: "Right Grotesk", sans-serif;
-    font-size: 44px;
+    /* font-size: 44px; */
       line-height: 1;
   }
 @utility grotesk-light-narrow {
