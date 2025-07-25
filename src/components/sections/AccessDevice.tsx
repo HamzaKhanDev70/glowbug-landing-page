@@ -227,9 +227,9 @@ export default function AccessDevice() {
               style={{ overflow: "visible" }}
             >
               <div className="w-full text-center md:text-start">
-                <h2 className="uppercase heading-m lg:heading-l whitespace-normal md:whitespace-nowrap font-normal ">
+                <h2 className="uppercase heading-m lg:grotesk-light text-wrap " style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
                   <span
-                    className="whitespace-normal md:whitespace-nowrap"
+                    className=""
                   >
                     Access on your own device:
                   </span>

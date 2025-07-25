@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function EntertainmentCTA() {
   return (
     <div className="w-full flex flex-col items-center py-12 md:py-20 text-center">
-      <h1 className="heading-m md:heading-l lg:heading-xl font-normal mb-12 md:mb-20" >
+      <h1 className="heading-m md:heading-l lg:grotesk-tight mb-12 md:mb-20" style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
         <span className="text-white">ELEVATE</span>
         <br className="md:hidden" />
         <span className="text-pink-500">YOUR ENTERTAINMENT</span>

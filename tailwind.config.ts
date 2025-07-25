@@ -10,7 +10,9 @@ const config:Config={
     extend: {
    
       fontFamily: {
-            grotesk: ['"Right Grotesk"', 'sans-serif'],
+          groteskTight: ['"Right Grotesk Tight"', 'sans-serif'],
+        groteskCompact: ['"Right Grotesk Compact"', 'sans-serif'],
+        groteskLight: ['"Right Grotesk Light"', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
        
       },

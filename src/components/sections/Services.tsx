@@ -204,7 +204,7 @@ const Services = () => {
     relative z-10  
     pt-[30%]
     px-4 sm:px-10 md:px-20 lg:px-32 xl:px-40 
-    mx-auto space-y-24  flex flex-col items-center justify-center gap-20
+    mx-auto space-y-24  flex flex-col items-center justify-around gap-20
   "
           style={{
             backgroundImage: "url('/images/vector-1.png')",

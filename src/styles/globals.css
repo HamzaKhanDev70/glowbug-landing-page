@@ -84,7 +84,14 @@ body {
 @font-face {
   font-family: "Right Grotesk";
   src: url("/fonts/right-grotesk/RightGrotesk-TightMedium.otf") format("opentype");
-  font-weight: 600;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Right Grotesk";
+  src: url("/fonts/right-grotesk/RightGrotesk-NarrowLight.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -216,3 +223,17 @@ body {
   /* color: #ffffff; */
 }
  
+@utility grotesk-tight {
+    font-family: "Right Grotesk", sans-serif;
+    font-size: 105px;
+  }
+@utility grotesk-light {
+    font-family: "Right Grotesk", sans-serif;
+    font-size: 64px;
+      line-height: 1;
+  }
+@utility grotesk-light-narrow {
+    font-family: "Right Grotesk", sans-serif;
+    font-size: 53px;
+      line-height: 1;
+  }

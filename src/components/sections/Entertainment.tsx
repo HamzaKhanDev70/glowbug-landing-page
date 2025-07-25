@@ -110,11 +110,11 @@ export default function  Entertainment() {
                 </div>
               </>
 
-              <div className="mt-3 text-center max-w-[1800px] mx-auto text-black px-2 sm:px-6">
-                <h2 className="heading-m md:heading-l lg:heading-xl font-grotesk font-[500] leading-[1] mb-0 text-black">
+              <div className="mt-3 text-center max-w-[1800px] mx-auto text-black px-2 sm:px-6" >
+                <h2 className="heading-m md:heading-l lg:grotesk-tight leading-[1] mb-0 text-black" style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
                   ONBOARD & IN LOUNGE
                 </h2>
-                <h3 className="heading-s md:heading-m font-normal leading-[1] mb-4 lg:mb-8 text-black sm:tracking-[.38em]">
+                <h3 className="heading-s md:grotesk-light  mb-4 lg:mb-8 text-black" style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}>
                   ENTERTAINMENT
                 </h3>
 

@@ -35,19 +35,19 @@ export default function EntertainmentFeatures() {
   return (
     <section className="relative w-full pt-16 md:pt-20">
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-start justify-between mb-12 md:mb-20 gap-8 text-center lg:text-left mx-12 ">
+        <div className="flex flex-col lg:flex-row items-center justify-between mb-12 md:mb-20 gap-8 text-center lg:text-left mx-12 ">
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-            <div className="block w-full overflow-hidden leading-none">
-              <span className="block text-[#FFD700] heading-m md:heading-l lg:heading-xl font-normal leading-tight tracking-[-0.04em]">
+            <div className="block w-full overflow-hidden leading-none " style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}  >
+              <span className="block text-[#FFD700] heading-m md:heading-l lg:grotesk-tight font-normal leading-tight"  style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
                 ONBOARD & IN LOUNGE
               </span>
-              <span className="block text-white heading-m md:heading-l lg:heading-xl font-normal leading-tight tracking-[0.05em] mt-[-0.2em]">
+              <span className="block text-white heading-m md:heading-l lg:grotesk-light font-normal leading-tight  mt-[-0.2em]" style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}>
                 ENTERTAINMENT
               </span>
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex items-start">
-            <p className="body-normal-d pt-4 lg:mx-0 lg:max-w-full">
+            <p className="body-normal-d pt-4 lg:mx-0 lg:max-w-full" style={{ fontFamily: '"Right Grotesk Compact", sans-serif' }}>
               Dream Stream is the only engagement platform that's ubiquitously
               available without download or the internet, for travellers across
               the World who want freedom, choice, and control of the.
