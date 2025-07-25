@@ -112,9 +112,7 @@ export default function TravelCompanion() {
               <TravelHero
                 heading={slides[currentImageIndex].heading}
                 description={slides[currentImageIndex].description}
-                
               />
-
               <TravelIllustration />
               <TravelFeatures />
               <EntertainmentCTA />

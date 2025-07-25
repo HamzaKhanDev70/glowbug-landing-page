@@ -66,20 +66,20 @@ function TravelType({
 
       <div className="flex-1 text-center lg:text-left mx-4">
         <h3 className="flex items-center mb-3 gap-2 leading-tight md:leading-none text-words whitespace-normal text-wrap break-words">
-          <span className="heading-s sm:heading-l lg:heading-xl font-bold">
+          <span className="heading-s sm:heading-l lg:heading-xl ">
             {title}
           </span>
 
           {type && (
             <>
               <br />
-              <span className="heading-s sm:heading-l lg:heading-xl font-normal">
+              <span className="heading-s sm:heading-l lg:heading-xl font-light">
                 {type}
               </span>
             </>
           )}
         </h3>
-        <span className="block heading-s font-bold mb-6">{brief}</span>
+        <span className="block heading-m  mb-6">{brief}</span>
         <p className="body-normal leading-relaxed max-w-[600px] mx-auto lg:mx-0">
           {description}
         </p>

@@ -11,7 +11,7 @@ export default function MobileAppShowcase() {
               <h1 className="heading-m  font-normal mb-4">
                 Elevate your entertainment
               </h1>
-              <p className="text-sm leading-relaxed max-w-[500px]">
+              <p className="body-normal-a leading-relaxed max-w-[500px]">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -41,7 +41,7 @@ export default function MobileAppShowcase() {
               <h1 className="heading-m  font-normal mb-4">
                 Experience magic in motion
               </h1>
-              <p className="text-sm leading-relaxed max-w-[500px]">
+              <p className="body-normal-a leading-relaxed max-w-[500px]">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley

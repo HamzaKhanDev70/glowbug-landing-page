@@ -37,7 +37,7 @@ export default function HowItWorks() {
         />
         
         <div className="relative z-10 lg:mt-18">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 md:mb-16 gap-8 pt-40">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 md:mb-16 md:mx-8 pt-40 ">
             <div>
               <h2 className="heading-l sm:heading-s md:heading-l lg:heading-xl text-[#FFD700] leading-tight">
                 HOW IT WORKS IN
@@ -48,9 +48,7 @@ export default function HowItWorks() {
             </div>
             <div className="max-w-xl heading-s font-normal leading-text-x/9">
               DreamStream is the only engagement platform that's ubiquitously
-              available
-              <br />
-              without download or the internet.
+              available without download or the internet.
             </div>
           </div>
 
@@ -58,20 +56,22 @@ export default function HowItWorks() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="relative flex flex-col md:flex-row items-center text-center md:text-left md:items-stretch border border-[#FFD700] rounded-[16px] p-6 md:p-8 gap-6 md:gap-10 bg-transparent"
+                className="relative flex border border-[#FFD700] rounded-[16px] p-6 md:p-8 gap-6 md:gap-35 bg-transparent"
               >
                 <div className="text-[#FFD700] heading-l sm:heading-s md:heading-l lg:heading-xl flex-shrink-0 leading-none">
                   {step.number}
                 </div>
-                <div className="flex-1 flex flex-col gap-2">
-                  <div className="heading-s sm:heading-s md:heading-l lg:heading-xl tracking-[-0.01em] mb-1">
+               <div className=" flex flex-col md:flex-row items-center text-center md:text-left md:items-stretch">
+                 <div className="flex-1 flex flex-col gap-2">
+                  <div className=" body-normal-ques tracking-[-0.01em] mb-1">
                     {step.title}
                   </div>
-                  <div className="body-normal">{step.description}</div>
+                  <div className="body-normal-d">{step.description}</div>
                 </div>
                 <div className="absolute top-4 right-4 transform -rotate-45">
                   <FaArrowRight className="text-[#FFD700] text-2xl md:text-3xl" />
                 </div>
+               </div>
               </div>
             ))}
           </div>

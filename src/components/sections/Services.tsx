@@ -80,7 +80,7 @@ const Services = () => {
                       Illo maxime aperiam ducimus blanditiis.
                     </p>
                   </div>
-                  <button className="text-s md:text-2xl w-auto bg-blue-500 px-2 py-1 sm:px-6 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base hidden sm:block">
+                  <button className="body-normal md:text-2xl w-auto bg-blue-500 px-2 py-1 sm:px-6 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base hidden sm:block">
                     <Link href="/experience" aria-label="Experience">
                       EXPERIENCE
                     </Link>
@@ -226,10 +226,10 @@ const Services = () => {
         {/* Left Cell */}
         <div className={`${isEven ? "md:order-2 md:justify-end text-right" : "md:order-1 md:justify-start"} flex justify-center `}>
           <div className="w-full max-w-[500px]">
-            <h4 className="text-[#FFD300] heading-s xl:heading-l mb-4">
+            <h4 className="text-[#FFD300] heading-s xl:heading-m mb-4">
               {service.title}
             </h4>
-            <p className="body-normal xl:text-xl text-gray-300">
+            <p className="body-normal  text-gray-300">
               {service.description}
             </p>
           </div>

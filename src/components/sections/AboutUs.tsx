@@ -43,14 +43,16 @@ const AboutUs = () => {
       </div>
 
       <div className="text-center max-w-5xl mx-auto px-4 pt-16">
-  <h1 className="text-[#FEE300] text-3xl md:text-4xl lg:text-5xl font-semibold mb-10 tracking-tight">
+  <h1 className="text-[#FEE300] heading-m mb-10 tracking-tight">
     OUR STORY
   </h1>
 
-  <div className="text-left space-y-8 text-gray-300 text-base sm:text-lg leading-relaxed">
+  <div className="text-left space-y-8 text-gray-300 body-normal leading-relaxed">
     <p>
       <strong className="text-white">Our Story</strong><br />
-      It started with silence. Not the peaceful kind but the kind you feel mid-journey, when the Wi-Fi doesn't connect, your screen goes dark, and you're left watching the world pass by without being part of it.
+        <blockquote className="italic text-white border-l-4 border-[#FEE300] pl-4">
+      It started with silence.
+    </blockquote> Not the peaceful kind but the kind you feel mid-journey, when the Wi-Fi doesn't connect, your screen goes dark, and you're left watching the world pass by without being part of it.
     </p>
 
     <p>
@@ -91,28 +93,33 @@ const AboutUs = () => {
       <li>Driven by the belief that travel time doesn’t have to be lost time.</li>
     </ul>
 
-    <p className="font-semibold text-white">
+   
+      <blockquote className="italic text-white border-l-4 border-[#FEE300] pl-4">
       DreamStream is more than a product. It’s a promise: Wherever you go, your world moves with you.
-    </p>
-
+    </blockquote>
+      <blockquote className="italic text-white border-l-4 border-[#FEE300] pl-4">
+      
     <p className="italic text-[#FEE300] text-xl">Magic in motion.</p>
+    </blockquote>
+
+    
 
     <div className="pt-8 space-y-4">
       <div>
-        <h3 className="text-white text-xl font-semibold">Purpose</h3>
+        <h3 className="text-white body-normal font-semibold">Purpose</h3>
         <p>To enable travelers across the world to find moments of magic in motion</p>
       </div>
       <div>
-        <h3 className="text-white text-xl font-semibold">Mission</h3>
+        <h3 className="text-white body-normal font-semibold">Mission</h3>
         <p>DreamStream reimagines the way in which travelers are entertained and engaged through a powerful platform that provides captivating content on any device on any mode of travel.</p>
       </div>
       <div>
-        <h3 className="text-white text-xl font-semibold">Vision</h3>
+        <h3 className="text-white body-normal font-semibold">Vision</h3>
         <p>A world in which travelers are free to engage, delight and dream regardless of context or connectivity.</p>
       </div>
       <div>
-        <h3 className="text-white text-xl font-semibold">Core Values – The 6E’s</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-[#FEE300] font-medium pt-2">
+        <h3 className="text-white body-normal font-semibold">Core Values – The 6E’s</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-[#FEE300] body-normal pt-2">
           <span>Envision</span>
           <span>Empower</span>
           <span>Explore</span>

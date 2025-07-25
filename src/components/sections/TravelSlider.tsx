@@ -82,12 +82,11 @@ This isn’t about replacing the old stage, it’s about extending it. DreamStre
   };
   return (
     <section className="relative ">
-      <div className="relative z-10 w-full py-16 md:py-20">
-        <div className="absolute left-10 md:left-40 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-3xl lg:rounded-l-[64px]" />
-
-        <div className="max-w-[1200px] mx-auto relative">
-          <div className="overflow-visible pl-5 md:pl-20">
-            <div className="mx-auto max-w-[1400px]">
+      <div className="relative z-10 w-full py-16 md:py-20  ">
+        <div className="absolute left-10 md:left-40 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-3xl lg:rounded-l-[64px] " />
+        <div className="max-w-[1500px] mx-auto relative ">
+          <div className="overflow-x-hidden pl-5 md:ml-45 ">
+            <div className="mx-auto max-w-[1500px]">
               <Swiper
                 modules={[Pagination, Navigation]}
                 spaceBetween={100}
@@ -142,7 +141,7 @@ This isn’t about replacing the old stage, it’s about extending it. DreamStre
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
                       <div className="absolute bottom-0 left-0 right-0 p-8">
-                        <h3 className="heading-m sm:heading-s md:heading-m lg:heading-xl font-bold  mb-3 ">
+                        <h3 className="heading-m sm:heading-s md:heading-m lg:heading-xl  mb-3 ">
                           {slide.title}
                         </h3>
                         <p className="body-normal leading-relaxed max-w-[90%]">

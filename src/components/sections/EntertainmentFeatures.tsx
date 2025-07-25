@@ -1,31 +1,31 @@
 const features = [
   {
-    image:"/images/watch.png",
+    image: "/images/watch.png",
     title: "Watch",
     items: ["Movies", "TV", "Live", "Video Podcasts"],
   },
   {
-   image:"/images/headphones.png",
+    image: "/images/headphones.png",
     title: "Listen",
     items: ["Artists", "Playlists", "Featured", "Podcasts"],
   },
   {
-    image:"/images/game.png",
+    image: "/images/game.png",
     title: "Play",
     items: ["Action adventure", "Roleplay & strategy", "Sports", "Puzzles"],
   },
   {
-   image:"/images/devotion.png",
+    image: "/images/devotion.png",
     title: "Devotion",
     items: ["Meditations", "Prayers", "Recitations"],
   },
   {
-    image:"/images/read.png",
+    image: "/images/read.png",
     title: "Read",
     items: ["News", "Magazines", "E-books"],
   },
   {
-    image:"/images/destination.png",
+    image: "/images/destination.png",
     title: "Destination",
     items: ["Arrival time", "Location highlights", "Things to do"],
   },
@@ -35,25 +35,22 @@ export default function EntertainmentFeatures() {
   return (
     <section className="relative w-full pt-16 md:pt-20">
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-start justify-between mb-12 md:mb-20 gap-8 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row items-start justify-between mb-12 md:mb-20 gap-8 text-center lg:text-left mx-12 ">
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
             <div className="block w-full overflow-hidden leading-none">
-  <span className="block text-[#FFD700] heading-m md:heading-l lg:heading-xl font-normal leading-tight tracking-[-0.04em]">
-    ONBOARD & IN LOUNGE
-  </span>
-  <span className="block text-white heading-m md:heading-l lg:heading-xl font-normal leading-tight tracking-[0.05em] mt-[-0.2em]">
-    ENTERTAINMENT
-  </span>
-</div>
-
+              <span className="block text-[#FFD700] heading-m md:heading-l lg:heading-xl font-normal leading-tight tracking-[-0.04em]">
+                ONBOARD & IN LOUNGE
+              </span>
+              <span className="block text-white heading-m md:heading-l lg:heading-xl font-normal leading-tight tracking-[0.05em] mt-[-0.2em]">
+                ENTERTAINMENT
+              </span>
+            </div>
           </div>
           <div className="w-full lg:w-1/2 flex items-start">
-            <p className="body-normal pt-4 lg:mx-0 lg:max-w-full">
-              Here we need to mention categories and all the sub-categories only
-              and if the customer clicks on to any one of these it should be
-              redirected to that particular category on the platform experience
-              portal OR you can also include experience specific to the category
-              for the look and feel only.
+            <p className="body-normal-d pt-4 lg:mx-0 lg:max-w-full">
+              Dream Stream is the only engagement platform that's ubiquitously
+              available without download or the internet, for travellers across
+              the World who want freedom, choice, and control of the.
             </p>
           </div>
         </div>
@@ -67,14 +64,14 @@ export default function EntertainmentFeatures() {
                 background: "linear-gradient(180deg, #4A1D00 0%, #2A1100 100%)",
               }}
             >
-             <div className="mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-        <img
-          src={feature.image}
-          alt={feature.title}
-          className="w-full h-full object-contain"
-        />
-      </div>
-              <h3 className="heading-m  text-white font-bold mb-2 sm:mb-4">
+              <div className="mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="heading-m  text-white  mb-2 sm:mb-4">
                 {feature.title}
               </h3>
               <div className="flex flex-col gap-1 sm:gap-2">

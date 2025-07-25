@@ -111,16 +111,17 @@ export default function  Entertainment() {
               </>
 
               <div className="mt-3 text-center max-w-[1800px] mx-auto text-black px-2 sm:px-6">
-                <h2 className="heading-m md:heading-l lg:heading-xl font-bold leading-[1] mb-0 text-black">
+                <h2 className="heading-m md:heading-l lg:heading-xl font-grotesk font-[500] leading-[1] mb-0 text-black">
                   ONBOARD & IN LOUNGE
                 </h2>
                 <h3 className="heading-s md:heading-m font-normal leading-[1] mb-4 lg:mb-8 text-black sm:tracking-[.38em]">
                   ENTERTAINMENT
                 </h3>
 
-                <p className="body-normal mb-8 lg:mb-13 max-w-[800px] mx-auto text-black">
-                  Walkthrough video of the platform, a step-by-step guide on how
-                  to use the platform as described in the steps above.
+                <p className="body-normal-d mb-8 lg:mb-13 max-w-[800px] mx-auto text-black">
+                    Dream Stream is the only engagement platform that's ubiquitously
+              available without download or the internet, for travellers across
+              the World who want freedom, choice, and control of the.
                 </p>
 
                 <div

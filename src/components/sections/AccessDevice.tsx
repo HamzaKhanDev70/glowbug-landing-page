@@ -157,8 +157,8 @@ export default function AccessDevice() {
         <Image
           src="/images/icon1.png"
           alt="Bring your own device"
-          width={32}
-          height={32}
+          width={45}
+          height={45}
         />
       ),
       title: "Bring your own device",
@@ -170,8 +170,8 @@ export default function AccessDevice() {
         <Image
           src="/images/icon2.png"
           alt="No wifi or download"
-          width={32}
-          height={32}
+          width={45}
+          height={45}
         />
       ),
       title: "No wifi or download",
@@ -183,8 +183,8 @@ export default function AccessDevice() {
         <Image
           src="/images/icon3.png"
           alt="Free access during travel"
-          width={32}
-          height={32}
+         width={45}
+          height={45}
         />
       ),
       title: "Free access during travel",
@@ -241,7 +241,7 @@ export default function AccessDevice() {
                 </h2>
               </div>
 
-              <p className="text-white body-normal lg:heading-xs font-normal mb-4 sm:mb-8 break-words whitespace-normal">
+              <p className="text-white body-normal font-normal mb-4 sm:mb-8 break-words whitespace-normal">
                 Here the experience for DreamStream should be embedded that by
                 clicking the “Tablet” the user shall be redirected to the DSPK
                 sandbox experience. Insertion of Motion Reel created through
@@ -253,13 +253,13 @@ export default function AccessDevice() {
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex-1 flex flex-col items-center  text-left min-w-0"
+                    className="flex-1 flex flex-col items-start  text-left min-w-0"
                   >
-                    <div className="mb-2 sm:mb-4">{feature.icon}</div>
-                    <h3 className="heading-s sm:heading-xs md:heading-s font-bold  mb-1 sm:mb-2 leading-tight">
+                    <div className="mb-2 sm:mb-4 ">{feature.icon}</div>
+                    <h3 className="heading-s sm:heading-xs md:heading-s  mb-1 sm:mb-2 leading-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-[#FFFFFF] body-normal break-words whitespace-normal text-center">
+                    <p className="text-[#FFFFFF] body-normal break-words whitespace-normal text-left">
                       {feature.description}
                     </p>
                   </div>

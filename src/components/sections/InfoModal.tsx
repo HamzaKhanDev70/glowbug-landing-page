@@ -60,17 +60,17 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
             </div>
           </div>
           {/* Right Text */}
-          <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[350px] overflow-auto  text-center sm:text-left">
-            <h2 className="text-xl md:text-2xl font-bold sm:mb-2 text-yellow-300 tracking-[.25rem] ">
+          <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[350px] overflow-auto scrollbar-hide  text-center sm:text-left">
+            <h2 className="heading-m sm:mb-2 text-yellow-300 tracking-[.25rem] ">
               {data.title}
               <span className=" text-xl md:text-2xl font-light mb-4">
                 {data.type}
               </span>
             </h2>
-               <span className="block text-sm md:heading-s text-gray-300 whitespace-pre-line break-words">
+               <span className="block body-normal text-gray-300 whitespace-pre-line break-words">
             {data.brief}
           </span>
-            <p className="text-sm xl:text-base text-gray-300 whitespace-pre-line break-words ">{data.description}</p>
+            <p className="body-normal text-gray-300 whitespace-pre-line break-words ">{data.description}</p>
 
             {link && (
               <div className="pt-4 hidden sm:block">
@@ -132,17 +132,17 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
             </div>
           </div>
           {/* Right Text */}
-          <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[430px] overflow-auto text-center sm:text-left ">
-            <h2 className="text-xl md:text-2xl font-bold sm:mb-2 text-yellow-300 tracking-[.25rem]">
+          <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[430px] overflow-y-auto scrollbar-hide text-center sm:text-left ">
+            <h2 className="heading-m sm:mb-2 text-yellow-300 tracking-[.25rem]">
               {data.title}
-              <span className=" text-xl md:text-2xl font-light mb-4">
+              <span className=" heading-m  mb-4">
                 {data.type}
               </span>
             </h2>
-               <span className="block text-sm md:heading-s text-gray-300 whitespace-pre-line break-words">
+               <span className="block heading-s text-gray-300 whitespace-pre-line break-words">
             {data.brief}
           </span>
-            <p className="text-sm md:text-base text-gray-300 whitespace-pre-line break-words ">{data.description}</p>
+            <p className="body-normal text-gray-300 whitespace-pre-line break-words ">{data.description}</p>
 
             {link && (
               <div className="pt-4 hidden sm:block">

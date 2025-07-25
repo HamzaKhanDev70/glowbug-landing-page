@@ -140,11 +140,11 @@ export default function ContactUs() {
       {/* Content & Form */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left Column */}
-        <div className="pl-4 mt-4">
-          <button className="bg-blue-500 heading-s font-normal px-4 py-2 rounded-2xl mb-4">
-            Get in Touch
+        <div className="pl-32 mt-4">
+          <button className="bg-blue-500 body-normal uppercase px-4 py-2 rounded-2xl mb-4">
+            Contact us
           </button>
-          <h2 className="text-[#FEE300] heading-s sm:heading-l font-normal mb-4">
+          <h2 className="text-[#FEE300] heading-s sm:heading-m font-normal mb-4">
             Let’s Get In Touch.
           </h2>
           <p className="body-normal">
@@ -220,7 +220,7 @@ export default function ContactUs() {
           </div>
 
           {/* Reason for Contact - Dropdown */}
-          <div className="relative">
+          <div className="relative body-normal">
             <label className="body-normal">Reason for Contact</label>
             <div className="relative mt-2">
               <List className="absolute left-3 top-1/2 transform -translate-y-1/2  w-5 h-5" />
@@ -234,9 +234,10 @@ export default function ContactUs() {
                 <option value="" disabled>
                   Select reason...
                 </option>
-                <option value="Feedback">Feedback</option>
-                <option value="Support">Support</option>
-                <option value="Collaboration">Collaboration</option>
+                <option value="Feedback">Request a Demo</option>
+                <option value="Support">Advertising or Sponsership</option>
+                <option value="Collaboration">Feedback or Suggestion</option>
+                <option value="Other">General Inquiry</option>
                 <option value="Other">Other</option>
               </select>
             </div>
@@ -268,11 +269,11 @@ export default function ContactUs() {
               className="w-4 h-4  focus:ring-yellow-400"
             />
             <label className="body-normal text-white">
-              I hereby agree to our
+              I hereby agree to our {" "}
               <a href="#" className="underline text-blue-600">
                 Privacy Policy
               </a>
-              terms.
+             {" "} terms.
             </label>
           </div>
 

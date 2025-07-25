@@ -111,7 +111,7 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
   />
     {/* 🔸 Content */}
     <div className="relative z-10 max-w-8xl mx-auto pt-35">
-      <h2 className="text-[#FEE300] heading-s md:heading-m lg:heading-l text-center mb-12">
+      <h2 className=" md:heading-m text-center mb-12">
         OUR TEAM
       </h2>
 
@@ -133,12 +133,12 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
 
               {/* Text - aligned left */}
               <div className="p-4 text-left">
-                <p className="text-sm uppercase tracking-wide text-gray-300 mb-1">
+                <p className="body-normal uppercase tracking-wide text-gray-300 mb-1">
                   {member.title}
                 </p>
-                <h4 className="font-semibold text-white">{member.name}</h4>
+                <h4 className="heading-s text-white">{member.name}</h4>
                 {member.description && (
-                  <p className="text-sm tracking-wide text-gray-300 text-justify">
+                  <p className="body-normal-a tracking-wide text-gray-300 text-justify">
                     {getFirst25Words(member.description)}
                     <button
                       className="text-[#FEE300] ml-2 underline text-xs"
