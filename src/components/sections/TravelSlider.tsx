@@ -142,7 +142,7 @@ This isn’t about replacing the old stage, it’s about extending it. DreamStre
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
                       <div className="absolute bottom-0 left-0 right-0 p-8">
-                        <h3 className="heading-m sm:heading-s md:heading-m lg:heading-xl font-bold text-white mb-3 ">
+                        <h3 className="heading-m sm:heading-s md:heading-m lg:heading-xl font-bold  mb-3 ">
                           {slide.title}
                         </h3>
                         <p className="body-normal leading-relaxed max-w-[90%]">
