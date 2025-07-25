@@ -37,11 +37,11 @@ export default function EntertainmentFeatures() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between mb-12 md:mb-20 gap-8 text-center lg:text-left mx-12 ">
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-            <div className="block w-full overflow-hidden leading-none " style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}  >
-              <span className="block text-[#FFD700] heading-m md:heading-l lg:grotesk-tight font-normal leading-tight"  style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
+            <div className="block w-full overflow-hidden leading-none " >
+              <span className="block text-[#FFD700]  grotesk-tight text-[36px] sm:text-[82px] lg:text-[88px] whitespace-nowrap"  style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
                 ONBOARD & IN LOUNGE
               </span>
-              <span className="block text-white heading-m md:heading-l lg:grotesk-light font-normal leading-tight  mt-[-0.2em]" style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}>
+              <span className="block grotesk-light text-[22px] sm:text-[50px] " style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}>
                 ENTERTAINMENT
               </span>
             </div>

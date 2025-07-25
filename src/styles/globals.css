@@ -234,6 +234,6 @@ body {
   }
 @utility grotesk-light-narrow {
     font-family: "Right Grotesk", sans-serif;
-    font-size: 37px;
+    /* font-size: 37px; */
       line-height: 1;
   }
