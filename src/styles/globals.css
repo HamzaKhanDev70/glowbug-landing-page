@@ -5,7 +5,7 @@
 @layer base {
   body {
     @apply min-h-screen antialiased;
-      font-family: 'Right Grotesk', 'Inter', sans-serif;
+      font-family:  'Inter', sans-serif;
   }
 }
 
@@ -225,15 +225,15 @@ body {
  
 @utility grotesk-tight {
     font-family: "Right Grotesk", sans-serif;
-    font-size: 105px;
+    font-size: 72px;
   }
 @utility grotesk-light {
     font-family: "Right Grotesk", sans-serif;
-    font-size: 64px;
+    font-size: 44px;
       line-height: 1;
   }
 @utility grotesk-light-narrow {
     font-family: "Right Grotesk", sans-serif;
-    font-size: 53px;
+    font-size: 37px;
       line-height: 1;
   }
