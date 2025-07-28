@@ -47,7 +47,7 @@ export default function AccessDevice() {
   ];
 
   return (
- <section className="relative">
+ <section className="relative pr-7 ">
   
     <div
       className="w-full bg-black bg-no-repeat bg-center bg-contain aspect-[1920/1850] flex items-center relative -top-3"
@@ -72,7 +72,7 @@ export default function AccessDevice() {
 
 
         <div
-          className="relative w-[90%] flex items-center justify-center px-4  py-8 sm:py-12 lg:py-0 "
+          className="relative w-[100%] flex items-center justify-center px-4  py-8 sm:py-12 lg:py-0 "
           style={{ overflow: "visible" }}
         >
           <div
@@ -87,7 +87,7 @@ export default function AccessDevice() {
                 <span className="">Access on your own device:</span>
               </h2>
               <h2 className="uppercase font-inter heading-l sm:heading-s md:heading-m lg:heading-xl">
-                <span className="block text-[#00A3FF] font-bold">
+                <span className="block text-[#00A3FF] font-bold whitespace-normal wrap-break-word">
                   ANYWHERE. ANY TIME.
                 </span>
               </h2>
@@ -104,13 +104,13 @@ export default function AccessDevice() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex-1 flex flex-col items-start  text-left min-w-0"
+                  className="flex-1 flex flex-col items-center md:items-start  text-left min-w-0"
                 >
                   <div className="mb-2 sm:mb-4 ">{feature.icon}</div>
-                  <h3 className="heading-s sm:heading-xs md:heading-s  mb-1 sm:mb-2 leading-tight" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
+                  <h3 className="heading-s sm:heading-xs md:heading-s  mb-1 sm:mb-2 leading-tight text-center md:text-left" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
                     {feature.title}
                   </h3>
-                  <p className="text-[#FFFFFF] body-normal break-words whitespace-normal text-left">
+                  <p className="text-[#FFFFFF] body-normal break-words whitespace-normal text-center md:text-left">
                     {feature.description}
                   </p>
                 </div>
@@ -127,7 +127,7 @@ export default function AccessDevice() {
         </div> */}
 
          <div
-        className="relative z-1 w-full -mt-4 "
+        className="relative z-1 w-full -mt-4"
         style={{
           backgroundImage: "url('/images/rectangle-20.png')",
           backgroundSize: "cover",
@@ -139,7 +139,7 @@ export default function AccessDevice() {
           height: "100%",
         }}
       >
-        <div className="px-8 relative lg:-top-40 ">
+        <div className="px-8 relative lg:-top-35 ">
           <MobileAppShowcase />
         </div>
         <div className="flex items-center justify-center  ">

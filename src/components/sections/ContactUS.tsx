@@ -5,6 +5,21 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+const validationSchema = Yup.object({
+  fullName: Yup.string().required("Full name is required") .max(100, "Full name must be 100 characters or less"),
+  email: Yup.string().email("Invalid email address").required("Email is required"),
+  phone: Yup.string().required("Phone number is required"),
+  reason: Yup.string().required("Reason for contact is required"),
+  message: Yup.string()
+    .required("Message is required")
+    .test("wordCount", "Message must not exceed 300 words", value => {
+      if (!value) return true;
+      return value.trim().split(/\s+/).length <= 300;
+    }),
+  agree: Yup.boolean().oneOf([true], "You must agree to the terms"),
+});
 
 export default function ContactUs() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -154,141 +169,199 @@ export default function ContactUs() {
           </p>
         </div>
 
-        {/* Right Column - Form */}
+  <Formik
+  initialValues={{
+    fullName: "",
+    email: "",
+    phone: "",
+    reason: "",
+    message: "",
+    agree: false,
+  }}
+  validationSchema={validationSchema}
+  onSubmit={async (values, { setSubmitting, resetForm, setStatus }) => {
+    setLoading(true);
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: values.email,
+          subject: "You're on the list – DreamStream is LIVE!",
+          body: `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #ffffff; color: #333; border: 1px solid #eee;">
+      <h2 style="color: #2B2D42;">Welcome to <span style="color: #F72585;">DreamStream</span> </h2>
 
-        <form
-          onSubmit={handleSubmit}
-          className="bg-[#2F2F2F] p-6 shadow-md space-y-5 text-white"
-        >
-          {/* Full Name */}
-          <div className="relative">
-            <label className="body-normal">Full Name</label>
-            <div className="relative mt-2">
-              <User className="absolute left-3 top-1/2 transform -translate-y-1/2  w-5 h-5" />
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Enter Your Full Name..."
-                value={formData.fullName}
-                onChange={handleChange}
-                required
-                className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
-              />
-            </div>
-          </div>
+      <p>Hi ${formData.fullName || "there"},</p>
 
-          {/* Email */}
-          <div className="relative">
-            <label className="body-normal">Email Address</label>
-            <div className="relative mt-2">
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2  w-5 h-5" />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
-              />
-            </div>
-          </div>
+      <p>Thanks for joining us on this exciting journey.</p>
 
-          {/* Phone */}
-          <div className="relative">
-            <label className="body-normal">Phone Number</label>
-            <PhoneInput
-              country={"pk"}
-              value={formData.phone}
-              onChange={(phone) => setFormData((prev) => ({ ...prev, phone }))}
-              inputStyle={{
-                width: "100%",
-                backgroundColor: "black",
-                color: "gray",
-                paddingLeft: "48px",
-                height: "48px",
-                borderRadius: "12px",
-                // border: "1px solid #4B5563", // Tailwind's border-gray-600
-              }}
-              buttonStyle={{
-                backgroundColor: "black",
-                borderRight: "1px solid #4B5563",
-              }}
-              dropdownStyle={{ backgroundColor: "gray", color: "white" }}
-              containerStyle={{ width: "100%" }}
-            />
-          </div>
+      <p>We're thrilled to welcome you to <strong>DreamStream – Magic in Motion</strong>.</p>
 
-          {/* Reason for Contact - Dropdown */}
-          <div className="relative body-normal">
-            <label className="body-normal">Reason for Contact</label>
-            <div className="relative mt-2">
-              <List className="absolute left-3 top-1/2 transform -translate-y-1/2  w-5 h-5" />
-              <select
-                name="reason"
-                value={formData.reason}
-                onChange={handleChange}
-                required
-                className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
-              >
-                <option value="" disabled>
-                  Select reason...
-                </option>
-                <option value="Feedback">Request a Demo</option>
-                <option value="Support">Advertising or Sponsership</option>
-                <option value="Collaboration">Feedback or Suggestion</option>
-                <option value="Other">General Inquiry</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-          </div>
+      <p>We’re bringing you a next-generation platform that transforms your travel experience with:</p>
+      <ul>
+        <li> Seamless entertainment across buses, trains, ferries, and flights</li>
+        <li> Entertainment you’ll love, anywhere you go</li>
+      </ul>
 
-          {/* Message */}
-          <div className="relative">
-            <label className="body-normal">Message</label>
-            <div className="relative mt-2">
-              <textarea
-                name="message"
-                placeholder="Your Message (300 words max)"
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                className="w-full bg-black text-white pl-10 pt-3 p-3 rounded-xl border border-gray-600 resize-none"
-                required
-              />
-            </div>
-          </div>
+      <p>Our mission is to keep you connected and entertained, no matter where your journey takes you.</p>
 
-          {/* Checkbox */}
-          <div className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              name="agree"
-              checked={formData.agree}
-              onChange={handleChange}
-              className="w-4 h-4  focus:ring-yellow-400"
-            />
-            <label className="body-normal text-white" >
-              I hereby agree to our {" "}
-              <a href="#" className="underline text-blue-600">
-                Privacy Policy
-              </a>
-             {" "} terms.
-            </label>
-          </div>
+      <p>Thanks for being a part of the future of travel.</p>
 
-          {/* Error */}
-          {error && <p className="text-red-500 text-sm">{error}</p>}
+      <p>Stay tuned,</p>
 
-          {/* Submit */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-yellow-400 text-black text-xl py-3 rounded font-normal hover:bg-yellow-500 transition"
+      <p style="font-weight: bold;">The DreamStream Team<br/>Powered by NKU Technologies</p>
+
+      <hr style="margin: 40px 0;"/>
+
+      <small style="color: #888;">You received this email because you signed up on our website.<br/>
+      If you didn’t, you can ignore this email.</small>
+    </div>
+  `,
+          fullName: values.fullName,
+          phone: values.phone,
+          reason: values.reason,
+          message: values.message,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send email");
+
+      setShowSuccessModal(true);
+      resetForm();
+    } catch (err) {
+      console.error(err);
+      setErrorMsg("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+      setSubmitting(false);
+    }
+  }}
+>
+  {({ isSubmitting, values, setFieldValue }) => (
+    <Form className="bg-[#2F2F2F] p-6 shadow-md space-y-5 text-white">
+      {/* Full Name */}
+      <div>
+        <label className="body-normal">Full Name</label>
+        <div className="relative mt-2">
+          <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5" />
+          <Field
+            type="text"
+            name="fullName"
+            placeholder="Enter Your Full Name..."
+            className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
+          />
+          <ErrorMessage name="fullName" component="div" className="text-red-500 text-sm" />
+        </div>
+      </div>
+
+      {/* Email */}
+      <div>
+        <label className="body-normal">Email Address</label>
+        <div className="relative mt-2">
+          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5" />
+          <Field
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
+          />
+          <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
+        </div>
+      </div>
+
+      {/* Phone (custom handler) */}
+      <div>
+        <label className="body-normal">Phone Number</label>
+        <PhoneInput
+          country={"pk"}
+          value={values.phone}
+          onChange={(phone) => setFieldValue("phone", phone)}
+          inputStyle={{
+            width: "100%",
+            backgroundColor: "black",
+            color: "gray",
+            paddingLeft: "48px",
+            height: "48px",
+            borderRadius: "12px",
+          }}
+          buttonStyle={{
+            backgroundColor: "black",
+            borderRight: "1px solid #4B5563",
+          }}
+          dropdownStyle={{ backgroundColor: "gray", color: "white" }}
+          containerStyle={{ width: "100%" }}
+        />
+        <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
+      </div>
+
+      {/* Reason */}
+      <div>
+        <label className="body-normal">Reason for Contact</label>
+        <div className="relative mt-2">
+          <List className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5" />
+          <Field
+            as="select"
+            name="reason"
+            className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
           >
-            {loading ? "Submitting..." : "Submit Form"}
-          </button>
-        </form>
+            <option value="" disabled>
+              Select reason...
+            </option>
+            <option value="Request a Demo">Request a Demo</option>
+            <option value="Advertising">Advertising or Sponsorship</option>
+            <option value="Feedback">Feedback or Suggestion</option>
+            <option value="General">General Inquiry</option>
+            <option value="Other">Other</option>
+          </Field>
+          <ErrorMessage name="reason" component="div" className="text-red-500 text-sm" />
+        </div>
+      </div>
+
+      {/* Message */}
+      <div>
+        <label className="body-normal">Message</label>
+        <Field
+          as="textarea"
+          name="message"
+          placeholder="Your Message (300 words max)"
+          rows={5}
+          className="w-full bg-black text-white pl-10 pt-3 p-3 rounded-xl border border-gray-600 resize-none"
+        />
+        <ErrorMessage name="message" component="div" className="text-red-500 text-sm" />
+      </div>
+
+      {/* Checkbox */}
+      <div className="flex items-center space-x-2">
+        <Field type="checkbox" name="agree" className="w-4 h-4 focus:ring-yellow-400" />
+        <label className="body-normal text-white">
+          I hereby agree to our{" "}
+          <a href="#" className="underline text-blue-600">
+            Privacy Policy
+          </a>{" "}
+          terms.
+        </label>
+      </div>
+      <ErrorMessage name="agree" component="div" className="text-red-500 text-sm" />
+
+      {/* Error */}
+      {errorMsg && <p className="text-red-500 text-sm">{errorMsg}</p>}
+
+      {/* Submit */}
+      <button
+        type="submit"
+        disabled={loading || isSubmitting}
+        className="w-full bg-yellow-400 text-black text-xl py-3 rounded font-normal hover:bg-yellow-500 transition"
+      >
+        {loading ? "Submitting..." : "Submit Form"}
+      </button>
+    </Form>
+  )}
+</Formik>
+
+
+        
       </div>
 
       {/* success modal */}

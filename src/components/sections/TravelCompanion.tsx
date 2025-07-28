@@ -57,8 +57,8 @@ export default function TravelCompanion() {
   }, [slides.length]);
 
   return (
-    <div className="overflow-x-hidden w-full overflow-y-clip">
-      <div className="px-5 md:px-10 mt-10 md:mt-22">
+    <div className="overflow-x-hidden w-full overflow-y-clip ">
+      <div className="px-5 md:px-10 mt-5 md:mt-6">
         <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100vh-200px)]">
           <div className="absolute inset-0 w-full h-full">
             {slides.map((slide, index) => (
@@ -74,7 +74,7 @@ export default function TravelCompanion() {
             ))}
           </div>
           {/* Arrows for Slider Navigation */}
-          <div className="absolute inset-0 z-20 sm:flex hidden flex items-center justify-between px-4 md:px-10">
+          <div className="absolute inset-0 z-20 sm:flex hidden  items-center justify-between px-4 md:px-10">
             {/* Left Arrow */}
             {currentImageIndex > 0 && (
               <button

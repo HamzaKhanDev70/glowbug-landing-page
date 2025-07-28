@@ -51,13 +51,13 @@ export default function HowItWorks() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="relative flex border border-[#FFD700] rounded-[16px] p-6 md:p-8 gap-6 md:gap-35 bg-transparent"
+                className="relative flex flex-col sm:flex-row border border-[#FFD700] rounded-[16px] p-6 md:p-8 gap-6 md:gap-35 bg-transparent"
               >
                 <div className="text-[#FFD700] heading-l sm:heading-s md:heading-l lg:heading-xl flex-shrink-0 leading-none" style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>
                   {step.number}
                 </div>
                <div className=" flex flex-col md:flex-row items-center text-center md:text-left md:items-stretch">
-                 <div className="flex-1 flex flex-col gap-2">
+                 <div className="flex-1 flex flex-col gap-2 text-start sm:text-center">
                   <div className=" body-normal-ques tracking-[-0.01em] mb-1">
                     {step.title}
                   </div>
