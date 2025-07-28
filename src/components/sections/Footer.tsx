@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 text-center md:text-left">
           <div className="lg:col-span-1">
-            <h3 className="heading-s sm:heading-s md:heading-m lg:heading-l mb-4">Company</h3>
+            <h3 className="lg:heading-s mb-4 font-inter font-bold">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.name}>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-1">
-            <h3 className="heading-s sm:heading-s md:heading-m lg:heading-l mb-4">Contact</h3>
+            <h3 className="lg:heading-s  font-inter font-bold mb-4">Contact</h3>
             <ul className="space-y-2">
               {contactInfo.map((contact) => (
                 <li key={contact.name}>
@@ -52,8 +52,8 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center md:items-start lg:col-span-2 lg:justify-self-end">
-            <h3 className="heading-s sm:heading-s md:heading-m lg:heading-l mb-4">Download Now</h3>
-            <div className="flex items-center body-normal gap-4">
+            <h3 className="lg:heading-s mb-4 font-inter font-bold">Download Now</h3>
+            <div className="flex flex-col items-center body-normal gap-4">
               <Link href="#">
                 <Image src="/images/playStore.png" alt="Get it on Google Play" width={135} height={40} />
               </Link>

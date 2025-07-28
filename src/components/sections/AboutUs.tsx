@@ -6,13 +6,11 @@ import ClippedSection from "./Clipped-Section";
 const AboutUs = () => {
   return (
     <section className="w-full px-2">
-    
-<ClippedSection
+      <ClippedSection
         backgroundImage="/images/about-us.png"
         headingWhite="About"
         headingYellow="us"
         paragraph="We are on a journey to empower creators and delight streamers around the globe."
-        
       />
       <div className="text-center max-w-5xl mx-auto px-4 pt-16">
         <h1 className="text-[#FEE300] heading-m mb-10 tracking-tight">

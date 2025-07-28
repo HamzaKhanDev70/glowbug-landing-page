@@ -28,7 +28,7 @@ const  CompanyPartner:React.FC<CompanyPartnerProp>=({heading})=> {
   return (
     <section className={`w-full py-16 px-4 ${heading?"bg-black":"bg-transparent opacity-50"} text-white`}>
       <div className="max-w-9xl mx-auto text-center">
-        <h2 className="text-[#FEE300] heading-s md:heading-m mb-8">
+        <h2 className="text-[#FEE300] heading-s md:heading-m mb-8" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
   {heading}
         </h2>
 

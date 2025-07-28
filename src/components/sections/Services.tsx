@@ -30,7 +30,7 @@ const servicesData = [
     image: "/images/crew.png",
   },
   {
-    title: "DreamCrew - Redefining Onboard Communication",
+    title: "BYOD Compatible Platform",
     description:
       "Whether on a flight, a bus, or a train, our BYOD platform ensures that you get the same entertainment experience anywhere. Amplify your travel experience with DreamStream and unlock a world of infinite entertainment possibilities.",
     image: "/images/byod.png",
@@ -140,7 +140,7 @@ const Services = () => {
         }}
       >
         <div className=" h-[370px] sm:h-[450px]  lg:h-[200px] ">
-Extra back ground div
+{/* Extra back ground div */}
         </div>
         {servicesData.map((service, index) => {
           const isEven = index % 2 === 1;
@@ -160,7 +160,7 @@ Extra back ground div
                 } flex justify-center `}
               >
                 <div className="w-full max-w-[500px]">
-                  <h4 className="text-[#FFD300] heading-s xl:heading-m mb-4">
+                  <h4 className="text-[#FFD300] heading-s xl:heading-m mb-4" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
                     {service.title}
                   </h4>
                   <p className="body-normal  text-gray-300">

@@ -16,7 +16,7 @@ const ClippedSection: React.FC<ClippedSectionProps> = ({
   headingYellow = "US",
   paragraph = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maxime aperiam ducimus blanditiis.",
   buttonLabel ,
-  buttonLink =""
+  buttonLink="/"
 }) => {
   return (
     <div
@@ -33,16 +33,16 @@ const ClippedSection: React.FC<ClippedSectionProps> = ({
     >
       <div className="relative px-12 py-40 text-white overflow-hidden rounded-[10px] custom-clip bg-gradient">
         <div className="max-w-4xl mx-auto text-left space-y-16 ">
-          <h3 className="text-[#FFD300] heading-s font-bold sm:heading-l mb-0 sm:mb-6 tracking-wider uppercase">
+          <h3 className="text-[#FFD300] heading-s font-bold sm:heading-l mb-0 sm:mb-6 tracking-wider uppercase" style={{ fontFamily: '"Right Grotesk WideMedium", sans-serif' }}>
             <span className="text-white">{headingWhite}</span>{" "}
             <span className="text-[#FFD300]">{headingYellow}</span>
           </h3>
           <p className="text-white mb-4 body-normal">{paragraph}</p>
-          <button className="body-normal md:text-2xl w-auto bg-blue-500 px-2 py-1 sm:px-6 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base ">
+         {buttonLabel?( <button className="body-normal md:text-2xl w-auto bg-blue-500 px-2 py-1 sm:px-6 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base ">
             <Link href={buttonLink} aria-label={buttonLabel}>
               {buttonLabel}
             </Link>
-          </button>
+          </button>):""}
         </div>
       </div>
     </div>

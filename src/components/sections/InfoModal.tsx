@@ -11,7 +11,9 @@ interface InfoModalProps {
     type?: string;
     description?: string;
     details?:string;
-    brief?:string
+    briefd?:string;
+    brief?:string;
+    promo?:string
   } | null;
   link?: string;
   buttonLabel?: string;
@@ -61,7 +63,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
           </div>
           {/* Right Text */}
           <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[350px] overflow-auto scrollbar-hide  text-center sm:text-left">
-            <h2 className="heading-m sm:mb-2 text-yellow-300 tracking-[.25rem] ">
+            <h2 className="heading-m sm:mb-2 text-yellow-300 tracking-[.25rem] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
               {data.title}
               <span className=" text-xl md:text-2xl font-light mb-4">
                 {data.type}
@@ -133,16 +135,19 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
           </div>
           {/* Right Text */}
           <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[430px] overflow-y-auto scrollbar-hide text-center sm:text-left ">
-            <h2 className="heading-m sm:mb-2 text-yellow-300 tracking-[.25rem]">
-              {data.title}
-              <span className=" heading-m  mb-4">
+            <h2 className="heading-m sm:mb-2 text-yellow-300 ] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
+              {data.title} {" "}
+              <span className="  ">
                 {data.type}
               </span>
             </h2>
-               <span className="block heading-s text-gray-300 whitespace-pre-line break-words">
+              <span className=" heading-m  mb-6 " style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>
+                {data.promo}
+              </span>
+               <span className="block heading-m text-gray-300 whitespace-pre-line break-words my-6 " style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>
             {data.brief}
           </span>
-            <p className="body-normal text-gray-300 whitespace-pre-line break-words ">{data.description}</p>
+            <p className="body-normal text-gray-300 whitespace-pre-line break-words ">{data.briefd + data.description}</p>
 
             {link && (
               <div className="pt-4 hidden sm:block">
