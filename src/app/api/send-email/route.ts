@@ -22,15 +22,15 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
- await prisma.contactSubmission.create({
-      data: {
-        fullName,
-        email: to,
-        phone,
-        reason,
-        message,
-      },
-    });
+//  await prisma.contactSubmission.create({
+//       data: {
+//         fullName,
+//         email: to,
+//         phone,
+//         reason,
+//         message,
+//       },
+//     });
     const params = {
       Source: process.env.FROM_EMAIL!,
       Destination: {
