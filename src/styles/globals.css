@@ -86,14 +86,14 @@ body {
 }
 @font-face {
   font-family: "Right Grotesk";
-  src: url("/fonts/right-grotesk/RightGrotesk-TightMedium.otf") format("opentype");
+  src: url("/fonts/right-grotesk/RightGrotesk-TightMedium.woff") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Right Grotesk";
-  src: url("/fonts/right-grotesk/RightGrotesk-NarrowLight.otf") format("opentype");
+  src: url("/fonts/right-grotesk/RightGrotesk-NarrowLight.woff") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
