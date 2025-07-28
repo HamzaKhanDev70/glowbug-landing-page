@@ -34,10 +34,10 @@ export default function HowItWorks() {
         <div className="relative z-10 mt-18 lg:mt-18">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 md:mb-16  ">
             <div className="whitespace-nowrap">
-              <h2 className="grotesk-tight text-[52px] md:text-[82px] text-[#FFD700] "  style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
+              <h2 className="grotesk-tight text-[4rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] text-[#FFD700] "  style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
                 HOW IT WORKS IN
               </h2>
-              <div className="grotesk-light-narrow text-[26px] md:text-[43px]"  style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}>
+              <div className="grotesk-light text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem]"  style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}>
                 3 SIMPLE STEPS
               </div>
             </div>

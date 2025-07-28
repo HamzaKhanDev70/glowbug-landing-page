@@ -14,6 +14,9 @@
     text-wrap: balance;
   }
 }
+html {
+  font-size: clamp(14px, 1.5vw, 18px);
+}
 
 :root {
   --background: #ffffff;

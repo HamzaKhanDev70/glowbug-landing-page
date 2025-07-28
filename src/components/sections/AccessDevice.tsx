@@ -133,7 +133,7 @@ export default function AccessDevice() {
           height: "100%",
         }}
       >
-        <div className="px-8 relative lg:-top-40 border-4 border-amber-200">
+        <div className="px-8 relative lg:-top-40 ">
           <MobileAppShowcase />
         </div>
         <div className="flex items-center justify-center  ">
