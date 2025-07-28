@@ -52,38 +52,7 @@ body {
   .btn-gradient:hover {
     opacity: 0.9;
   }
-  
-@font-face {
-  font-family: "Right Grotesk";
-  src: url("/fonts/right-grotesk/RightGrotesk-CompactRegular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Right Grotesk";
-  src: url("/fonts/right-grotesk/RightGrotesk-WideMedium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: "Right Grotesk";
-  src: url("/fonts/right-grotesk/RightGrotesk-CompactBlack.otf") format("opentype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Right Grotesk";
-  src: url("/fonts/right-grotesk/RightGrotesk-Dark.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
 @font-face {
   font-family: 'Right Grotesk Tight';
   src: url('/fonts/RightGrotesk-TightMedium.woff2') format('woff2');
