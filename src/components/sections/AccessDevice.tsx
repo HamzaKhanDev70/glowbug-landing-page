@@ -56,14 +56,20 @@ export default function AccessDevice() {
       }}
     >
       <div className=" h-auto  w-full grid grid-cols-1 md:grid-cols-2  items-center">
-       
-        <div className="">
-          <img
-            src="/images/Group 35.png"
-            alt="Visual"
-            className="w-full mx-auto"
-          />
-        </div>
+       <div>
+  <a
+    href="https://dspk-sandbox.airfi.io/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/images/Group 35.png"
+      alt="Visual"
+      className="w-full mx-auto cursor-pointer"
+    />
+  </a>
+</div>
+
 
         <div
           className="relative w-[90%] flex items-center justify-center px-4  py-8 sm:py-12 lg:py-0 "
