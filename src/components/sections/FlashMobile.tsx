@@ -8,7 +8,7 @@ export default function MobileAppShowcase() {
           {/* Left Block */}
           <div className="flex-1 flex justify-end">
             <div className="text-white text-center lg:text-left self-center lg:mt-22">
-              <h1 className="heading-m  font-normal mb-4">
+              <h1 className="heading-m  font-normal mb-4" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
                 Elevate your entertainment
               </h1>
               <p className="body-normal-a leading-relaxed max-w-[500px]">
@@ -38,7 +38,7 @@ export default function MobileAppShowcase() {
           {/* Right Block */}
           <div className="flex-1 flex justify- lg:mt-22">
             <div className="text-white text-center lg:text-left self-center ">
-              <h1 className="heading-m  font-normal mb-4">
+              <h1 className="heading-m  font-normal mb-4" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
                 Experience magic in motion
               </h1>
               <p className="body-normal-a leading-relaxed max-w-[500px]">

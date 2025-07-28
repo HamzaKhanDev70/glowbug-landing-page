@@ -76,11 +76,11 @@ export default function AccessDevice() {
             <div className="w-full text-center md:text-start">
               <h2
                 className="uppercase grotesk-light-narrow text-[72px] text-wrap "
-                style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}
+                style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}
               >
                 <span className="">Access on your own device:</span>
               </h2>
-              <h2 className="uppercase heading-l sm:heading-s md:heading-m lg:heading-xl">
+              <h2 className="uppercase font-inter heading-l sm:heading-s md:heading-m lg:heading-xl">
                 <span className="block text-[#00A3FF] font-bold">
                   ANYWHERE. ANY TIME.
                 </span>
@@ -101,7 +101,7 @@ export default function AccessDevice() {
                   className="flex-1 flex flex-col items-start  text-left min-w-0"
                 >
                   <div className="mb-2 sm:mb-4 ">{feature.icon}</div>
-                  <h3 className="heading-s sm:heading-xs md:heading-s  mb-1 sm:mb-2 leading-tight">
+                  <h3 className="heading-s sm:heading-xs md:heading-s  mb-1 sm:mb-2 leading-tight" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
                     {feature.title}
                   </h3>
                   <p className="text-[#FFFFFF] body-normal break-words whitespace-normal text-left">
