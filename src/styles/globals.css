@@ -55,14 +55,14 @@ body {
 
 @font-face {
   font-family: 'Right Grotesk Tight';
-  src: url('/fonts/RightGrotesk-TightMedium.woff2') format('woff2');
+  src: url('/fonts/right-grotesk/RightGrotesk-TightMedium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Right Grotesk Narrow';
-  src: url('/fonts/RightGrotesk-NarrowLight.woff2') format('woff2');
+  src: url('/fonts/right-grotesk/RightGrotesk-NarrowLight.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
 }
