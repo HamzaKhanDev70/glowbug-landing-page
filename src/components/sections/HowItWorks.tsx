@@ -53,7 +53,7 @@ export default function HowItWorks() {
                 key={step.number}
                 className="relative flex border border-[#FFD700] rounded-[16px] p-6 md:p-8 gap-6 md:gap-35 bg-transparent"
               >
-                <div className="text-[#FFD700] heading-l sm:heading-s md:heading-l lg:heading-xl flex-shrink-0 leading-none">
+                <div className="text-[#FFD700] heading-l sm:heading-s md:heading-l lg:heading-xl flex-shrink-0 leading-none" style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>
                   {step.number}
                 </div>
                <div className=" flex flex-col md:flex-row items-center text-center md:text-left md:items-stretch">
