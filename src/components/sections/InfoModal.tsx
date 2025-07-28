@@ -147,7 +147,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
                <span className="block heading-m text-gray-300 whitespace-pre-line break-words my-6 " style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>
             {data.brief}
           </span>
-            <p className="body-normal text-gray-300 whitespace-pre-line break-words ">{data.briefd + data.description}</p>
+            <p className="body-normal text-gray-300 whitespace-pre-line break-words ">{(data?.briefd??"") + (data?.description??"")}</p>
 
             {link && (
               <div className="pt-4 hidden sm:block">
