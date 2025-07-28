@@ -127,9 +127,7 @@ const Services = () => {
 
       <div
         className="
-    relative z-10
-    px-4 sm:px-10 md:px-20 lg:px-32 xl:px-50
-    mx-auto space-y-5  flex flex-col items-center justify-between gap-20 
+    relative z-10    mx-auto space-y-5  flex flex-col items-center justify-between gap-20 
   "
         style={{
           backgroundImage: "url('/images/vector-1.png')",
@@ -147,7 +145,7 @@ const Services = () => {
             <div
               key={index}
               className={`
-          grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center  w-full `}
+          grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center  w-1/2 `}
             >
               {/* Left Cell */}
               <div
