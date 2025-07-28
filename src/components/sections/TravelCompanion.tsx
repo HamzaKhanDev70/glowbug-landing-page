@@ -34,13 +34,13 @@ export default function TravelCompanion() {
         "DreamStream delivers the same seamless experience— whether jet or train, bus or cruise we have it covered for you.",
     },
     {
-      image: "/images/header-byod.jpg",
+      image: "/images/slide1.png",
 
       heading: "Your Journey, Your Screen",
       description: "Watch, Listen, Read, Play and Meditate",
     },
     {
-      image: "/images/buss.png",
+      image: "/images/bus-slider.png",
 
       heading: "Passenger-First Entertainment Everywhere",
       description:
