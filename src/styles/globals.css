@@ -85,19 +85,19 @@ body {
   font-display: swap;
 }
 @font-face {
-  font-family: "Right Grotesk";
-  src: url("/fonts/right-grotesk/RightGrotesk-TightMedium.woff") format("opentype");
+  font-family: 'Right Grotesk Tight';
+  src: url('/fonts/RightGrotesk-TightMedium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: "Right Grotesk";
-  src: url("/fonts/right-grotesk/RightGrotesk-NarrowLight.woff") format("opentype");
+  font-family: 'Right Grotesk Narrow';
+  src: url('/fonts/RightGrotesk-NarrowLight.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
+
 /* Swiper custom styles */
 .swiper-container {
   overflow: visible !important;
