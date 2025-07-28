@@ -83,7 +83,7 @@ export default function Navbar() {
               </div>
             </div>
             {/* Button positioned absolutely */}
-            <div className="hidden md:block absolute -right-2 md:top-[4.4rem] lg:top-[4.5rem] xl:top-1/2 -translate-y-1/2">
+            <div className="hidden xl:block absolute -right-2 md:top-[4.4rem] lg:top-[4.5rem] xl:top-1/2 -translate-y-1/2">
               <Link href="/contact-us" aria-label="Contact Us">
                 <Button variant="primary" className="body-normal ">
                   GET IN TOUCH

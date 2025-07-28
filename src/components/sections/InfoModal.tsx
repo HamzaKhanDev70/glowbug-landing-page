@@ -75,7 +75,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
             {link && (
               <div className="pt-4 hidden sm:block">
                 <Link href={link} aria-label={buttonLabel}>
-                  <Button variant="primary" className="md:text-xs lg:text-sm">
+                  <Button variant="primary" className="body-normal">
                     {buttonLabel}
                   </Button>
                 </Link>
@@ -147,7 +147,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
             {link && (
               <div className="pt-4 hidden sm:block">
                 <Link href={link} aria-label={buttonLabel}>
-                  <Button variant="primary" className="md:text-xs lg:text-sm">
+                  <Button variant="primary" className="body-normal">
                     {buttonLabel}
                   </Button>
                 </Link>

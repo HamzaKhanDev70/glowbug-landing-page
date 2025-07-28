@@ -37,8 +37,7 @@ export default function TravelCompanion() {
       image: "/images/header-byod.jpg",
 
       heading: "Your Journey, Your Screen",
-      description:
-        "Watch, Listen, Read, Play and Meditate",
+      description: "Watch, Listen, Read, Play and Meditate",
     },
     {
       image: "/images/buss.png",
@@ -49,13 +48,9 @@ export default function TravelCompanion() {
     },
   ];
 
-
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % slides.length
-      );
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(interval);
@@ -78,11 +73,63 @@ export default function TravelCompanion() {
               />
             ))}
           </div>
+          {/* Arrows for Slider Navigation */}
+          <div className="absolute inset-0 z-20 sm:flex hidden flex items-center justify-between px-4 md:px-10">
+            {/* Left Arrow */}
+            {currentImageIndex > 0 && (
+              <button
+                onClick={() => setCurrentImageIndex(currentImageIndex - 1)}
+                className="text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition"
+                aria-label="Previous Slide"
+              >
+                {/* Replace with your preferred icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+            )}
+
+            {/* Right Arrow */}
+            {currentImageIndex < slides.length - 1 && (
+              <button
+                onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
+                className="text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition"
+                aria-label="Next Slide"
+              >
+                {/* Replace with your preferred icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            )}
+          </div>
 
           {slides.map(
             (image, index) =>
               index !== currentImageIndex && (
-                <link key={index} rel="preload" as="image"  />
+                <link key={index} rel="preload" as="image" />
               )
           )}
 

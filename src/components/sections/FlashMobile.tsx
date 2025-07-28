@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function MobileAppShowcase() {
   return (
-    <section className="relative w-full flex items-center justify-center bg-transparent z-20 py-16 px-4 md:px-8 ">
-      <div className="max-w-[1600px] w-full mx-auto">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-0 xl:gap-10  lg:px-12">
+    <section className="relative w-full flex items-center justify-center bg-transparent z-20 px-4 md:px-8 ">
+      <div className="max-w-[1400px] w-full mx-auto">
+        <div className="flex flex-col md:flex-row items-center lg:items-start justify-center gap-10 md:gap-0 xl:gap-10  lg:px-12">
           {/* Left Block */}
           <div className="flex-1 flex justify-end">
             <div className="text-white text-center lg:text-left self-center lg:mt-22">

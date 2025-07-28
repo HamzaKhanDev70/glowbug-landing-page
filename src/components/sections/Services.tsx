@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Experience from "./Experience";
 import Link from "next/link";
+import ClippedSection from "./Clipped-Section";
 const servicesData = [
   {
     title: "Entertainment Superhighway",
@@ -41,57 +42,32 @@ const Services = () => {
       id="services"
       className="relative"
       style={{
-        // border: "1px solid yellow",
         position: "relative",
       }}
     >
       <div>
         <div
           style={{ backgroundColor: "black" }}
-          className="h-[70px] sm:h-[150px] md:h-[170px] lg:h-[300px] xl:h-[400px]  overflow-visible"
+          className="h-[70px] sm:h-[150px] md:h-[150px] lg:h-[300px] xl:h-[400px]  overflow-visible"
         >
           <div className="flex justify-center ">
             <div className="relative w-[95vw] aspect-[21/9] z-20">
-              <Image
-                src="/images/plane.png"
-                alt="About Us"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 90vw, 90vw"
-              />
+              
 
-              <div className="absolute -top-[1%] left-[4%] w-[60vw] max-w-[1600px] aspect-[9/6] z-30">
-                <Image
-                  src="/images/rectangle-38.png"
-                  alt="Overlay"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 80vw, 40vw"
-                />
-                {/* Text Overlay on second image */}
-                <div className="absolute top-1/2 -left-1  md:left-4 -translate-y-1/2 z-40 text-white max-w-3xl px-4">
-                  <h3 className="text-[#FFD300] heading-s font-bold sm:heading-xl mb-0 sm:mb-6 tracking-wider uppercase">
-                    <span className="text-white">our</span>
-                    <span className="text-[#FFD300]"> Services</span>
-                  </h3>
-                  <div className="">
-                    <p className="text-white mb-4 body-normal">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Illo maxime aperiam ducimus blanditiis.
-                    </p>
-                  </div>
-                  <button className="body-normal md:text-2xl w-auto bg-blue-500 px-2 py-1 sm:px-6 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base hidden sm:block">
-                    <Link href="/experience" aria-label="Experience">
-                      EXPERIENCE
-                    </Link>
-                  </button>
-                </div>
-              </div>
+             <ClippedSection
+        backgroundImage="/images/about-us.png"
+        headingWhite="our"
+        headingYellow="services"
+        paragraph="We are on a journey to empower creators and delight streamers around the globe."
+        buttonLabel="Experience"
+        buttonLink="/experience"
+      />
             </div>
           </div>
         </div>
-        {/* --------------------------sir zeeshan */}
-        {/* <div
+      </div>
+      {/* --------------------------sir zeeshan */}
+      {/* <div
           style={{
             // height: "200px",
             width: "95%",
@@ -107,7 +83,7 @@ const Services = () => {
           }}
           className="h-[282px] sm:h-[320px] md:h-[500px] lg-h-[600px] -top-[0.5%] sm:top-[2%] md:top-[4%]"
         > */}
-        {/* <div style={{  padding: "3%" }}>
+      {/* <div style={{  padding: "3%" }}>
             <div
               style={{
                 // border: "1px solid red",
@@ -146,121 +122,72 @@ const Services = () => {
             </div>
           </div> */}
 
-        {/* </div> */}
-        {/* -------------------------------------- */}
+      {/* </div> */}
+      {/* -------------------------------------- */}
 
-        {/* <div
-          className="
-    relative z-10  
-   pt-[30%]
-    px-4 sm:px-10 md:px-20 lg:px-32 xl:px-40 
-    mx-auto space-y-24
+      <div
+        className="
+    relative z-10
+
+    px-4 sm:px-10 md:px-20 lg:px-32 xl:px-40
+    mx-auto space-y-24  flex flex-col items-center justify-between gap-20 
   "
-          style={{
-            backgroundImage: "url('/images/vector-1.png')",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "top center",
-          }}
-        >
-          {servicesData.map((service, index) => {
-            const isEven = index % 2 === 1;
-            return (
-              <div
-                key={index}
-                className={`flex flex-col md:flex-row gap-10 md:gap-20 ${
-                  isEven ? "md:flex-row-reverse md:text-end" : ""
-                } items-center md:items-start`}
-              >
-                
-                <div className="w-full md:w-1/2 min-h-[320px] sm:min-h-[470px] flex items-center justify-center">
-                  <div>
-                    <h4 className="text-[#FFD300] heading-s  xl:heading-l   mb-4">
-                      {service.title}
-                    </h4>
-                    <p className="body-normal xl:text-xl xl:font-normal  text-gray-300">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-
-                <div className={`relative w-64  h-64 sm:w-80 sm:h-80 lg:w-[470px] lg:h-[470px] `}>
-                  <div className="absolute inset-0 overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className={`w-full h-full object-contain ${
-                        isEven ? "object-left" : "object-right"
-                      }`}
-                    />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div> */}
-        <div
-          className="
-    relative z-10  
-    pt-[30%]
-    px-4 sm:px-10 md:px-20 lg:px-32 xl:px-40 
-    mx-auto space-y-24  flex flex-col items-center justify-around gap-20
-  "
-          style={{
-            backgroundImage: "url('/images/vector-1.png')",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "top center",
-          }}
-        >
-          {servicesData.map((service, index) => {
-            const isEven = index % 2 === 1;
-
-            return (
-              <div
-                key={index}
-                className={`
-          grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0 items-center  xl:mx-28 
-        `}
-              >
-                {/* Left Cell */}
-                <div
-                  className={`${
-                    isEven
-                      ? "md:order-2 md:justify-end text-right"
-                      : "md:order-1 md:justify-start"
-                  } flex justify-center `}
-                >
-                  <div className="w-full max-w-[500px]">
-                    <h4 className="text-[#FFD300] heading-s xl:heading-m mb-4">
-                      {service.title}
-                    </h4>
-                    <p className="body-normal  text-gray-300">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Right Cell */}
-                <div
-                  className={`${
-                    isEven
-                      ? "md:order-1 md:justify-start"
-                      : "md:order-2 md:justify-end"
-                  } flex justify-center `}
-                >
-                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[410px] lg:h-[470px]  overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-contain "
-                    />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        style={{
+          backgroundImage: "url('/images/vector-1.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "top center",
+        }}
+      >
+        <div className=" h-[370px] sm:h-[450px]  lg:h-[200px] ">
+Extra back ground div
         </div>
+        {servicesData.map((service, index) => {
+          const isEven = index % 2 === 1;
+
+          return (
+            <div
+              key={index}
+              className={`
+          grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center  w-full      `}
+            >
+              {/* Left Cell */}
+              <div
+                className={`${
+                  isEven
+                    ? "md:order-2 md:justify-end text-right"
+                    : "md:order-1 md:justify-start"
+                } flex justify-center `}
+              >
+                <div className="w-full max-w-[500px]">
+                  <h4 className="text-[#FFD300] heading-s xl:heading-m mb-4">
+                    {service.title}
+                  </h4>
+                  <p className="body-normal  text-gray-300">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Cell */}
+              <div
+                className={`${
+                  isEven
+                    ? "md:order-1 md:justify-start"
+                    : "md:order-2 md:justify-end"
+                } flex justify-center `}
+              >
+                <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[410px] lg:h-[470px]  overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-contain "
+                  />
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
