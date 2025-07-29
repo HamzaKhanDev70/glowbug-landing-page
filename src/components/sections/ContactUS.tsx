@@ -8,7 +8,7 @@ import "react-phone-input-2/lib/style.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 const validationSchema = Yup.object({
-  fullName: Yup.string().required("Full name is required") .max(100, "Full name must be 100 characters or less"),
+  fullName: Yup.string().required("Full name is required") .max(10, "Full name must be 10 characters or less"),
   email: Yup.string().email("Invalid email address").required("Email is required"),
   phone: Yup.string().required("Phone number is required"),
   reason: Yup.string().required("Reason for contact is required"),
@@ -37,105 +37,6 @@ export default function ContactUs() {
     agree: false,
   });
 
-  const [error, setError] = useState("");
-
-  const countWords = (text: string) => {
-    return text.trim().split(/\s+/).filter(Boolean).length;
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value, type } = e.target;
-    const isCheckbox = type === "checkbox";
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]:
-        isCheckbox && e.target instanceof HTMLInputElement
-          ? e.target.checked
-          : value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!formData.agree) {
-      setError("You must agree to the terms.");
-      return;
-    }
-
-    const wordCount = countWords(formData.message);
-    if (wordCount > 300) {
-      setError("Message exceeds 300 word limit.");
-      return;
-    }
-
-    setLoading(true);
-    const payload = {
-      to: formData.email,
-      subject: "You're on the list – DreamStream is LIVE!",
-      body: `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #ffffff; color: #333; border: 1px solid #eee;">
-      <h2 style="color: #2B2D42;">Welcome to <span style="color: #F72585;">DreamStream</span> </h2>
-
-      <p>Hi ${formData.fullName || "there"},</p>
-
-      <p>Thanks for joining us on this exciting journey.</p>
-
-      <p>We're thrilled to welcome you to <strong>DreamStream – Magic in Motion</strong>.</p>
-
-      <p>We’re bringing you a next-generation platform that transforms your travel experience with:</p>
-      <ul>
-        <li> Seamless entertainment across buses, trains, ferries, and flights</li>
-        <li> Entertainment you’ll love, anywhere you go</li>
-      </ul>
-
-      <p>Our mission is to keep you connected and entertained, no matter where your journey takes you.</p>
-
-      <p>Thanks for being a part of the future of travel.</p>
-
-      <p>Stay tuned,</p>
-
-      <p style="font-weight: bold;">The DreamStream Team<br/>Powered by NKU Technologies</p>
-
-      <hr style="margin: 40px 0;"/>
-
-      <small style="color: #888;">You received this email because you signed up on our website.<br/>
-      If you didn’t, you can ignore this email.</small>
-    </div>
-  `,
-      fullName: formData.fullName,
-      phone: formData.phone,
-      reason: formData.reason,
-      message: formData.message,
-    };
-
-    try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!res.ok) throw new Error("Failed to send email");
-      const data = await res.json();
-      setSuccessMsg("Email sent successfully ");
-      setShowSuccessModal(true);
-
-      setEmail("");
-    } catch (err: any) {
-      console.error(err);
-      setErrorMsg("Something went wrong ");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-12 overflow-visible">
@@ -225,9 +126,7 @@ export default function ContactUs() {
           message: values.message,
         }),
       });
-
       if (!res.ok) throw new Error("Failed to send email");
-
       setShowSuccessModal(true);
       resetForm();
     } catch (err) {

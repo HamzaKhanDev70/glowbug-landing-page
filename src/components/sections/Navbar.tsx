@@ -170,13 +170,14 @@ export default function Navbar() {
     //   )}
     // </nav>
 
+    // --------------------
 
     <nav className="bg-dark-800 py-3">
-            <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
-         <div className="flex items-center justify-between">
-        <div className="flex-shrink-0 md:hidden mt-4">
-             <Link href="/" aria-label="Home">
-               <Image
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="flex items-center justify-between">
+          <div className="flex-shrink-0 md:hidden mt-4">
+            <Link href="/" aria-label="Home">
+              <Image
                 src="/images/HeaderLogo.png"
                 alt="Header Logo"
                 width={60}
@@ -184,81 +185,80 @@ export default function Navbar() {
               />
             </Link>
           </div>
-  <div className="hidden md:flex w-full relative items-center justify-between px-6 lg:px-0 xl:px-14">
+          <div className="hidden md:flex w-full relative items-center justify-between px-6 lg:px-0 xl:px-6">
+            {/* Left Button (invisible but takes space for balance) */}
+            <div className="invisible ">
+              <Link href="/contact-us" aria-label="Contact Us">
+                <Button
+                  variant="primary"
+                  className="text-[1rem] sm:body-normal"
+                >
+                  GET IN TOUCH
+                </Button>
+              </Link>
+            </div>
 
-    {/* Left Button (invisible but takes space for balance) */}
-    <div className="invisible ">
-      <Link href="/contact-us" aria-label="Contact Us">
-        <Button variant="primary" className="text-[1rem] sm:body-normal">
-          GET IN TOUCH
-        </Button>
-      </Link>
-    </div>
+            {/* Center Nav and Logo */}
+            <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center space-x-8 lg:space-x-20 ">
+              {/* Left Links */}
+              <div className="flex items-center space-x-8 lg:space-x-12">
+                {navItems.slice(0, 2).map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`body-normal transition-colors whitespace-nowrap ${
+                      pathname === item.href
+                        ? "text-white font-semibold"
+                        : "text-green-800 hover:text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
 
-    {/* Center Nav and Logo */}
-    <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center space-x-8 lg:space-x-20 ">
+              {/* Logo */}
+              <div className="flex-shrink-0">
+                <Link href="/" aria-label="Home" className="flex items-center">
+                  <Image
+                    src="/images/HeaderLogo.png"
+                    alt="Header Logo"
+                    width={70}
+                    height={30}
+                    className="object-contain"
+                  />
+                </Link>
+              </div>
 
-      {/* Left Links */}
-      <div className="flex items-center space-x-8 lg:space-x-12">
-        {navItems.slice(0, 2).map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className={`body-normal transition-colors whitespace-nowrap ${
-              pathname === item.href
-                ? "text-white font-semibold"
-                : "text-green-800 hover:text-white"
-            }`}
-          >
-            {item.name}
-          </Link>
-        ))}
-      </div>
+              {/* Right Links */}
+              <div className="flex items-center space-x-8 lg:space-x-12">
+                {navItems.slice(2).map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`body-normal transition-colors whitespace-nowrap ${
+                      pathname === item.href
+                        ? "text-white font-semibold"
+                        : "text-green-800 hover:text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
 
-      {/* Logo */}
-      <div className="flex-shrink-0">
-        <Link href="/" aria-label="Home" className="flex items-center">
-          <Image
-            src="/images/HeaderLogo.png"
-            alt="Header Logo"
-            width={70}
-            height={30}
-            className="object-contain"
-          />
-        </Link>
-      </div>
-
-      {/* Right Links */}
-      <div className="flex items-center space-x-8 lg:space-x-12">
-        {navItems.slice(2).map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className={`body-normal transition-colors whitespace-nowrap ${
-              pathname === item.href
-                ? "text-white font-semibold"
-                : "text-green-800 hover:text-white"
-            }`}
-          >
-            {item.name}
-          </Link>
-        ))}
-      </div>
-    </div>
-
-    {/* Right Button (visible and aligned to right) */}
-    <div className="hidden md:block ml-4">
-      <Link href="/contact-us" aria-label="Contact Us">
-        <Button variant="primary" className="body-normal p-0">
-          GET IN TOUCH
-        </Button>
-      </Link>
-    </div>
-  </div>
-
-
-           <div className="md:hidden flex items-center ">
-             <button
+            {/* Right Button (visible and aligned to right) */}
+            <div className="hidden md:block ml-4">
+              <Link href="/contact-us" aria-label="Contact Us">
+                <Button variant="primary" className="body-normal p-0">
+                  GET IN TOUCH
+                </Button>
+              </Link>
+            </div>
+          </div>
+          <div className="md:hidden flex items-center ">
+            <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-green-800 hover:text-white focus:outline-none"
@@ -303,7 +303,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-     {isOpen && (
+      {isOpen && (
         <div
           className="md:hidden   bg-transparent backdrop-blur-md backdrop-saturate-150"
           id="mobile-menu"
@@ -333,7 +333,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-</nav>
-
+    </nav>
   );
 }

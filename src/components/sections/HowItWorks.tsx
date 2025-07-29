@@ -56,8 +56,8 @@ export default function HowItWorks() {
                 <div className="text-[#FFD700] heading-l sm:heading-s md:heading-l lg:heading-xl flex-shrink-0 leading-none" style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>
                   {step.number}
                 </div>
-               <div className=" flex flex-col md:flex-row items-center text-center md:text-left md:items-stretch">
-                 <div className="flex-1 flex flex-col gap-2 text-start sm:text-center">
+               <div className=" flex flex-col md:flex-row items-left text-center md:text-start md:items-stretch">
+                 <div className="flex-1 flex flex-col gap-2 text-start ">
                   <div className=" body-normal-ques tracking-[-0.01em] mb-1">
                     {step.title}
                   </div>
