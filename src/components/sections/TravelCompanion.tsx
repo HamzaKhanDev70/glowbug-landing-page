@@ -8,6 +8,7 @@ import EntertainmentCTA from "./EntertainmentCTA";
 import TravelSlider from "./TravelSlider";
 import TravelTypes from "./TravelTypes";
 import Entertainment from "./Entertainment";
+import SliderDots from "./Slider_Dots";
 
 export default function TravelCompanion() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -59,18 +60,22 @@ export default function TravelCompanion() {
   return (
     <div className="overflow-x-hidden w-full overflow-y-clip ">
       <div className="px-5 md:px-10 mt-5 md:mt-6">
-        <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100vh-200px)]">
+        <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] ">
           <div className="absolute inset-0 w-full h-full">
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+                className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
                   index === currentImageIndex ? "opacity-100" : "opacity-0"
                 }`}
-                style={{
-                  backgroundImage: `url('${slide.image}')`,
-                }}
-              />
+              >
+                <div className="w-full aspect-[2/9] md:aspect-[3/7] bg-no-repeat bg-center bg-cover"
+                  style={{
+                    backgroundImage: `url('${slide.image}')`,
+                    backgroundPosition: "top", 
+                  }}
+                />
+              </div>
             ))}
           </div>
           {/* Arrows for Slider Navigation */}
@@ -133,34 +138,18 @@ export default function TravelCompanion() {
               )
           )}
 
-          <section className="w-full py-16 lg:py-30 flex items-center justify-center bg-dark-900/50 text-white relative z-10">
+          <section className="w-full py-16  flex items-center justify-center bg-dark-900/50 text-white relative z-10">
             <div className="w-full flex flex-col items-center">
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex justify-center gap-2 z-20">
-                {slides.map((_, index) => (
-                  <span
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2.5 h-2.5 rounded-full inline-block mx-1 cursor-pointer transition-all duration-300 ${
-                      index === currentImageIndex
-                        ? "bg-yellow-400 opacity-100"
-                        : "bg-purple-500 opacity-50 hover:opacity-80"
-                    }`}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        setCurrentImageIndex(index);
-                      }
-                    }}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
               <TravelHero
                 heading={slides[currentImageIndex].heading}
                 description={slides[currentImageIndex].description}
               />
               <TravelIllustration />
+              <SliderDots
+                currentIndex={currentImageIndex}
+                total={slides.length}
+                onSelect={(index) => setCurrentImageIndex(index)}
+              />
               <TravelFeatures />
               <EntertainmentCTA />
             </div>

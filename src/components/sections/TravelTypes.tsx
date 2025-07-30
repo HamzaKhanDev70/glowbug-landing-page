@@ -104,7 +104,7 @@ export default function TravelTypes() {
     {
       title: "BUS",
       type: "TRAVEL",
-      image: "/images/buss.png",
+      image: "/images/bus-travel.png",
       brief: "Big-screen stories on every road.",
       description:
         "Even on the longest highways and remote stretches, DreamStream transforms daily commutes into cinematic escapes. BYOD access makes every seat feel personal—and every mile more meaningful.",

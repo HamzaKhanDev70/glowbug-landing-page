@@ -7,7 +7,6 @@ export default function Home() {
       <TravelCompanion />
       <EntertainmentFeatures />
       <AccessDevice />
-     
     </main>
   );
 }

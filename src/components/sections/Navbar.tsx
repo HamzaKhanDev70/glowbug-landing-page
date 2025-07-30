@@ -1,12 +1,12 @@
 "use client";
-import Link from "next/link";
+import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 import Image from "next/image";
 import Button from "../ui/Button";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 
 const navItems = [
-  { name: "HOW IT WORKS", href: "/how-it-works" },
+  { name: "HOW IT WORKS", href:"/#access-device"  },
   { name: "SERVICES", href: "/services" },
   { name: "WHO IT'S FOR", href: "" },
   { name: "ABOUT US", href: "/about-us" },
@@ -15,7 +15,21 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+const router = useRouter();
 
+  const handleNavClick = (href: string) => {
+    const isSamePage = pathname === '/' && href.startsWith('/#');
+
+    if (isSamePage) {
+      const id = href.split('#')[1];
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      router.push(href);
+    }
+  };
   return (
     // <nav
     //   className="bg-dark-800"
@@ -172,7 +186,7 @@ export default function Navbar() {
 
     // --------------------
 
-    <nav className="bg-dark-800 py-3">
+    <nav className="bg-[#0B0707] py-3">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0 md:hidden mt-4">
@@ -201,21 +215,19 @@ export default function Navbar() {
             {/* Center Nav and Logo */}
             <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center space-x-8 lg:space-x-20 ">
               {/* Left Links */}
-              <div className="flex items-center space-x-8 lg:space-x-12">
-                {navItems.slice(0, 2).map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`body-normal transition-colors whitespace-nowrap ${
-                      pathname === item.href
-                        ? "text-white font-semibold"
-                        : "text-green-800 hover:text-white"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+            <div className="flex items-center space-x-8 lg:space-x-12">
+          {navItems.slice(0, 2).map((item) => (
+            <button
+              key={item.name}
+              onClick={() => handleNavClick(item.href)}
+              className={`body-normal transition-colors whitespace-nowrap bg-transparent ${
+                pathname === item.href ? 'text-white font-semibold' : 'text-green-800 hover:text-white'
+              }`}
+            >
+              {item.name}
+            </button>
+          ))}
+        </div>
 
               {/* Logo */}
               <div className="flex-shrink-0">
@@ -231,21 +243,19 @@ export default function Navbar() {
               </div>
 
               {/* Right Links */}
-              <div className="flex items-center space-x-8 lg:space-x-12">
-                {navItems.slice(2).map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`body-normal transition-colors whitespace-nowrap ${
-                      pathname === item.href
-                        ? "text-white font-semibold"
-                        : "text-green-800 hover:text-white"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+          <div className="flex items-center space-x-8 lg:space-x-12">
+          {navItems.slice(2).map((item) => (
+            <button
+              key={item.name}
+              onClick={() => handleNavClick(item.href)}
+              className={`body-normal transition-colors whitespace-nowrap bg-transparent ${
+                pathname === item.href ? 'text-white font-semibold' : 'text-green-800 hover:text-white'
+              }`}
+            >
+              {item.name}
+            </button>
+          ))}
+        </div>
             </div>
 
             {/* Right Button (visible and aligned to right) */}

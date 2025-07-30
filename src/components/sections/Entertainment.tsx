@@ -61,54 +61,57 @@ export default function  Entertainment() {
               className="w-full h-[1600px] sm:h-[1300px] lg:h-[1600px] max-h-[1900px] object-fill object-top "
             />
             <div className="absolute top-20 left-0 right-0 ">
-              <>
-                {/* SVG filter definition */}
-                <svg
-                  style={{ visibility: "hidden", position: "absolute" }}
-                  width="0"
-                  height="0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  version="1.1"
-                >
-                  <defs>
-                    <filter id="goo">
-                      <feGaussianBlur
-                        in="SourceGraphic"
-                        stdDeviation="8"
-                        result="blur"
-                      />
-                      <feColorMatrix
-                        in="blur"
-                        mode="matrix"
-                        values="1 0 0 0 0  
+            <>
+  {/* SVG filter definition */}
+  <svg
+    style={{ visibility: "hidden", position: "absolute" }}
+    width="0"
+    height="0"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+  >
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="1 0 0 0 0  
                   0 1 0 0 0  
                   0 0 1 0 0  
                   0 0 0 19 -9"
-                        result="goo"
-                      />
-                      <feComposite
-                        in="SourceGraphic"
-                        in2="goo"
-                        operator="atop"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
+          result="goo"
+        />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
 
-                {/* Filtered section */}
-                <div
-                  className="overflow-hidden rounded-2xl px-10 sm:px-16"
-                  style={{ filter: "url(#goo)" }}
-                >
-                  <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] [clip-path:polygon(0_21%,100%_0,100%_100%,0_79%)]">
-                    <img
-                      src="/images/mbl.png"
-                      alt="Clipped"
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </>
+  {/* Filtered section */}
+  <div
+    className="overflow-hidden rounded-2xl px-10 sm:px-16"
+    style={{ filter: "url(#goo)" }}
+  >
+    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] [clip-path:polygon(0_21%,100%_0,100%_100%,0_79%)]">
+      {/* Background Image */}
+      <img
+        src="/images/mbl.png"
+        alt="Clipped"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Centered Play Icon */}
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <img
+          src="/images/play-icon.png"
+          alt="Play"
+          className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"
+        />
+      </div>
+    </div>
+  </div>
+</>
+
 
               <div className="mt-3 text-center max-w-[1800px] mx-auto text-[#030202] px-2 sm:px-6" >
                 <h2 className="grotesk-tight text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] leading-[1.05] whitespace-nowrap" style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>

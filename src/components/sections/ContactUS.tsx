@@ -39,7 +39,7 @@ export default function ContactUs() {
 
 
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-12 overflow-visible">
+    <section className=" px-4 sm:px-6 lg:px-12 overflow-visible ">
       {/* Top Image */}
       <div className="flex justify-center mb-6">
         <div className="relative w-[95vw] aspect-[18/9]">
@@ -48,7 +48,7 @@ export default function ContactUs() {
             alt="contact Us"
             fill
             className="object-contain"
-            sizes="(max-width: 768px) 90vw, 90vw"
+            sizes="(max-width: 768px) 90vw, 90vw border-4 border-white"
           />
         </div>
       </div>

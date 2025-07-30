@@ -87,7 +87,7 @@ export default function Footer() {
                 className="hover:brightness-125 transition"
               />
             </Link>
-            <Link href="https://youtube.com" target="_blank">
+            {/* <Link href="https://youtube.com" target="_blank">
               <Image
                 src="/images/utube.png"
                 alt="YouTube"
@@ -95,7 +95,7 @@ export default function Footer() {
                 height={16}
                 className="hover:brightness-125 transition"
               />
-            </Link>
+            </Link> */}
             <Link href="https://www.threads.net" target="_blank">
               <Image
                 src="/images/thread.png"

@@ -47,7 +47,7 @@ export default function AccessDevice() {
   ];
 
   return (
- <section className="relative pr-7 ">
+ <section className="relative pr-7 " id="access-device">
   
     <div
       className="w-full bg-black bg-no-repeat bg-center bg-contain aspect-[1920/1850] flex items-center relative -top-3"
