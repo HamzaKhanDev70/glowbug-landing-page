@@ -55,7 +55,7 @@ const Services = () => {
               
 
              <ClippedSection
-        backgroundImage="/images/about-us.png"
+        backgroundImage="/images/cloud.png"
         headingWhite="our"
         headingYellow="services"
         paragraph="We are on a journey to empower creators and delight streamers around the globe."
