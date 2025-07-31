@@ -2,28 +2,29 @@ const features = [
   {
     image: "/images/watch.png",
     title: "Watch",
-    items: ["Movies", "TV", "Live", "Video Podcasts"],
+    items: ["Movies", "TV", "Dreamkids", "Sports", "Documentaries"],
   },
   {
     image: "/images/headphones.png",
     title: "Listen",
-    items: ["Artists", "Playlists", "Featured", "Podcasts"],
+    items: ["Music", "Podcasts","Audio Books"],
+  },
+   {
+    image: "/images/read.png",
+    title: "Read",
+    items: [ "E-Magazines", "E-Books","E-Bookazines"],
   },
   {
     image: "/images/game.png",
     title: "Play",
-    items: ["Action adventure", "Roleplay & strategy", "Sports", "Puzzles"],
+    items: ["Games"],
   },
   {
     image: "/images/devotion.png",
-    title: "Devotion",
-    items: ["Meditations", "Prayers", "Recitations"],
+    title: "Devotional",
+    items: ["Quran Majeed", "Hamd-o-Naat", "Qawali","Hajj"],
   },
-  {
-    image: "/images/read.png",
-    title: "Read",
-    items: ["News", "Magazines", "E-books"],
-  },
+ 
   {
     image: "/images/destination.png",
     title: "Destination",

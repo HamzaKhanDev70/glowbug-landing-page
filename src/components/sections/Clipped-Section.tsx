@@ -20,10 +20,11 @@ const ClippedSection: React.FC<ClippedSectionProps> = ({
 }) => {
   return (
     <div
-      className="relative p-10 sm:pr-[30%]"
+      className="relative p-10 sm:pr-[40%]"
       style={{
-        width: "95%",
-        left: "2.5%",
+        width: "100%",
+        // width: "95%",
+        // left: "2.5%",
         zIndex: 40,
         backgroundImage: `url('${backgroundImage}')`,
         backgroundSize: "cover",
@@ -31,7 +32,7 @@ const ClippedSection: React.FC<ClippedSectionProps> = ({
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="relative px-12 py-40 text-white overflow-hidden rounded-[10px] custom-clip bg-gradient">
+      <div className="relative px-9 py-40 text-white overflow-hidden rounded-[10px] custom-clip bg-gradient">
         <div className="max-w-4xl mx-auto text-left space-y-16 ">
           <h3 className="text-[#FFD300] heading-s font-bold sm:heading-l mb-0 sm:mb-6 tracking-wider uppercase" style={{ fontFamily: '"Right Grotesk WideMedium", sans-serif' }}>
             <span className="text-white">{headingWhite}</span>{" "}

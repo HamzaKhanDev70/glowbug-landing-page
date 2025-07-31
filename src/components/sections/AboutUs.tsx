@@ -5,7 +5,7 @@ import CompanyPartner from "./Company-Partner";
 import ClippedSection from "./Clipped-Section";
 const AboutUs = () => {
   return (
-    <section className="w-full px-2">
+    <section className="w-full ">
       <ClippedSection
         backgroundImage="/images/about-us.png"
         headingWhite="About"
@@ -21,9 +21,9 @@ const AboutUs = () => {
           <p>
             <strong className="text-white">Our Story</strong>
             <br />
-            <blockquote className="italic text-white border-l-4 border-[#FEE300] pl-4">
+            <span className="italic text-white border-l-4 border-[#FEE300] pl-4">
               It started with silence.
-            </blockquote>{" "}
+            </span>{" "}
             Not the peaceful kind but the kind you feel mid-journey, when the
             Wi-Fi doesn't connect, your screen goes dark, and you're left
             watching the world pass by without being part of it.

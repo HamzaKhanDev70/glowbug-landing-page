@@ -1,4 +1,4 @@
-export default function  Entertainment() {
+export default function Entertainment() {
   const informationList = [
     {
       heading: "Offline, Always On",
@@ -61,99 +61,99 @@ export default function  Entertainment() {
               className="w-full h-[1600px] sm:h-[1300px] lg:h-[1600px] max-h-[1900px] object-fill object-top "
             />
             <div className="absolute top-20 left-0 right-0 ">
-            <>
-  {/* SVG filter definition */}
-  <svg
-    style={{ visibility: "hidden", position: "absolute" }}
-    width="0"
-    height="0"
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-  >
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-        <feColorMatrix
-          in="blur"
-          mode="matrix"
-          values="1 0 0 0 0  
+              <>
+                {/* SVG filter definition */}
+                <svg
+                  style={{ visibility: "hidden", position: "absolute" }}
+                  width="0"
+                  height="0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                >
+                  <defs>
+                    <filter id="goo">
+                      <feGaussianBlur
+                        in="SourceGraphic"
+                        stdDeviation="8"
+                        result="blur"
+                      />
+                      <feColorMatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  
                   0 1 0 0 0  
                   0 0 1 0 0  
                   0 0 0 19 -9"
-          result="goo"
-        />
-        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-      </filter>
-    </defs>
-  </svg>
+                        result="goo"
+                      />
+                      <feComposite
+                        in="SourceGraphic"
+                        in2="goo"
+                        operator="atop"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
 
-  {/* Filtered section */}
-  <div
-    className="overflow-hidden rounded-2xl px-10 sm:px-16"
-    style={{ filter: "url(#goo)" }}
-  >
-    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] [clip-path:polygon(0_21%,100%_0,100%_100%,0_79%)]">
-      {/* Background Image */}
-      <img
-        src="/images/mbl.png"
-        alt="Clipped"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+                {/* Filtered section */}
+                <div
+                  className="overflow-hidden rounded-2xl px-10 sm:px-16"
+                  style={{ filter: "url(#goo)" }}
+                >
+                  <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] [clip-path:polygon(0_21%,100%_0,100%_100%,0_79%)]">
+                    {/* Background Image */}
+                    <img
+                      src="/images/mbl.png"
+                      alt="Clipped"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
 
-      {/* Centered Play Icon */}
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <img
-          src="/images/play-icon.png"
-          alt="Play"
-          className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"
-        />
-      </div>
-    </div>
-  </div>
-</>
+                    {/* Centered Play Icon */}
+                    <div className="absolute inset-0 flex items-center justify-center z-10">
+                      <img
+                        src="/images/play-icon.png"
+                        alt="Play"
+                        className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </>
 
-
-              <div className="mt-3 text-center max-w-[1800px] mx-auto text-[#030202] px-2 sm:px-6" >
-                <h2 className="grotesk-tight text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] leading-[1.05] whitespace-nowrap" style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}>
+              <div className="mt-3 text-center max-w-[1800px] mx-auto text-[#030202] px-2 sm:px-6">
+                <h2
+                  className="grotesk-tight text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] leading-[1.05] whitespace-nowrap"
+                  style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}
+                >
                   ONBOARD & IN LOUNGE
                 </h2>
-                <h3 className="font-inter body-normal text-[1.8rem] sm:text-[3.1rem] md:text-[4.3rem] lg:text-[5rem]  leading-[1.05]" >
+                <h3 className="font-inter body-normal text-[1.8rem] sm:text-[3.1rem] md:text-[4.3rem] lg:text-[5rem]  leading-[1.05]">
                   ENTERTAINMENT
                 </h3>
 
                 <p className="body-normal-d mb-8 lg:mb-13 max-w-[800px] mx-auto text-black">
-                    Dream Stream is the only engagement platform that's ubiquitously
-              available without download or the internet, for travellers across
-              the World who want freedom, choice, and control of the.
+                  Dream Stream is the only engagement platform that's
+                  ubiquitously available without download or the internet, for
+                  travellers across the World who want freedom, choice, and
+                  control of the.
                 </p>
+<div
+  className="grid grid-cols-2 md:grid-cols-2 gap-x-8 md:gap-x-14 gap-y-2 text-left max-w-[800px] mx-auto text-black"
+ 
+>
+{informationList.map((info, index) => (
+  <div key={index} className="flex items-start gap-1.5">
+    <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-black shrink-0" />
+    <div>
+      <div className="heading-xs font-bold">{info.heading}</div>
+      <div className="body-normal">{info.description}</div>
+    </div>
+  </div>
+))}
 
-                <div
-                  className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-x-8 md:gap-x-14 gap-y-2 text-left max-w-[800px] mx-auto lg:space-y-3 text-black"
-                  style={{ fontFamily: "Inter, sans-serif" }}
-                >
-                  {informationList.map((info, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start  m1-4"
-                    >
-                      {/* Bullet */}
-                      {/* <span className="w-2.5 h-2.5 mt-4 bg-black rounded-full" /> */}
+</div>
 
-                      {/* Text Content */}
-                      <div>
-                        <li className="text-lg font-bold ">
-                          {info.heading}
-                        </li>
-                        <div className="text-xs ">
-                          {info.description}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
-
-
             </div>
           </div>
         </div>

@@ -141,6 +141,26 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
+/* Webkit browsers (Chrome, Safari) */
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px; /* or 4px, depending on how thin you want it */
+  height: 6px; /* for horizontal scroll */
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* customize color */
+  border-radius: 4px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* or a light color if you want track visible */
+}
+
+/* Firefox */
+.thin-scrollbar {
+  scrollbar-width: thin; /* "auto" | "thin" | "none" */
+  scrollbar-color: #FDE200 transparent;
+}
 
   @utility heading-xl {
     font-family: "Right Grotesk", sans-serif;
@@ -174,7 +194,7 @@ body {
 @utility heading-xs {
   font-family: "Right Grotesk", sans-serif;
   /* font-weight: 500;  */
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.4;
   /* color: #ffffff; */
 }

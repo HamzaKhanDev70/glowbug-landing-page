@@ -59,9 +59,10 @@ export default function TravelCompanion() {
 
   return (
     <div className="overflow-x-hidden w-full overflow-y-clip ">
-      <div className="px-5 md:px-10 mt-5 md:mt-6">
-        <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] ">
-          <div className="absolute inset-0 w-full h-full">
+      <div className="mt-5 md:mt-0">
+        <div className="relative  overflow-hidden min-h-[calc(100v-100px)] aspect-[2/9] md:aspect-[3/7] ">
+        {/* <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] "> */}
+          <div className="absolute inset-0 w-full h-full ">
             {slides.map((slide, index) => (
               <div
                 key={index}
@@ -69,7 +70,7 @@ export default function TravelCompanion() {
                   index === currentImageIndex ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="w-full aspect-[2/9] md:aspect-[3/7] bg-no-repeat bg-center bg-cover"
+                <div className="w-full h-full bg-no-repeat bg-center bg-cover"
                   style={{
                     backgroundImage: `url('${slide.image}')`,
                     backgroundPosition: "top", 
@@ -79,12 +80,12 @@ export default function TravelCompanion() {
             ))}
           </div>
           {/* Arrows for Slider Navigation */}
-          <div className="absolute inset-0 z-20 sm:flex hidden  items-center justify-between px-4 md:px-10">
+          <div className="absolute inset-0  sm:flex hidden  items-center justify-between px-4 md:px-10  mx-9">
             {/* Left Arrow */}
             {currentImageIndex > 0 && (
               <button
                 onClick={() => setCurrentImageIndex(currentImageIndex - 1)}
-                className="text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition"
+                className="text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition relative z-15 cursor-pointer"
                 aria-label="Previous Slide"
               >
                 {/* Replace with your preferred icon */}
@@ -109,7 +110,7 @@ export default function TravelCompanion() {
             {currentImageIndex < slides.length - 1 && (
               <button
                 onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
-                className="text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition"
+                className="text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition relative z-15 cursor-pointer"
                 aria-label="Next Slide"
               >
                 {/* Replace with your preferred icon */}
@@ -161,7 +162,7 @@ export default function TravelCompanion() {
         </div>
       </div>
 
-      <div className="relative -mt-[500px] lg:-mt-[650px]">
+      <div className="relative -mt-[500px] lg:-mt-[650px] ">
         <TravelSlider />
         <TravelTypes />
         <Entertainment />

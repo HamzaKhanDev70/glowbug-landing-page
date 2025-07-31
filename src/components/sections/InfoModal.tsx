@@ -62,8 +62,8 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
             </div>
           </div>
           {/* Right Text */}
-          <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[350px] overflow-auto scrollbar-hide  text-center sm:text-left">
-            <h2 className="heading-m sm:mb-2 text-yellow-300 tracking-[.25rem] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
+          <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[350px] overflow-auto  thin-scrollbar text-center sm:text-left">
+            <h2 className="heading-m sm:mb-2 text-[#FDE200] tracking-[.25rem] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
               {data.title}
               <span className=" text-xl md:text-2xl font-light mb-4">
                 {data.type}
@@ -134,7 +134,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
             </div>
           </div>
           {/* Right Text */}
-          <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[430px] overflow-y-auto scrollbar-hide text-center sm:text-left ">
+          <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[430px] overflow-y-auto thin-scrollbar text-center sm:text-left ">
             <h2 className="heading-m sm:mb-2 text-yellow-300 ] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
               {data.title} {" "}
               <span className="  ">

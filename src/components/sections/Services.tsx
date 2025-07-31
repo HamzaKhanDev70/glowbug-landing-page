@@ -51,17 +51,16 @@ const Services = () => {
           className="h-[70px] sm:h-[150px] md:h-[150px] lg:h-[300px] xl:h-[400px]  overflow-visible"
         >
           <div className="flex justify-center ">
-            <div className="relative w-[95vw] aspect-[21/9] z-20">
-              
-
-             <ClippedSection
-        backgroundImage="/images/cloud.png"
-        headingWhite="our"
-        headingYellow="services"
-        paragraph="We are on a journey to empower creators and delight streamers around the globe."
-        buttonLabel="Experience"
-        buttonLink="/experience"
-      />
+            {/* <div className="relative w-[95vw] aspect-[21/9] z-20"> */}
+            <div className="relative w-full aspect-[21/9] z-20">
+              <ClippedSection
+                backgroundImage="/images/cloud.png"
+                headingWhite="our"
+                headingYellow="services"
+                paragraph="We are on a journey to empower creators and delight streamers around the globe."
+                buttonLabel="Experience"
+                buttonLink="/experience"
+              />
             </div>
           </div>
         </div>
@@ -127,7 +126,7 @@ const Services = () => {
 
       <div
         className="
-    relative z-10    mx-auto space-y-5  flex flex-col items-center justify-between gap-20 
+    relative z-10 mx-auto space-y-15  flex flex-col items-center justify-between 
   "
         style={{
           backgroundImage: "url('/images/vector-1.png')",
@@ -136,8 +135,7 @@ const Services = () => {
           backgroundPosition: "top center",
         }}
       >
-        <div className=" h-[370px] sm:h-[450px]  lg:h-[200px] ">
-        </div>
+        <div className=" h-[370px] sm:h-[450px]  lg:h-[250px] "></div>
         {servicesData.map((service, index) => {
           const isEven = index % 2 === 1;
 
@@ -145,21 +143,24 @@ const Services = () => {
             <div
               key={index}
               className={`
-          grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center  w-1/2 `}
+          grid grid-cols-1 md:grid-cols-2  md:gap-20 md:space-y-8 items-center  px-8 `}
             >
               {/* Left Cell */}
               <div
                 className={`${
                   isEven
-                    ? "md:order-2 md:justify-end text-right"
+                    ? "md:order-2 md:justify-end text-right items-end"
                     : "md:order-1 md:justify-start"
                 } flex justify-center `}
               >
                 <div className="w-full max-w-[500px]">
-                  <h4 className="text-[#FFD300] heading-s xl:heading-m mb-4" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
+                  <h4
+                    className="text-[#FFD300] heading-s xl:heading-m mb-4"
+                    style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}
+                  >
                     {service.title}
                   </h4>
-                  <p className="body-normal  text-gray-300">
+                  <p className="body-normal text-gray-300">
                     {service.description}
                   </p>
                 </div>

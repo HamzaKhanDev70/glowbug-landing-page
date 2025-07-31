@@ -25,7 +25,7 @@ function TravelType({
 }: TravelTypeProps) {
   return (
     <div
-      className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center mb-24 lg:mb-40 last:mb-0 cursor-pointer hover:opacity-90 transition-opacity"
+      className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-24  last:mb-0 items-center   cursor-pointer hover:opacity-90 transition-opacity"
       onClick={onClick}
     >
       {/* no rounded */}
@@ -64,7 +64,7 @@ function TravelType({
   </svg>
 </div>
 
-      <div className="flex-1 text-center lg:text-left mx-4">
+      <div className="flex-1 text-center lg:text-left mx-4 ">
         <h3 className="flex items-center mb-3 gap-2 leading-tight md:leading-none text-words whitespace-normal text-wrap break-words">
           <span className="heading-s sm:heading-l lg:heading-xl " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
             {title}
@@ -80,7 +80,7 @@ function TravelType({
           )}
         </h3>
         <span className="block heading-m  mb-6" style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>{brief}</span>
-        <p className="body-normal leading-relaxed max-w-[600px] mx-auto lg:mx-0">
+        <p className="body-normal leading-relaxed max-w-[600px] mx-auto lg:mx-0 ">
           {description}
         </p>
       </div>
@@ -149,9 +149,9 @@ export default function TravelTypes() {
   };
 
   return (
-    <section className="relative -mt-24 md:-mt-40">
+    <section className="relative -mt-24 md:-mt-40" >
       {/* Your existing background gradient */}
-      <div className="absolute top-0 left-5 right-5 md:left-20 md:right-20 h-full">
+      <div className="absolute top-0 w-full h-full">
         <div
           className="absolute top-0 left-0 right-0 h-[150%] bg-gradient-to-b from-[#4A1D00] to-black"
           style={{

@@ -6,9 +6,9 @@ import Button from "../ui/Button";
 import { useState } from "react";
 
 const navItems = [
-  { name: "HOW IT WORKS", href:"/#access-device"  },
+  { name: "HOW IT WORKS", href:"/#how-it-works"  },
   { name: "SERVICES", href: "/services" },
-  { name: "WHO IT'S FOR", href: "" },
+  { name: "WHO IT'S FOR", href: "/#travel-slider" },
   { name: "ABOUT US", href: "/about-us" },
 ];
 
@@ -186,7 +186,7 @@ const router = useRouter();
 
     // --------------------
 
-    <nav className="bg-[#0B0707] py-3">
+    <nav className="bg-[hsl(0,24%,7%)] py-3">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0 md:hidden mt-4">
@@ -199,7 +199,7 @@ const router = useRouter();
               />
             </Link>
           </div>
-          <div className="hidden md:flex w-full relative items-center justify-between px-6 lg:px-0 xl:px-6">
+          <div className="hidden md:flex w-full relative items-center justify-between py-2 px-6 lg:px-0 xl:px-6">
             {/* Left Button (invisible but takes space for balance) */}
             <div className="invisible ">
               <Link href="/contact-us" aria-label="Contact Us">
@@ -221,7 +221,7 @@ const router = useRouter();
               key={item.name}
               onClick={() => handleNavClick(item.href)}
               className={`body-normal transition-colors whitespace-nowrap bg-transparent ${
-                pathname === item.href ? 'text-white font-semibold' : 'text-green-800 hover:text-white'
+                pathname === item.href ? 'text-[#FDE200] font-semibold' : 'text-[#00774F] hover:text-[#FDE200]'
               }`}
             >
               {item.name}
@@ -235,8 +235,8 @@ const router = useRouter();
                   <Image
                     src="/images/HeaderLogo.png"
                     alt="Header Logo"
-                    width={70}
-                    height={30}
+                    width={80}
+                    height={40}
                     className="object-contain"
                   />
                 </Link>
@@ -249,7 +249,7 @@ const router = useRouter();
               key={item.name}
               onClick={() => handleNavClick(item.href)}
               className={`body-normal transition-colors whitespace-nowrap bg-transparent ${
-                pathname === item.href ? 'text-white font-semibold' : 'text-green-800 hover:text-white'
+                pathname === item.href ? 'text-[#FDE200] font-semibold' : 'text-[#00774F] hover:text-[#FDE200]'
               }`}
             >
               {item.name}
@@ -259,9 +259,9 @@ const router = useRouter();
             </div>
 
             {/* Right Button (visible and aligned to right) */}
-            <div className="hidden md:block ml-4">
+            <div className="hidden md:block ml-4 ">
               <Link href="/contact-us" aria-label="Contact Us">
-                <Button variant="primary" className="body-normal p-0">
+                <Button variant="primary" className="body-normal p-0 hover:text-[#FDE200]">
                   GET IN TOUCH
                 </Button>
               </Link>
