@@ -8,7 +8,7 @@ import "react-phone-input-2/lib/style.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 const validationSchema = Yup.object({
-  fullName: Yup.string().required("Full name is required") .max(10, "Full name must be 10 characters or less"),
+  fullName: Yup.string().required("Full name is required") .max(15, "Full name must be 15 characters or less"),
   email: Yup.string().email("Invalid email address").required("Email is required"),
   phone: Yup.string().required("Phone number is required"),
   reason: Yup.string().required("Reason for contact is required"),
