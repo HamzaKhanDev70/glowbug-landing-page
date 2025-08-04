@@ -7,6 +7,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useState } from "react";
 import InfoModal from "./InfoModal";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface SlideData {
   title: string;
@@ -59,7 +62,8 @@ There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus
   ];
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState<SlideData | null>(null);
-
+const ref = useRef(null);
+  const inView = useInView(ref, { once: false, margin: "0px 0px -100px 0px" });
   const openModal = (slide: SlideData) => {
 
     // console.log('')
@@ -265,7 +269,14 @@ There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus
 
 
     // without slider
-    <section className="relative" id="travel-slider">
+   <motion.section
+  id="travel-slider"
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.2 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="relative"
+>
   <div className="relative z-20 w-full py-16 md:py-20">
     <div className="absolute  right-0 top-0 w-full bottom-0 bg-black rounded-l-3xl lg:rounded-l-[64px] " />
     <div className="max-w-[2300px] mx-auto relative">
@@ -302,7 +313,7 @@ There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus
   </div>
 
   <InfoModal isOpen={isModalOpen} onClose={closeModal} data={selectedSlide} />
-</section>
+</motion.section>
 
   );
 }

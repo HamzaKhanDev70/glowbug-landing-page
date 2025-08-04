@@ -149,7 +149,7 @@ export default function TravelTypes() {
   };
 
   return (
-    <section className="relative -mt-24 md:-mt-40" >
+    <section className="relative -mt-24 md:-mt-40 " >
       {/* Your existing background gradient */}
       <div className="absolute top-0 w-full h-full">
         <div
@@ -161,7 +161,7 @@ export default function TravelTypes() {
       </div>
 
       <div className="relative pt-48 md:pt-72 pb-24 md:pb-32">
-        <div className="max-w-[1400px] mx-auto px-5 md:px-20">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-20 ">
           {travelTypes.map((type, index) => (
             <TravelType
               key={index}

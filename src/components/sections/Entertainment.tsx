@@ -2,7 +2,7 @@ export default function Entertainment() {
   const informationList = [
     {
       heading: "Offline, Always On",
-      description: "Stream anywhere—no internet, no buffering.",
+      description: "Stream anywhere no internet, no buffering.",
     },
     {
       heading: "Works Across All Carriers",
@@ -11,15 +11,15 @@ export default function Entertainment() {
     },
     {
       heading: "Instant Access from Lounge to Landing",
-      description: "The journey starts before boarding—and never pauses.",
+      description: "The journey starts before boarding and never pauses.",
     },
     {
-      heading: "Passenger-Centric Design",
+      heading: "Passenger Centric Design",
       description: "Curated content, intuitive access, zero learning curve.",
     },
     {
       heading: "BYOD-Ready",
-      description: "No apps, no installations—just scan, connect, and play.",
+      description: "No apps, no installations just scan, connect, and play.",
     },
     {
       heading: "Scalable Across Fleets and Geographies",
@@ -30,7 +30,7 @@ export default function Entertainment() {
       description: "Fully automated, hassle-free for operations.",
     },
     {
-      heading: "Plug-and-Play Deployment",
+      heading: "Plug and Play Deployment",
       description: "Minimal setup. Fleet-wide rollout in days.",
     },
     {
@@ -39,7 +39,7 @@ export default function Entertainment() {
         "Behind the scenes, DreamStream updates without touching your live operations.",
     },
     {
-      heading: "Built for Monetization—When You’re Ready",
+      heading: "Built for Monetization When You’re Ready",
       description:
         "Future-ready for advertising, content partnerships, and ancillary services.",
     },

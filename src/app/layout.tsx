@@ -7,6 +7,7 @@ import 'react-phone-input-2/lib/style.css';
 
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect } from "react";
+import RightSidebar from './../components/sections/Right-SideBar';
 const inter = Inter({ subsets: ["latin"], weight: ["400", "800"] });
 
 export default function RootLayout({
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en" className={` bg-dark-900 text-white`}>
       <body className="bg-black">
         <Navbar />
+        <RightSidebar/>
         <main>{children}</main>
         <Footer />
       </body>

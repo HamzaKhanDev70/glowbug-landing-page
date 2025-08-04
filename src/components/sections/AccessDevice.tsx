@@ -55,9 +55,7 @@ export default function AccessDevice() {
   });
 
   // Animate X from -100% to 0%
-  const x = useTransform(scrollYProgress, [0.2, 1], ["-20%", "100%"]);
-  // Make content move down as image slides in
-  const y = useTransform(scrollYProgress, [0.2, 1], ["-50px", "100px"]);  // adjust as needed
+  const x = useTransform(scrollYProgress, [0.2, 1], ["80%", "-120%"]);
   const opacity = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]); // optional fade-in
   return (
     <section className="relative  " >
@@ -158,7 +156,7 @@ export default function AccessDevice() {
 </motion.div>
 
           <motion.div
-            style={{ y, opacity }}
+            style={{ opacity }}
             className="relative w-full flex items-center justify-center px-4 py-8 sm:py-12 lg:py-0 z-0"
           >
             {/* Content */}
