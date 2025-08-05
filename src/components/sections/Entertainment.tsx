@@ -18,7 +18,7 @@ export default function Entertainment() {
       description: "Curated content, intuitive access, zero learning curve.",
     },
     {
-      heading: "BYOD-Ready",
+      heading: "BYOD Ready",
       description: "No apps, no installations just scan, connect, and play.",
     },
     {
@@ -27,11 +27,11 @@ export default function Entertainment() {
     },
     {
       heading: "No Crew Intervention Required",
-      description: "Fully automated, hassle-free for operations.",
+      description: "Fully automated, hassle free for operations.",
     },
     {
       heading: "Plug and Play Deployment",
-      description: "Minimal setup. Fleet-wide rollout in days.",
+      description: "Minimal setup. Fleet wide rollout in days.",
     },
     {
       heading: "Quietly Maintained, Always Fresh",

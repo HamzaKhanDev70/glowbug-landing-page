@@ -55,10 +55,10 @@ export default function AccessDevice() {
   });
 
   // Animate X from -100% to 0%
-  const x = useTransform(scrollYProgress, [0.2, 1], ["80%", "-120%"]);
+  const x = useTransform(scrollYProgress, [0.2, 1], ["60%", "-120%"]);
   const opacity = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]); // optional fade-in
   return (
-    <section className="relative  " >
+    <section className="relative  ">
       {/* here is original code */}
       {/* <div
       className="w-full bg-black bg-no-repeat bg-center bg-contain aspect-[1920/1850] flex items-center relative -top-3"
@@ -139,21 +139,21 @@ export default function AccessDevice() {
       >
         <div className="h-auto w-full grid grid-cols-1 md:grid-cols-2  mb-10 sm:mb-0">
           {/* Animated Image */}
-        <motion.div style={{x  }} className="relative z-1 overflow-x-visible">
-  <div className="w-[200%] -ml-[100%] ">
-    <a
-      href="https://dspk-sandbox.airfi.io/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src="/images/Group-35-3.png"
-        alt="Visual"
-        className="w-full  cursor-pointer"
-      />
-    </a>
-  </div>
-</motion.div>
+          <motion.div style={{ x }} className="relative z-1 overflow-x-visible">
+            <div className="w-[200%] -ml-[100%] ">
+              <a
+                href="https://dspk-sandbox.airfi.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/images/Group-35-3.png"
+                  alt="Visual"
+                  className="w-full  cursor-pointer"
+                />
+              </a>
+            </div>
+          </motion.div>
 
           <motion.div
             style={{ opacity }}
@@ -224,7 +224,7 @@ export default function AccessDevice() {
           <MobileAppShowcase />
         </div>
         <div className="flex items-center justify-center  ">
-          <HowItWorks  />
+          <HowItWorks />
         </div>
       </div>
     </section>

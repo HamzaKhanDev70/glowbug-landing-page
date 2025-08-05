@@ -275,7 +275,7 @@ const ref = useRef(null);
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: false, amount: 0.2 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
-  className="relative"
+  className="relative "
 >
   <div className="relative z-20 w-full py-16 md:py-20">
     <div className="absolute  right-0 top-0 w-full bottom-0 bg-black rounded-l-3xl lg:rounded-l-[64px] " />

@@ -3,15 +3,15 @@ import Link from "next/link";
 
 export default function RightSidebar() {
   return (
-    <div className="fixed right-4 top-0 h-screen w-[60px] md:w-[80px] flex flex-col justify-between items-center py-6 z-50 pointer-events-none">
+    <div className="fixed right-4 top-0 h-screen w-[120px] flex flex-col justify-between items-end py-6 z-50 pointer-events-none">
       {/* Centered Social Icons */}
       <div className="flex-1 flex flex-col items-center justify-center space-y-4 pointer-events-auto">
         <Link href="https://x.com/Dream_Stream_23" target="_blank">
           <Image
             src="/images/Vector.png"
             alt="X"
-            width={18}
-            height={16}
+            width={22}
+            height={18}
             className="hover:brightness-125 transition"
           />
         </Link>
@@ -19,7 +19,7 @@ export default function RightSidebar() {
           <Image
             src="/images/fi_3046120.png"
             alt="TikTok"
-            width={18}
+            width={22}
             height={16}
             className="hover:brightness-125 transition"
           />
@@ -28,7 +28,7 @@ export default function RightSidebar() {
           <Image
             src="/images/thread.png"
             alt="Threads"
-            width={18}
+            width={22}
             height={16}
             className="hover:brightness-125 transition"
           />
@@ -37,7 +37,7 @@ export default function RightSidebar() {
           <Image
             src="/images/Group 60.png"
             alt="Instagram"
-            width={18}
+            width={22}
             height={16}
             className="hover:brightness-125 transition"
           />
@@ -50,16 +50,16 @@ export default function RightSidebar() {
           <Image
             src="/images/playStore.png"
             alt="Get it on Google Play"
-            width={100}
-            height={30}
+            width={120}
+            height={40}
           />
         </Link>
         <Link href="#">
           <Image
             src="/images/appStore.png"
             alt="Download on the App Store"
-            width={100}
-            height={30}
+             width={120}
+            height={40}
           />
         </Link>
       </div>

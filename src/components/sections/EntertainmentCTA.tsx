@@ -12,7 +12,7 @@ export default function EntertainmentCTA() {
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 mt-6">
         <div className="w-full md:w-auto bg-blue-500  px-8 py-3 md:px-12 md:py-4 rounded-full body-normal hover:bg-blue-600 transition-colors">
         
-          <Link href="/experience" aria-label="Experience">
+          <Link  href="https://dspk-sandbox.airfi.io/" aria-label="Experience">
           EXPERIENCE
             </Link>
         </div>

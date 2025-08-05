@@ -219,8 +219,9 @@ export default function ContactUs() {
       </div>
 
       {/* Message */}
-      <div>
+      <div className="relative">
         <label className="body-normal">Message</label>
+        <Mail className="absolute left-3 top-12.5 transform -translate-y-1/2 w-5 h-5" />
         <Field
           as="textarea"
           name="message"
@@ -243,10 +244,8 @@ export default function ContactUs() {
         </label>
       </div>
       <ErrorMessage name="agree" component="div" className="text-red-500 text-sm" />
-
       {/* Error */}
       {errorMsg && <p className="text-red-500 text-sm">{errorMsg}</p>}
-
       {/* Submit */}
       <button
         type="submit"

@@ -4,10 +4,12 @@ import Link from 'next/link';
 import Image from "next/image";
 import Button from "../ui/Button";
 import { useState } from "react";
+import Experience from './Experience';
 
 const navItems = [
+  { name: "WHAT IS", href:"/"  },
   { name: "HOW IT WORKS", href:"/#how-it-works"  },
-  { name: "SERVICES", href: "/services" },
+  // { name: "SERVICES", href: "/services" },
   { name: "WHO IT'S FOR", href: "/#travel-slider" },
   { name: "ABOUT US", href: "/about-us" },
 ];
@@ -199,7 +201,7 @@ const router = useRouter();
               />
             </Link>
           </div>
-          <div className="hidden md:flex w-full relative items-center justify-between py-2 px-6 lg:px-0 xl:px-6">
+          <div className="hidden md:flex w-full relative items-center justify-between py-3 px-6 lg:px-0 xl:px-6">
             {/* Left Button (invisible but takes space for balance) */}
             <div className="invisible ">
               <Link href="/contact-us" aria-label="Contact Us">
@@ -230,16 +232,25 @@ const router = useRouter();
         </div>
 
               {/* Logo */}
-              <div className="flex-shrink-0">
-                <Link href="/" aria-label="Home" className="flex items-center">
+              <div className="flex-shrink-0 ">
+                <Link  href="https://dspk-sandbox.airfi.io/" aria-label="Home" className="flex flex-col items-center">
                   <Image
                     src="/images/HeaderLogo.png"
                     alt="Header Logo"
-                    width={80}
-                    height={40}
+                    width={60}
+                    height={30}
                     className="object-contain"
                   />
+                 <button
+            
+              className={`body-normal transition-colors whitespace-nowrap bg-transparent 
+                text-[#00774F] hover:text-[#FDE200]
+              `}
+            >
+            Experience
+            </button>
                 </Link>
+
               </div>
 
               {/* Right Links */}
@@ -262,7 +273,7 @@ const router = useRouter();
             <div className="hidden md:block ml-4 ">
               <Link href="/contact-us" aria-label="Contact Us">
                 <Button variant="primary" className="body-normal p-0 hover:text-[#FDE200]">
-                  GET IN TOUCH
+                 FIND US
                 </Button>
               </Link>
             </div>
