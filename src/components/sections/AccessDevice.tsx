@@ -48,90 +48,19 @@ export default function AccessDevice() {
   ];
   const ref = useRef(null);
 
-  // Track scroll progress within the section
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
-  // Animate X from -100% to 0%
-  const x = useTransform(scrollYProgress, [0.2, 1], ["60%", "-120%"]);
-  const opacity = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]); // optional fade-in
+const x = useTransform(
+  scrollYProgress,
+  [0.2, 0.5],
+  ["60%", "-10%"],
+  { clamp: true }
+);
   return (
     <section className="relative  ">
-      {/* here is original code */}
-      {/* <div
-      className="w-full bg-black bg-no-repeat bg-center bg-contain aspect-[1920/1850] flex items-center relative -top-3"
-      style={{
-        backgroundImage: "url('/images/rectangle-20.png')",
-      }}
-    >
-      <div className=" h-auto  w-full grid grid-cols-1 md:grid-cols-2  items-center">
-       <div>
-  <a
-    href="https://dspk-sandbox.airfi.io/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="/images/Group 35.png"
-      alt="Visual"
-      className="w-full mx-auto cursor-pointer"
-    />
-  </a>
-</div>
-
-
-        <div
-          className="relative w-[100%] flex items-center justify-center px-4  py-8 sm:py-12 lg:py-0 "
-          style={{ overflow: "visible" }}
-        >
-          <div
-            className="w-full text-center md:text-left"
-            style={{ overflow: "visible" }}
-          >
-            <div className="w-full text-center md:text-start">
-              <h2
-                className="uppercase grotesk-light-narrow text-[72px] text-wrap "
-                style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}
-              >
-                <span className="">Access on your own device:</span>
-              </h2>
-              <h2 className="uppercase font-inter heading-l sm:heading-s md:heading-m lg:heading-xl">
-                <span className="block text-[#00A3FF] font-bold whitespace-normal wrap-break-word">
-                  ANYWHERE. ANY TIME.
-                </span>
-              </h2>
-            </div>
-
-            <p className="text-white body-normal font-normal mb-4 sm:mb-8 break-words whitespace-normal">
-              Here the experience for DreamStream should be embedded that by
-              clicking the “Tablet” the user shall be redirected to the DSPK
-              sandbox experience. Insertion of Motion Reel created through
-              different screens and use cases combining web portal and web app.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 ">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex-1 flex flex-col items-center md:items-start  text-left min-w-0"
-                >
-                  <div className="mb-2 sm:mb-4 ">{feature.icon}</div>
-                  <h3 className="heading-s sm:heading-xs md:heading-s  mb-1 sm:mb-2 leading-tight text-center md:text-left" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
-                    {feature.title}
-                  </h3>
-                  <p className="text-[#FFFFFF] body-normal break-words whitespace-normal text-center md:text-left">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div> */}
       <div
         ref={ref}
         className="w-full bg-black bg-no-repeat bg-center bg-contain aspect-[1920/1950] flex items-center relative -top-3"
@@ -155,12 +84,7 @@ export default function AccessDevice() {
             </div>
           </motion.div>
 
-          <motion.div
-            style={{ opacity }}
-            className="relative w-full flex items-center justify-center px-4 py-8 sm:py-12 lg:py-0 z-0"
-          >
-            {/* Content */}
-            {/* <div className="relative w-full flex items-center justify-center px-4 py-8 sm:py-12 lg:py-0"> */}
+          <div className="relative w-full flex items-center justify-center px-4 py-8 sm:py-12 lg:py-0 z-0">
             <div className="w-full text-center md:text-left">
               <h2
                 className="uppercase grotesk-light-narrow text-[72px]"
@@ -202,8 +126,7 @@ export default function AccessDevice() {
                 ))}
               </div>
             </div>
-            {/* </div> */}
-          </motion.div>
+          </div>
         </div>
       </div>
 

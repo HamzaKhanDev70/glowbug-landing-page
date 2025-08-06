@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InfoModal from "./InfoModal";
+import { motion } from "framer-motion";
 
 // Reusable for the data
 interface TravelTypeData {
@@ -25,66 +26,70 @@ function TravelType({
 }: TravelTypeProps) {
   return (
     <div
-      className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-24  last:mb-0 items-center   cursor-pointer hover:opacity-90 transition-opacity"
-      onClick={onClick}
-    >
-      {/* no rounded */}
-      {/* <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] flex-shrink-0">
-        <div className="absolute inset-0 overflow-hidden rounded-2xl border-4 border-amber-200 [clip-path:polygon(0_16%,100%_0%,100%_100%,0_100%)]">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover rounded-xl [clip-path:polygon(0_16%,100%_0%,100%_100%,0_100%)] "
-          />
-        </div>
+  className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-24 last:mb-0 items-center cursor-pointer hover:opacity-90 transition-opacity "
+  onClick={onClick}
+>
+  <motion.div
+    initial={{ x: -100, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: false }}
+    className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] flex-shrink-0"
+  >
+    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <clipPath id="roundedTopLeft" clipPathUnits="objectBoundingBox">
+          <path d="M0.1,0 Q0,0 0,0.1 V1 H1 V0 H0.1 Z" />
+        </clipPath>
+      </defs>
+      <foreignObject width="100%" height="100%" clipPath="url(#roundedTopLeft)">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+      </foreignObject>
+    </svg>
+  </motion.div>
 
-      </div> */}
-<div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] flex-shrink-0">
-  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <defs>
-      <clipPath id="roundedTopLeft" clipPathUnits="objectBoundingBox">
-      
-        <path d="
-          M0.1,0 
-          Q0,0 0,0.1 
-          V1 
-          H1 
-          V0 
-          H0.1 
-          Z" />
-      </clipPath>
-    </defs>
-    <foreignObject width="100%" height="100%" clipPath="url(#roundedTopLeft)">
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-full object-cover" 
-      />
-    </foreignObject>
-  </svg>
+  <motion.div
+    initial={{ x: 100, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+    viewport={{ once: false }}
+    className="flex-1 text-center lg:text-left mx-4 "
+  >
+    <h3 className="flex items-center justify-center lg:justify-start mb-3 gap-2 leading-tight md:leading-none text-words whitespace-normal text-wrap break-words">
+      <span
+        className="heading-s sm:heading-l lg:heading-xl"
+        style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}
+      >
+        {title}
+      </span>
+      {type && (
+        <>
+          <br />
+          <span
+            className="heading-s sm:heading-l lg:heading-xl font-light"
+            style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}
+          >
+            {type}
+          </span>
+        </>
+      )}
+    </h3>
+    <span
+      className="block heading-m  mb-6"
+      style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}
+    >
+      {brief}
+    </span>
+    <p className="body-normal leading-relaxed max-w-[600px] mx-auto lg:mx-0 ">
+      {description}
+    </p>
+  </motion.div>
 </div>
 
-      <div className="flex-1 text-center lg:text-left mx-4 ">
-        <h3 className="flex items-center mb-3 gap-2 leading-tight md:leading-none text-words whitespace-normal text-wrap break-words">
-          <span className="heading-s sm:heading-l lg:heading-xl " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
-            {title}
-          </span>
-
-          {type && (
-            <>
-              <br />
-              <span className="heading-s sm:heading-l lg:heading-xl font-light" style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>
-                {type}
-              </span>
-            </>
-          )}
-        </h3>
-        <span className="block heading-m  mb-6" style={{ fontFamily: '"Right Grotesk Narrow", sans-serif' }}>{brief}</span>
-        <p className="body-normal leading-relaxed max-w-[600px] mx-auto lg:mx-0 ">
-          {description}
-        </p>
-      </div>
-    </div>
   );
 }
 
@@ -149,18 +154,19 @@ export default function TravelTypes() {
   };
 
   return (
-    <section className="relative -mt-24 md:-mt-40 " >
+    // <section className="relative -mt-24 md:-mt-40 " >
+    <section className="relative " >
       {/* Your existing background gradient */}
       <div className="absolute top-0 w-full h-full">
         <div
           className="absolute top-0 left-0 right-0 h-[150%] bg-gradient-to-b from-[#4A1D00] to-black"
           style={{
-            clipPath: "polygon(530px 0, 100% 0, 100% 100%, 0 100%, 0 120px)",
+            clipPath: "polygon(100px 0, 100% 0, 100% 100%, 0 100%, 0 0px)",
           }}
         />
       </div>
 
-      <div className="relative pt-48 md:pt-72 pb-24 md:pb-32">
+      <div className="relative pt-38 md:pt-17 pb-24 md:pb-32">
         <div className="max-w-[1400px] mx-auto px-5 md:px-20 ">
           {travelTypes.map((type, index) => (
             <TravelType
