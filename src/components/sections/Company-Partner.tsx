@@ -7,18 +7,18 @@ import "swiper/css";
 
 
 const partners = [
-  { name: "Google", logo: "/logos/C.png" },
-  { name: "Facebook", logo: "/logos/LI.png" },
-  { name: "Amazon", logo: "/logos/L.png" },
-  { name: "Netflix", logo: "/logos/T.png" },
-  { name: "Apple", logo: "/logos/C.png" },
-  { name: "Spotify", logo: "/logos/LI.png" },
-  { name: "Google", logo: "/logos/C.png" },
-  { name: "Facebook", logo: "/logos/LI.png" },
-  { name: "Amazon", logo: "/logos/L.png" },
-  { name: "Netflix", logo: "/logos/T.png" },
-  { name: "Apple", logo: "/logos/C.png" },
-  { name: "Spotify", logo: "/logos/LI.png" },
+  { name: "Google", logo: "/images/pia.png" },
+  { name: "Facebook", logo: "/images/pia.png" },
+  { name: "Amazon", logo: "/images/pia.png" },
+  { name: "Netflix", logo: "/images/pia.png" },
+  { name: "Apple", logo: "/images/pia.png" },
+  { name: "Spotify", logo: "/images/pia.png" },
+  { name: "Google", logo: "/images/pia.png" },
+  { name: "Facebook", logo: "/images/pia.png" },
+  { name: "Amazon", logo: "/images/pia.png" },
+  { name: "Netflix", logo: "/images/pia.png" },
+  { name: "Apple", logo: "/images/pia.png" },
+  { name: "Spotify", logo: "/images/pia.png" },
 ];
 interface CompanyPartnerProp{
   heading?:string

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import InfoModal from "./InfoModal";
+import { motion } from "framer-motion";
 interface TeamMemberProps {
   name?: string;
   title?: string;
@@ -53,7 +54,6 @@ const teamMembers = [
   },
 ];
 
-
 const TeamSection: React.FC<TeamMemberProps> = () => {
   const [selectedType, setSelectedType] = useState<TeamMemberProps | null>(
     null
@@ -100,24 +100,38 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
             // transform: "matrix(-1, 0, 0, 1, 0, 0)",
           }}
         />
-        {/* 🔸 Content */}
+
         <div className="relative z-10 max-w-8xl mx-auto pt-35">
           <h2 className=" md:heading-m text-center mb-12">OUR TEAM</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3  gap-4 justify-items-center">
             {teamMembers.map((member, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="w-[400px] flex flex-col  bg-opacity-5 rounded-xl shadow-lg hover:bg-opacity-10 transition"
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                  delay: idx * 0.1,
+                }}
+                viewport={{ once: false, amount: 0.2 }}
+                className="w-[400px] flex flex-col bg-opacity-5 rounded-xl shadow-lg hover:bg-opacity-10 transition"
               >
                 {/* Image */}
-                <div className=" w-[400px] h-[330px] relative overflow-hidden ">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-contain "
-                  />
+                <div className="w-[400px] h-[330px] relative overflow-hidden group">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="w-full h-full"
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-contain transition-transform duration-300"
+                    />
+                  </motion.div>
                 </div>
 
                 {/* Text - aligned left */}
@@ -138,7 +152,7 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
                     </p>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
