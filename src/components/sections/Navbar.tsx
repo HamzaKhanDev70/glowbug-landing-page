@@ -35,7 +35,7 @@ const router = useRouter();
   };
   return (
 
-    <nav className="bg-[hsl(0,24%,7%)] py-8">
+    <nav className="bg-[hsl(0,24%,7%)] py-6 sm:py-8">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0 md:hidden mt-4">
@@ -129,7 +129,7 @@ const router = useRouter();
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-green-800 hover:text-white focus:outline-none"
+              className="relative z-51 inline-flex items-center justify-center p-2 rounded-md text-green-800 hover:text-white focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
@@ -173,7 +173,7 @@ const router = useRouter();
       </div>
       {isOpen && (
         <div
-          className="md:hidden   bg-transparent backdrop-blur-md backdrop-saturate-150"
+          className="md:hidden  bg-transparent backdrop-blur-md backdrop-saturate-150"
           id="mobile-menu"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
@@ -191,13 +191,13 @@ const router = useRouter();
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4">
+            {/* <div className="pt-4">
               <Link href="/contact-us" aria-label="Contact Us">
                 <Button variant="primary" className="md:text-xs lg:text-sm ">
-                  GET IN TOUCH
+                 FIND US
                 </Button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

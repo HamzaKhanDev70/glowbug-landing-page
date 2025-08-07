@@ -3,6 +3,7 @@ import Image from "next/image";
 import TeamSection from "./TeamSection";
 import CompanyPartner from "./Company-Partner";
 import ClippedSection from "./Clipped-Section";
+import SectionDivider from './SectionSeperator';
 const AboutUs = () => {
   return (
     <section className="w-full ">
@@ -139,7 +140,8 @@ const AboutUs = () => {
       </div>
 
       <TeamSection />
-      <CompanyPartner heading="OUR CARRIER PARTNERS " />
+      {/* <CompanyPartner heading="OUR CARRIER PARTNERS " /> */}
+      <SectionDivider/>
     </section>
   );
 };

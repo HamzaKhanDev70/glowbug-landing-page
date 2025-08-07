@@ -20,7 +20,7 @@ interface InfoModalProps {
   layoutColor?:"string"
   teamMember?:boolean
 }
-const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,link = "/contact-us", buttonLabel = "Contact Us",layoutColor = "#4B1D00" }) => {
+const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,link = "/contact-us", buttonLabel = "Find Us",layoutColor = "#4B1D00" }) => {
   if (!isOpen || !data) return null;
 
  {return teamMember ?  (
