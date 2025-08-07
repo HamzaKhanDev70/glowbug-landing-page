@@ -184,7 +184,7 @@ export default function TravelTypes() {
         onClose={closeModal}
         data={selectedType}
       />
-      <SectionSeparator color="border-gray-900" margin="my-16" />
+      <SectionSeparator />
     </section>
   );
 }

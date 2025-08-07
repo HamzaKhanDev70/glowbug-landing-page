@@ -88,7 +88,7 @@ export default function EntertainmentFeatures() {
           ))}
         </div>
       </div>
-        <SectionSeparator color="border-gray-900" margin="my-16" />
+        <SectionSeparator />
     </section>
   );
 }

@@ -183,12 +183,12 @@ const x = useTransform(
         <div className="px-8 relative lg:-top-35 ">
           <MobileAppShowcase />
         </div>
-          <SectionSeparator color="border-gray-900" margin="my-16" />
+          <SectionSeparator  />
         <div className="flex items-center justify-center  ">
           <HowItWorks />
         </div>
       </div>
-        <SectionSeparator color="border-gray-900" margin="my-16" />
+        <SectionSeparator  />
     </section>
   );
 }
