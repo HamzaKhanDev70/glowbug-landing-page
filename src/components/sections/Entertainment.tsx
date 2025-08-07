@@ -1,3 +1,5 @@
+import SectionSeparator from "./SectionSeperator";
+
 export default function Entertainment() {
   const informationList = [
     {
@@ -157,6 +159,9 @@ export default function Entertainment() {
             </div>
           </div>
         </div>
+
+        <SectionSeparator color="border-gray-900" margin="my-16" />
+
       </section>
     </>
   );

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InfoModal from "./InfoModal";
 import { motion } from "framer-motion";
+import SectionSeparator from "./SectionSeperator";
 
 // Reusable for the data
 interface TravelTypeData {
@@ -183,6 +184,7 @@ export default function TravelTypes() {
         onClose={closeModal}
         data={selectedType}
       />
+      <SectionSeparator color="border-gray-900" margin="my-16" />
     </section>
   );
 }

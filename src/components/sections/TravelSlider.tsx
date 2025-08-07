@@ -10,6 +10,8 @@ import InfoModal from "./InfoModal";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import SectionSeparator from "./SectionSeperator";
+import SectionDivider from "./SectionSeperator";
 
 interface SlideData {
   title: string;
@@ -313,6 +315,8 @@ const ref = useRef(null);
   </div>
 
   <InfoModal isOpen={isModalOpen} onClose={closeModal} data={selectedSlide} />
+    <SectionDivider />
+
 </motion.section>
 
   );

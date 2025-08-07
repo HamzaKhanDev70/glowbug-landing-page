@@ -1,3 +1,5 @@
+import SectionSeparator from "./SectionSeperator";
+
 const features = [
   {
     image: "/images/watch.png",
@@ -86,6 +88,7 @@ export default function EntertainmentFeatures() {
           ))}
         </div>
       </div>
+        <SectionSeparator color="border-gray-900" margin="my-16" />
     </section>
   );
 }

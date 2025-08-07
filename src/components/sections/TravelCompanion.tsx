@@ -59,7 +59,7 @@ export default function TravelCompanion() {
 
   return (
     <div className="overflow-x-hidden w-full overflow-y-clip ">
-      <div className="mt-5 md:mt-0">
+      <div className="">
         <div className="relative  overflow-hidden min-h-[calc(100v-100px)] ">
         {/* <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] "> */}
           <div className="absolute inset-0 w-full h-full">
