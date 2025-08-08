@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function RightSidebar() {
   return (
-    <div className="fixed right-4 top-0 h-screen w-[120px] flex flex-col justify-between items-end pb-10 sm:pb-0 py-6 z-50 pointer-events-none ">
+    <div className="fixed right-4 top-0 h-screen w-[120px] flex flex-col justify-between items-end pb-20 sm:pb-0 py-6 z-50 pointer-events-none ">
       {/* Centered Social Icons */}
       <div className="flex-1 flex flex-col items-center justify-center space-y-4 pointer-events-auto">
         {socialLinks.map((icon, index) => (
