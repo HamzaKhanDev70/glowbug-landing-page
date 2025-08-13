@@ -184,7 +184,7 @@ export default function TravelTypes() {
         onClose={closeModal}
         data={selectedType}
       />
-      <SectionSeparator />
+      <SectionSeparator keyword="Experience" />
     </section>
   );
 }

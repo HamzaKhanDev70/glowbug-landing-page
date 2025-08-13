@@ -1,11 +1,10 @@
 "use client";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InfoModal from "./InfoModal";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
@@ -18,7 +17,7 @@ interface SlideData {
   image: string;
   description: string;
   briefd?: string;
-  promo?:string;
+  promo?: string;
 }
 
 export default function TravelSlider() {
@@ -26,16 +25,16 @@ export default function TravelSlider() {
     {
       title: "Passengers",
       image: "/images/slide1.png",
-      promo:"A moment of magic.",
+      promo: "A moment of magic.",
       briefd:
         "You’re relaxing in the quiet lounge, flight still an hour away, but airport mobile internet is patchy and public Wi-Fi is scrappy. Then you spot a small sign: “Connect to DreamStream.”",
       description: `One tap or a quick scan of the QR code on your boarding pass, brings the offline network to life. A login screen appears; you choose a simple manual sign-in or let the QR code fill your details. Instantly, a full library of films, playlists, podcasts, and destination guides opens on your device. When boarding is called, you slip your phone into your pocket, stroll down the jet bridge, take your seat, and reconnect to the same DreamStream network aboard. No buffering, no searching—your movie continues exactly where you paused, a live map traces the route, and the soundtrack you queued hums softly through your headphones. From lounge to landing, DreamStream feels like magic: one invisible thread of entertainment that never asks for internet and never breaks the spell.
 `,
     },
     {
-      title: "Operators", 
+      title: "Operators",
       image: "/images/slide2.png",
-      promo:"Customer Satisfaction with Zero Drag",
+      promo: "Customer Satisfaction with Zero Drag",
       briefd:
         "DreamStream unlocks a new frontier in onboard experience, one where passengers are delighted, and operators don’t lift a finger.",
       description: `With a lightweight, plug-and-play appliance that fits seamlessly into aircraft, trains, coaches, ferries, and cruise fleets, DreamStream installs quickly, no capex, no structural changes, no content licensing burden. It switches on as part of your existing flow, offering instant access to entertainment and curated services with minimal setup and zero disruption.Behind the scenes, the platform quietly generates value, sharing in high-margin revenue streams from advertising, premium content, and ancillary services like F&B or mobility partnerships, all without adding crew or straining bandwidth.
@@ -46,7 +45,7 @@ This isn’t just another system, it’s your fast lane to satisfaction, loyalty
     {
       title: "Advertisers",
       image: "/images/slide3.png",
-promo:"Captive Audiences, Clutter-Free Canvas",
+      promo: "Captive Audiences, Clutter-Free Canvas",
       briefd: `A traveller leans back mid-journey, phone in hand, headphones on, immersed.
 There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus and time.
 `,
@@ -56,7 +55,7 @@ There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus
     {
       title: "Content Partners",
       image: "/images/slide4.png",
-      promo:"A New Stage for Stories",
+      promo: "A New Stage for Stories",
       briefd: `A short film, an indie doc, or a local-language drama, ready to be seen, but buried under the noise of crowded OTT platforms.`,
       description: `Now imagine that same story finding its way to a traveller on a train winding through the Alps, or a family settling into a ferry ride across the Aegean. No search bar, no algorithm walls; just your content, front and centre, in the quiet space where people are ready to watch.DreamStream is opening a new stage, one that travels. With a single ingest, your titles are distributed across subscribed carriers worldwide, reaching passengers in aircraft, buses, trains, cruises, and lounges where traditional OTTs often don’t go.The platform is built with creators in mind: DRM-secure, windowing-respectful, and designed to surface metadata and ratings that drive discovery and long-tail viewership. Each view counts, each stream generates revenue, and you stay in control.No reformatting for every operator. No extra licensing friction. Just your stories, streamed seamlessly to an audience that’s ready to engage whether it’s for 20 minutes or an entire journey. This isn’t about replacing the old stage, it’s about extending it. DreamStream invites you to travel further, without losing your creative footprint.
 `,
@@ -64,10 +63,10 @@ There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus
   ];
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState<SlideData | null>(null);
-const ref = useRef(null);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const ref = useRef(null);
   const inView = useInView(ref, { once: false, margin: "0px 0px -100px 0px" });
   const openModal = (slide: SlideData) => {
-
     // console.log('')
     setSelectedSlide(slide);
     setIsModalOpen(true);
@@ -78,213 +77,21 @@ const ref = useRef(null);
     setSelectedSlide(null);
   };
   return (
-    // first 1
-    // <section className="relative ">
-    //   <div className="relative z-20 w-full py-16 md:py-20  ">
-    //     <div className="absolute left-10 md:left-40 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-3xl lg:rounded-l-[64px] border-4 border-red-600" />
-    //     <div className="max-w-[2300px] mx-auto relative ">
-    //       <div className="overflow-x-hidden pl-5 md:ml-42   ">
-    //         <div className="mx-auto max-w-[1500px] border-4 border-orange-600">
-    //           <Swiper
-    //             modules={[Pagination, Navigation]}
-    //             spaceBetween={100}
-    //             loop={false}
-    //             grabCursor={true}
-    //             slidesPerView={3}
-    //             pagination={{
-    //               el: ".custom-pagination",
-    //               clickable: true,
-    //               renderBullet: function (index, className) {
-    //                 return (
-    //                   '<span class="' +
-    //                   className +
-    //                   ' w-2.5 h-2.5 rounded-full inline-block mx-1 cursor-pointer opacity-50"></span>'
-    //                 );
-    //               },
-    //             }}
-    //             breakpoints={{
-    //               320: {
-    //                 slidesPerView: 1,
-    //                 spaceBetween: 24,
-    //               },
-    //               768: {
-    //                 slidesPerView: 2,
-    //                 spaceBetween: 24,
-    //               },
-    //               1024: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 100,
-    //               },
-    //               1280: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 100,
-    //               },
-    //               1600: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 100,
-    //               },
-    //             }}
-    //             className="!pb-16 !overflow-visible"
-    //           >
-    //             {slides.map((slide, index) => (
-    //               <SwiperSlide key={index}>
-    //                 <div
-    //                   className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group w-[400px] md:w-[420px] lg:w-[450px]"
-    //                   onClick={() => openModal(slide)}
-    //                 >
-    //                   <img
-    //                     src={slide.image}
-    //                     alt={slide.title}
-    //                     className="w-full h-full object-cover"
-    //                   />
-    //                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
-    //                   <div className="absolute bottom-0 left-0 right-0 p-8">
-    //                     <h3 className="heading-m sm:heading-s md:heading-m lg:heading-xl  mb-3 " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }} >
-    //                       {slide.title}
-    //                     </h3>
-    //                     <p className="body-normal leading-relaxed max-w-[90%]">
-    //                       {slide.briefd}
-    //                     </p>
-    //                   </div>
-    //                 </div>
-    //               </SwiperSlide>
-    //             ))}
-    //           </Swiper>
-    //         </div>
-    //         <div className="custom-pagination flex justify-center gap-2 mt-8" />
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <InfoModal
-    //     isOpen={isModalOpen}
-    //     onClose={closeModal}
-    //     data={selectedSlide}
-    //   />
-    //   <style jsx global>{`
-    //     .swiper-pagination-bullet {
-    //       background-color: #d946ef !important;
-    //     }
-    //     .swiper-pagination-bullet-active {
-    //       background-color: #ffd700 !important;
-    //       opacity: 1 !important;
-    //     }
-    //     .swiper-wrapper {
-    //       overflow: visible !important;
-    //     }
-    //   `}</style>
-    // </section>
-// 2nd
-    // <section className="relative ">
-    //   <div className="relative z-20 w-full py-16 md:py-20  ">
-    //     <div className="absolute left-5 right-0 top-0 w-full bottom-0 bg-black/90 rounded-l-3xl lg:rounded-l-[64px] " />
-    //     <div className="max-w-[2300px] mx-auto relative ">
-    //       <div className="overflow-x-hidden md:ml-12 md:mr-4">
-    //         <div className="mx-auto max-w-[1500px] ">
-    //           <Swiper
-    //             modules={[Pagination, Navigation]}
-    //             spaceBetween={100}
-    //             loop={false}
-    //             grabCursor={true}
-    //             slidesPerView={3}
-    //             pagination={{
-    //               el: ".custom-pagination",
-    //               clickable: true,
-    //               renderBullet: function (index, className) {
-    //                 return (
-    //                   '<span class="' +
-    //                   className +
-    //                   ' w-2.5 h-2.5 rounded-full inline-block mx-1 cursor-pointer opacity-50"></span>'
-    //                 );
-    //               },
-    //             }}
-    //             breakpoints={{
-    //               320: {
-    //                 slidesPerView: 1,
-    //                 spaceBetween: 24,
-    //               },
-    //               768: {
-    //                 slidesPerView: 2,
-    //                 spaceBetween: 24,
-    //               },
-    //               1024: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 100,
-    //               },
-    //               1280: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 100,
-    //               },
-    //               1600: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 100,
-    //               },
-    //             }}
-    //             className="!pb-16 !overflow-visible"
-    //           >
-    //             {slides.map((slide, index) => (
-    //               <SwiperSlide key={index}>
-    //                 <div
-    //                   className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group w-[400px] md:w-[420px] lg:w-[450px]"
-    //                   onClick={() => openModal(slide)}
-    //                 >
-    //                   <img
-    //                     src={slide.image}
-    //                     alt={slide.title}
-    //                     className="w-full h-full object-cover"
-    //                   />
-    //                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
-    //                   <div className="absolute bottom-0 left-0 right-0 p-8">
-    //                     <h3 className="heading-m sm:heading-s md:heading-m lg:heading-xl  mb-3 " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }} >
-    //                       {slide.title}
-    //                     </h3>
-    //                     <p className="body-normal leading-relaxed max-w-[90%]">
-    //                       {slide.briefd}
-    //                     </p>
-    //                   </div>
-    //                 </div>
-    //               </SwiperSlide>
-    //             ))}
-    //           </Swiper>
-    //         </div>
-    //         <div className="custom-pagination flex justify-center gap-2 mt-8" />
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <InfoModal
-    //     isOpen={isModalOpen}
-    //     onClose={closeModal}
-    //     data={selectedSlide}
-    //   />
-    //   <style jsx global>{`
-    //     .swiper-pagination-bullet {
-    //       background-color: #d946ef !important;
-    //     }
-    //     .swiper-pagination-bullet-active {
-    //       background-color: #ffd700 !important;
-    //       opacity: 1 !important;
-    //     }
-    //     .swiper-wrapper {
-    //       overflow: visible !important;
-    //     }
-    //   `}</style>
-    // </section>
-
-
     // without slider
-   <motion.section
-  id="travel-slider"
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: false, amount: 0.2 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  className="relative "
->
-  <div className="relative z-20 w-full py-16 md:py-20">
-    <div className="absolute  right-0 top-0 w-full bottom-0 bg-black rounded-l-3xl lg:rounded-l-[64px] " />
-    <div className="max-w-[2300px] mx-auto relative">
-      <div className="overflow-x-hidden md:mx-12">
-        <div className="mx-auto max-w-[1500px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 px-6 md:px-1">
-          {slides.map((slide, index) => (
+    <motion.section
+      id="travel-slider"
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative "
+    >
+      <div className="relative z-20 w-full py-16 md:py-20">
+        <div className="absolute  right-0 top-0 w-full bottom-0 bg-black rounded-l-3xl lg:rounded-l-[64px] " />
+        <div className="max-w-[2300px] mx-auto relative">
+          <div className="overflow-x-hidden md:mx-12">
+            <div className="mx-auto max-w-[1500px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 px-6 md:px-1">
+              {/* {slides.map((slide, index) => (
             <div
               key={index}
               className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group w-full cursor-pointer"
@@ -308,16 +115,76 @@ const ref = useRef(null);
                 </p>
               </div>
             </div>
-          ))}
+          ))} */}
+
+              {slides.map((slide, index) => (
+                <div
+                  key={index}
+                  className="relative rounded-[32px] overflow-hidden bg-dark-800 h-[500px] group w-full cursor-pointer"
+                  onClick={() => openModal(slide)}
+                >
+                  {/* Image */}
+                  <motion.img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="w-full h-full object-cover"
+                    initial={
+                      isMobile ? { x: -100, opacity: 0 } : { y: 80, opacity: 0 }
+                    }
+                    whileInView={{ x: 0, y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: false, amount: 0.2 }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
+                  {/* Text */}
+                  <motion.div
+                    className="absolute bottom-0 left-0 right-0 p-4"
+                    initial={
+                      isMobile ? { x: 100, opacity: 0 } : { y: 80, opacity: 0 }
+                    }
+                    whileInView={{ x: 0, y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
+                    <h3
+                      className="heading-m sm:heading-s md:heading-m mb-3"
+                      style={{
+                        fontFamily: '"Right Grotesk Medium", sans-serif',
+                      }}
+                    >
+                      {slide.title}
+                    </h3>
+                    <p className="body-normal leading-relaxed max-w-[90%]">
+                      {slide.briefd}
+                    </p>
+                  </motion.div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <InfoModal isOpen={isModalOpen} onClose={closeModal} data={selectedSlide} />
-    <SectionDivider />
-
-</motion.section>
-
+      <InfoModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        data={selectedSlide}
+      />
+      <SectionDivider keyword="Where is" />
+    </motion.section>
   );
+}
+
+function useMediaQuery(query: any) {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) setMatches(media.matches);
+    const listener = () => setMatches(media.matches);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
+  }, [matches, query]);
+
+  return matches;
 }

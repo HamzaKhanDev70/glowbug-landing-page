@@ -1,4 +1,5 @@
-import SectionSeparator from "./SectionSeperator";
+import SectionDivider from "./SectionSeperator";
+
 
 const features = [
   {
@@ -88,7 +89,8 @@ export default function EntertainmentFeatures() {
           ))}
         </div>
       </div>
-        <SectionSeparator />
+       
+        {/* <SectionDivider keyword="Byod"/> */}
     </section>
   );
 }

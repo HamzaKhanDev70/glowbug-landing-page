@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Button from "../ui/Button";
+import { span } from "framer-motion/client";
 
 interface InfoModalProps {
   isOpen: boolean;
@@ -9,7 +10,7 @@ interface InfoModalProps {
     image?: string;
     title?: string;
     type?: string;
-    description?: string;
+    description?: [];
     details?:string;
     briefd?:string;
     brief?:string;
@@ -72,7 +73,13 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
                <span className="block body-normal text-gray-300 whitespace-pre-line break-words">
             {data.brief}
           </span>
-            <p className="body-normal text-gray-300 whitespace-pre-line break-words ">{data.description}</p>
+           <p className="body-normal text-gray-300 break-words">
+  {data?.description?.map((item, index) => (
+    <span key={index} className="block mb-2">
+      {item}
+    </span>
+  ))}
+</p>
 
             {link && (
               <div className="pt-4 hidden sm:block">

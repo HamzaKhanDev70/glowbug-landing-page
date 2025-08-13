@@ -139,29 +139,25 @@ export default function Entertainment() {
                   travellers across the World who want freedom, choice, and
                   control of the.
                 </p>
-<div
-  className="grid grid-cols-2 md:grid-cols-2 gap-x-8 md:gap-x-14 gap-y-2 text-left max-w-[800px] mx-auto text-black"
- 
->
-{informationList.map((info, index) => (
-  <div key={index} className="flex items-start gap-1.5">
-    <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-black shrink-0" />
-    <div>
-      <div className="heading-xs font-bold">{info.heading}</div>
-      <div className="body-normal">{info.description}</div>
-    </div>
-  </div>
-))}
-
-</div>
-
+                <div className="grid grid-cols-2 md:grid-cols-2 gap-x-8 md:gap-x-14 gap-y-2 text-left max-w-[800px] mx-auto text-black">
+                  {informationList.map((info, index) => (
+                    <div key={index} className="flex items-start gap-1.5">
+                      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-black shrink-0" />
+                      <div>
+                        <div className="heading-xs font-bold">
+                          {info.heading}
+                        </div>
+                        <div className="body-normal">{info.description}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <SectionSeparator />
-
+        {/* <SectionSeparator keyword="On Boarding" /> */}
       </section>
     </>
   );

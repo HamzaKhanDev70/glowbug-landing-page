@@ -6,6 +6,7 @@ import Image from "next/image";
 import MobileAppShowcase from "./FlashMobile";
 import HowItWorks from "./HowItWorks";
 import SectionSeparator from "./SectionSeperator";
+import SectionDivider from "./SectionSeperator";
 export default function AccessDevice() {
   const features = [
     {
@@ -94,6 +95,7 @@ const x = useTransform(
   return (
 
     <section className="relative  ">
+      <SectionDivider keyword="Byod"/>
       <div
         ref={ref}
         className="w-full bg-black bg-no-repeat bg-center bg-contain aspect-[1920/1950] flex items-center relative -top-3"
@@ -183,12 +185,12 @@ const x = useTransform(
         <div className="px-8 relative lg:-top-35 ">
           <MobileAppShowcase />
         </div>
-          <SectionSeparator  />
+          <SectionDivider keyword="how it works"/>
         <div className="flex items-center justify-center  ">
           <HowItWorks />
         </div>
       </div>
-        <SectionSeparator  />
+      {/* <SectionDivider keyword="Footer"/> */}
     </section>
   );
 }
