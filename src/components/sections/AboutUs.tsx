@@ -141,7 +141,7 @@ const AboutUs = () => {
 
       <TeamSection />
       {/* <CompanyPartner heading="OUR CARRIER PARTNERS " /> */}
-      <SectionDivider/>
+      {/* <SectionDivider/> */}
     </section>
   );
 };

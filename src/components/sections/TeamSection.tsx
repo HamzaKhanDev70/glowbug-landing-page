@@ -80,7 +80,7 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
       (text.split(" ").length > 25 ? "..." : "")
     );
   };
-  const handleTypeClick = (type: TeamMemberProps) => {
+  const handleTypeClick = (type: any) => {
     setSelectedType(type);
     setIsModalOpen(true);
   };
