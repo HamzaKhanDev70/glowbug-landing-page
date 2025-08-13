@@ -10,7 +10,7 @@ interface InfoModalProps {
     image?: string;
     title?: string;
     type?: string;
-    description?: [];
+    description?: [] | string;
     details?:string;
     briefd?:string;
     brief?:string;
@@ -74,12 +74,15 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
             {data.brief}
           </span>
            <p className="body-normal text-gray-300 break-words">
-  {data?.description?.map((item, index) => (
-    <span key={index} className="block mb-2">
-      {item}
-    </span>
-  ))}
+  {Array.isArray(data?.description)
+    ? data.description.map((item, index) => (
+        <span key={index} className="block mb-2">
+          {item}
+        </span>
+      ))
+    : data?.description}
 </p>
+
 
             {link && (
               <div className="pt-4 hidden sm:block">
