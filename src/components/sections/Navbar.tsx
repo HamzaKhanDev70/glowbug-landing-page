@@ -8,11 +8,11 @@ import Experience from './Experience';
 
 const navItems = [
   { name: "WHAT IS", href:"/"  },
-  { name: "HOW IT WORKS", href:"/#how-it-works"  },
-  { name: "WHAT WE OFFER", href: "/services" },
-  { name: "WHO IT'S FOR", href: "/#travel-slider" },
-  { name: "ABOUT US", href: "/about-us" },
-  { name: "FIND US", href: "/contact-us" },
+  { name: "WHERE IS", href:"/#where-is"  },
+  { name: "WHAT WE OFFER", href: "/#what-we-offer" },
+  { name: "HOW IT WORKS?", href: "/#how-it-works" },
+  { name: "KNOW US", href: "/#know-us" },
+  { name: "FIND US", href: "/#find-us" },
 ];
 
 export default function Navbar() {

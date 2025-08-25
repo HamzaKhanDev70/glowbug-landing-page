@@ -94,8 +94,8 @@ const x = useTransform(
 
   return (
 
-    <section className="relative  ">
-      <SectionDivider keyword="Byod"/>
+    <section className="relative" id="how-it-works">
+      <SectionDivider keyword="How it works?"/>
       <div
         ref={ref}
         className="w-full bg-black bg-no-repeat bg-center bg-contain aspect-[1920/1950] flex items-center relative -top-3"
@@ -139,9 +139,7 @@ const x = useTransform(
       </h2>
 
       <p className="text-white body-normal font-normal mb-4 sm:mb-8">
-        Here the experience for DreamStream should be embedded that by clicking
-        the “Tablet” the user shall be redirected to the DSPK sandbox
-        experience...
+       Whether in-lounge or onboard – in bus or flying to your dream destination we have it all covered. Just forget about downloading the content even when there is no internet, we stream like a dream on your device or even seatback screen. 
       </p>
 
       <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
@@ -185,12 +183,11 @@ const x = useTransform(
         <div className="px-8 relative lg:-top-35 ">
           <MobileAppShowcase />
         </div>
-          <SectionDivider keyword="how it works"/>
         <div className="flex items-center justify-center  ">
           <HowItWorks />
         </div>
       </div>
-      {/* <SectionDivider keyword="Footer"/> */}
+      <SectionDivider keyword="Know Us"/>
     </section>
   );
 }

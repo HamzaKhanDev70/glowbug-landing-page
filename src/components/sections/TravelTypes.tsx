@@ -115,24 +115,25 @@ export default function TravelTypes() {
       description:
         "Even on the longest highways and remote stretches, DreamStream transforms daily commutes into cinematic escapes. BYOD access makes every seat feel personal—and every mile more meaningful.",
     },
-    {
-      title: "BOAT",
+        {
+      title: "TRAIN",
       type: "TRAVEL",
+      image: "/images/train.png",
+
+      brief: " Journeys with rhythm, powered by story.",
+      description:
+        "Whether it’s a daily route or a scenic ride, DreamStream turns train time into screen time. Passengers scan, stream, and settle in, no apps, no waiting, just moments that move with them.",
+    },
+    {
+      title: "FERRIES",
+      type: "& CRUISES",
       image: "/images/ship.png",
 
       brief: "Journeys with rhythm, powered by story.",
       description:
         "Ferries, cruises, or island-hoppers, DreamStream fills the offline silence with choice and comfort. Passengers sail with music, films, and travel tips; all without touching open waters of the internet.",
     },
-    {
-      title: "TRAIN",
-      type: "TRAVEL",
-      image: "/images/train.png",
 
-      brief: " When the sea disconnects, we reconnect.",
-      description:
-        "Whether it’s a daily route or a scenic ride, DreamStream turns train time into screen time. Passengers scan, stream, and settle in, no apps, no waiting, just moments that move with them.",
-    },
     {
       title: "HOTEL",
       type: "",
@@ -156,7 +157,7 @@ export default function TravelTypes() {
 
   return (
     // <section className="relative -mt-24 md:-mt-40 " >
-    <section className="relative " >
+    <section className="relative " id="where-is">
       {/* Your existing background gradient */}
       <div className="absolute top-0 w-full h-full">
         <div
@@ -168,7 +169,7 @@ export default function TravelTypes() {
       </div>
 
       <div className="relative pt-38 md:pt-17 pb-24 md:pb-32">
-        <div className="max-w-[1400px] mx-auto px-5 md:px-20 ">
+        <div className="w-full flex flex-col items-center justify-between px-5 md:px-20 ">
           {travelTypes.map((type, index) => (
             <TravelType
               key={index}
@@ -184,7 +185,7 @@ export default function TravelTypes() {
         onClose={closeModal}
         data={selectedType}
       />
-      <SectionSeparator keyword="Experience" />
+  
     </section>
   );
 }

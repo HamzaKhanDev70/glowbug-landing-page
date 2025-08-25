@@ -3,10 +3,10 @@ import Image from "next/image";
 import TeamSection from "./TeamSection";
 import CompanyPartner from "./Company-Partner";
 import ClippedSection from "./Clipped-Section";
-import SectionDivider from './SectionSeperator';
+import SectionDivider from "./SectionSeperator";
 const AboutUs = () => {
   return (
-    <section className="w-full ">
+    <section className="w-full " id="know-us">
       <ClippedSection
         backgroundImage="/images/about-us.png"
         headingWhite="About"
@@ -141,7 +141,6 @@ const AboutUs = () => {
 
       <TeamSection />
       {/* <CompanyPartner heading="OUR CARRIER PARTNERS " /> */}
-      {/* <SectionDivider/> */}
     </section>
   );
 };

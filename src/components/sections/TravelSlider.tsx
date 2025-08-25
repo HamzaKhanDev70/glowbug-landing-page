@@ -79,7 +79,8 @@ There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus
   return (
     // without slider
     <motion.section
-      id="travel-slider"
+      id="what-we-offer"
+      
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}

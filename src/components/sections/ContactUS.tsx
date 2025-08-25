@@ -39,7 +39,7 @@ export default function ContactUs() {
 
 
   return (
-    <section className=" px-4 sm:px-6 lg:px-12 overflow-visible ">
+    <section className=" px-4 sm:px-6 lg:px-12 overflow-visible " id="find-us">
       {/* Top Image */}
       <div className="flex justify-center mb-6">
         <div className="relative w-[95vw] aspect-[18/9]">

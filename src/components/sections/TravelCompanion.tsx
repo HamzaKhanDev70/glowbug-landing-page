@@ -9,7 +9,8 @@ import TravelSlider from "./TravelSlider";
 import TravelTypes from "./TravelTypes";
 import Entertainment from "./Entertainment";
 import SliderDots from "./Slider_Dots";
-
+import EntertainmentFeatures from "./EntertainmentFeatures";
+import SectionSeparator from "./SectionSeperator";
 export default function TravelCompanion() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const slides = [
@@ -61,7 +62,7 @@ export default function TravelCompanion() {
     <div className="overflow-x-hidden w-full overflow-y-clip ">
       <div className="">
         <div className="relative  overflow-hidden min-h-[calc(100v-100px)] ">
-        {/* <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] "> */}
+          {/* <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] "> */}
           <div className="absolute inset-0 w-full h-full">
             {slides.map((slide, index) => (
               <div
@@ -70,10 +71,11 @@ export default function TravelCompanion() {
                   index === currentImageIndex ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="w-full aspect-[2/9] md:aspect-[3/7] bg-no-repeat bg-center bg-cover"
+                <div
+                  className="w-full aspect-[2/9] md:aspect-[3/7] bg-no-repeat bg-center bg-cover"
                   style={{
                     backgroundImage: `url('${slide.image}')`,
-                    backgroundPosition: "top", 
+                    backgroundPosition: "top",
                   }}
                 />
               </div>
@@ -140,33 +142,39 @@ export default function TravelCompanion() {
           )}
 
           <section className="w-full py-16  flex items-center justify-center bg-dark-900/50 text-white relative z-10">
-            <div className="w-full flex flex-col items-center">
+            <div className="w-full flex flex-col">
               <TravelHero
                 heading={slides[currentImageIndex].heading}
                 description={slides[currentImageIndex].description}
               />
               <TravelIllustration />
-              <SliderDots
+              {/* <SliderDots
                 currentIndex={currentImageIndex}
                 total={slides.length}
                 onSelect={(index) => setCurrentImageIndex(index)}
-              />
+              /> */}
               <TravelFeatures />
-              <EntertainmentCTA />
+              <SectionSeparator keyword="Where is" />
+              <TravelTypes />
+              {/* <EntertainmentCTA /> */}
             </div>
           </section>
 
-          <div className="relative h-[500px] lg:h-[650px] z-10">
+          {/* <div className="relative h-[500px] lg:h-[650px] z-10 border-2 border-red-500">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
-          </div>
+          </div> */}
         </div>
       </div>
 
-      <div className="relative -mt-[500px] lg:-mt-[650px] ">
+      {/* <div className="relative -mt-[500px] lg:-mt-[650px] border-2"> */}
+      <div className="relative">
+        <SectionSeparator keyword="What we offer" />
         <TravelSlider />
-        <TravelTypes />
-        <Entertainment />
+        {/* <TravelTypes /> */}
       </div>
+      <EntertainmentFeatures />
+      <Entertainment />
+      <EntertainmentCTA />
     </div>
   );
 }

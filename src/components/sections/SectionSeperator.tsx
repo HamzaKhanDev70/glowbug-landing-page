@@ -39,18 +39,18 @@ const SectionDivider: React.FC<SectionDividerProps> = ({
   keyword = "",
 }) => {
   return (
-    <div className={clsx("relative w-full flex items-center", margin, className)}>
+    <div className={clsx("relative w-full flex items-center justify-center", margin, className)}>
       {/* Left line */}
-      <div className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-[#FDE200] to-yellow-500" />
+      {/* <div className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-[#FDE200] to-yellow-500" /> */}
 
       {/* Keyword */}
       {keyword && (
         <motion.span
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: false }}
-          className="mx-4 text-lg font-bold text-[#FDE200] uppercase tracking-widest"
+          className="mx-4 text-xl font-bold text-[#FDE200] uppercase tracking-widest"
           style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}
         >
           {keyword}
@@ -58,7 +58,7 @@ const SectionDivider: React.FC<SectionDividerProps> = ({
       )}
 
       {/* Right line */}
-      <div className="flex-1 h-[2px] bg-gradient-to-l from-transparent via-[#FDE200] to-yellow-500" />
+      {/* <div className="flex-1 h-[2px] bg-gradient-to-l from-transparent via-[#FDE200] to-yellow-500" /> */}
     </div>
   );
 };
