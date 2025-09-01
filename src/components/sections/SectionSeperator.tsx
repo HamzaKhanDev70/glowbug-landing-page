@@ -16,7 +16,7 @@ const SectionDivider: React.FC<SectionDividerProps> = ({
   keyword = "",
 }) => {
   return (
-    <div className={clsx("relative w-full flex items-center justify-center", margin, className)}>
+    <div className={clsx("relative w-full flex items-center justify-start px-80" , margin, className)}>
       {/* Left line */}
       {/* <div className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-[#FDE200] to-yellow-500" /> */}
 

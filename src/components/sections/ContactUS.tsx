@@ -59,7 +59,7 @@ export default function ContactUs() {
       </div>
 
       {/* Content */}
-      <div className=" grid-cols-1 lg:grid-cols-2 gap-12 items-center flex justify-center">
+      <div className=" grid-cols-1 lg:grid-cols-2 gap-12 items-center flex justify-start">
         {/* Left Column */}
         <div className="pl-32 mt-4">
           <h2
@@ -85,7 +85,7 @@ export default function ContactUs() {
       {showFormModal && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50"  ref={modalRef}
          >
-          <div className="relative w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl bg-[#2F2F2F] rounded-lg p-4 sm:p-6 shadow-lg h-[90%] thin-scrollbar overflow-y-auto chat-scrollbar">
+          <div className="relative w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl bg-[#2F2F2F] rounded-lg p-4 sm:p-6 shadow-lg min-h-fit h-[50%] thin-scrollbar overflow-y-auto chat-scrollbar">
             {/* Close Button */}
             <button
               onClick={() => setShowFormModal(false)}
@@ -148,7 +148,7 @@ export default function ContactUs() {
               }}
             >
               {({ isSubmitting, values, setFieldValue }) => (
-                <Form className="space-y-1 text-white">
+                <Form className="space-y-3 text-white">
                   {/* Full Name */}
                   <div>
                     <label className="body-normal">Full Name</label>
@@ -158,7 +158,7 @@ export default function ContactUs() {
                         type="text"
                         name="fullName"
                         placeholder="Enter Your Full Name..."
-                        className="w-full bg-black text-white pl-10 p-2 rounded-xl border border-gray-600"
+                        className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
                       />
                       <ErrorMessage name="fullName" component="div" className="text-red-500 text-sm" />
                     </div>
@@ -173,7 +173,7 @@ export default function ContactUs() {
                         type="email"
                         name="email"
                         placeholder="Email Address"
-                        className="w-full bg-black text-white pl-10 p-2 rounded-xl border border-gray-600"
+                        className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
                       />
                       <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
                     </div>
@@ -212,7 +212,7 @@ export default function ContactUs() {
                       <Field
                         as="select"
                         name="reason"
-                        className="w-full bg-black text-white pl-10 p-2 rounded-xl border border-gray-600"
+                        className="w-full bg-black text-white pl-10 p-3 rounded-xl border border-gray-600"
                       >
                         <option value="" disabled>
                           Select reason...
@@ -236,7 +236,7 @@ export default function ContactUs() {
                       name="message"
                       placeholder="Your Message (300 words max)"
                       rows={3}
-                      className="w-full bg-black text-white pl-10 pt-3 p-2 rounded-xl border border-gray-600 resize-none"
+                      className="w-full bg-black text-white pl-10 pt-3 p-3 rounded-xl border border-gray-600 resize-none"
                     />
                     <ErrorMessage name="message" component="div" className="text-red-500 text-sm" />
                   </div>
@@ -261,7 +261,7 @@ export default function ContactUs() {
                   <button
                     type="submit"
                     disabled={loading || isSubmitting}
-                    className="w-full bg-yellow-400 text-black text-xl py-2 rounded font-normal hover:bg-yellow-500 transition"
+                    className="w-full bg-yellow-400 text-black text-xl py-3 rounded font-normal hover:bg-yellow-500 transition"
                   >
                     {loading ? "Submitting..." : "Submit Form"}
                   </button>

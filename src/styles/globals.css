@@ -263,3 +263,11 @@ body {
 .clip-polygon {
   clip-path: polygon(0% 9%, 100% 2%, 100% 98%, 0% 90%);
 }
+
+
+@media print {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
