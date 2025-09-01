@@ -15,7 +15,7 @@ const SliderDots: React.FC<SliderDotsProps> = ({
 }) => {
   return (
     <div
-      className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 flex justify-center gap-2 z-20 ${className}`}
+      className={`mt-4 flex items-center justify-center gap-2 z-20 ${className}`}
     >
       {Array.from({ length: total }).map((_, index) => (
         <span

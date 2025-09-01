@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaXTwitter, FaTiktok, FaYoutube, FaInstagram, FaAt } from 'react-icons/fa6';
@@ -12,6 +13,15 @@ const contactInfo = [
   { name: 'support@dreamstream.com', href: 'mailto:support@dreamstream.com' },
 ];
 
+const siteLinks = [
+  { name: "WHAT IS", href:"/"  },
+  { name: "WHERE IS", href:"/#where-is"  },
+  { name: "WHAT WE OFFER", href: "/#what-we-offer" },
+  { name: "HOW IT WORKS?", href: "/#how-it-works" },
+  { name: "KNOW US", href: "/#know-us" },
+  { name: "FIND US", href: "/#find-us" },
+];
+
 const socialLinks = [
   { icon: <FaXTwitter />, href: '#' },
   { icon: <FaTiktok />, href: '#' },
@@ -24,13 +34,27 @@ export default function Footer() {
   return (
     <footer className="bg-[#1C1C1C] text-white w-full  py-10 mt-14"  id="footer">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 text-center md:text-left">
+
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12 text-center md:text-left" >
+          <div className="lg:col-span-1">
+            <h3 className="lg:heading-s mb-4 font-inter font-bold">Site Links</h3>
+            <ul className="space-y-2">
+              {siteLinks.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="body-normal transition-colors hover:text-[#FDE200]">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="lg:col-span-1">
             <h3 className="lg:heading-s mb-4 font-inter font-bold">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="hover:text-gray-300 body-normal transition-colors">
+                  <Link href={link.href} className="body-normal transition-colors hover:text-gray-300">
                     {link.name}
                   </Link>
                 </li>
@@ -43,7 +67,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {contactInfo.map((contact) => (
                 <li key={contact.name}>
-                  <Link href={contact.href} className="hover:text-gray-300 body-normal transition-colors">
+                  <Link href={contact.href} className="body-normal transition-colors hover:text-gray-300">
                     {contact.name}
                   </Link>
                 </li>

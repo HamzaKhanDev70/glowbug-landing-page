@@ -157,7 +157,7 @@ export default function TravelTypes() {
 
   return (
     // <section className="relative -mt-24 md:-mt-40 " >
-    <section className="relative " id="where-is">
+  <section className="relative w-full " id="where-is" >
       {/* Your existing background gradient */}
       <div className="absolute top-0 w-full h-full">
         <div
@@ -168,8 +168,8 @@ export default function TravelTypes() {
         />
       </div>
 
-      <div className="relative pt-38 md:pt-17 pb-24 md:pb-32">
-        <div className="w-full flex flex-col items-center justify-between px-5 md:px-20 ">
+ <div className="relative pt-7">
+  <div className="w-full flex flex-col justify-between items-center px-0 md:px-0 ">
           {travelTypes.map((type, index) => (
             <TravelType
               key={index}

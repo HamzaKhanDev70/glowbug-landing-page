@@ -130,10 +130,10 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
                   delay: idx * 0.1,
                 }}
                 viewport={{ once: false, amount: 0.2 }}
-                className="w-[400px] flex flex-col bg-opacity-5 rounded-xl shadow-lg hover:bg-opacity-10 transition"
+                className="w-[250px] md:w-[400px] flex flex-col bg-opacity-5 rounded-xl shadow-lg hover:bg-opacity-10 transition "
               >
                 {/* Image */}
-                <div className="w-[400px] h-[330px] relative overflow-hidden group">
+                <div className="w-[250px] md:w-[400px] h-[330px] relative overflow-hidden group">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
@@ -149,7 +149,7 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
                 </div>
 
                 {/* Text - aligned left */}
-                <div className="p-4 text-left">
+                <div className="p-4 text-left ">
                   <p className="body-normal uppercase tracking-wide text-gray-300 mb-1">
                     {member.title}
                   </p>

@@ -8,13 +8,13 @@ interface TravelHeroProps {
 const TravelHero:React.FC<TravelHeroProps>=({heading,description})=> {
   return (
     <div
-      className="z-10 w-full max-w-7xl flex flex-col items-center px-4 md:px-0 py-20 md:py-28"
+      className="z-10 w-full max-w-4xl flex flex-col items-center px-4 md:px-0 py-20  min-h-[220px] "
     >
-      <h1 className="heading-s md:heading-xl font-bold mb-4 text-center leading-none wrap-break-word uppercase" >
+      <h1 className="heading-s md:heading-xl font-bold mb-2 text-center leading-none wrap-break-word uppercase" >
         Your ulitmate 
       </h1>
      
-      <h1 className=" text-[#FFD300] heading-m md:heading-l lg:heading-xl font-normal mb-8 text-center leading-none">
+      <h1 className=" text-[#FFD300] heading-m md:heading-l lg:heading-xl font-normal mb-2 text-center leading-none">
         TRAVEL COMPANION
       </h1>
       <h1 className="heading-s md:heading-xl font-bold mb-4 text-center leading-none wrap-break-word" >

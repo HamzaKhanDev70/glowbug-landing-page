@@ -88,7 +88,7 @@ There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus
       className="relative "
     >
       <div className="relative z-20 w-full py-16 md:py-20">
-        <div className="absolute  right-0 top-0 w-full bottom-0 bg-black rounded-l-3xl lg:rounded-l-[64px] " />
+        <div className="relative  right-0 top-0 w-full bottom-0 bg-black rounded-l-3xl lg:rounded-l-[64px] " />
         <div className="max-w-[2300px] mx-auto relative">
           <div className="overflow-x-hidden md:mx-12">
             <div className="mx-auto max-w-[1500px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 px-6 md:px-1">

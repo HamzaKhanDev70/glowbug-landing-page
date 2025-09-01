@@ -1,61 +1,23 @@
-import React from "react";
-import Image from "next/image";
-import TeamSection from "./TeamSection";
-import CompanyPartner from "./Company-Partner";
+"use client";
+import React, { useState } from "react";
+import StoryModal from "./StoryModal";
 import ClippedSection from "./Clipped-Section";
-import SectionDivider from "./SectionSeperator";
-const AboutUs = () => {
-  return (
-    <section className="w-full " id="know-us">
-      <ClippedSection
-        backgroundImage="/images/about-us.png"
-        headingWhite="About"
-        headingYellow="us"
-        paragraph="We are on a journey to empower creators and delight streamers around the globe."
-      />
-      <div className="text-center max-w-5xl mx-auto px-4 pt-16">
-        <h1 className="text-[#FEE300] heading-m mb-10 tracking-tight">
-          OUR STORY
-        </h1>
+import TeamSection from './TeamSection';
 
-        <div className="text-left space-y-8 text-gray-300 body-normal leading-relaxed">
+const AboutSection = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  // Full text AFTER "That question became a mission."
+  const moreContent = (
+    <>
+         <div className="text-left space-y-8 text-gray-300 body-normal leading-relaxed">
+        
           <p>
-            <strong className="text-white">Our Story</strong>
-            <br />
-            <span className="italic text-white border-l-4 border-[#FEE300] pl-4">
-              It started with silence.
-            </span>{" "}
-            Not the peaceful kind but the kind you feel mid-journey, when the
-            Wi-Fi doesn't connect, your screen goes dark, and you're left
-            watching the world pass by without being part of it.
-          </p>
-
-          <p>
-            We saw that moment everywhere; families on buses with restless kids,
-            business travellers on planes staring at blank screens, commuters on
-            trains scrolling through offline photo galleries just to pass the
-            ride.
-          </p>
-
-          <p>
-            In a world bursting with content, the journey remained
-            disconnected—not just from the internet, but from experience. And we
-            thought:
-          </p>
-
-          <blockquote className="italic text-white border-l-4 border-[#FEE300] pl-4">
-            What if the journey itself became the destination?
-          </blockquote>
-
-          <p>
-            That question became a mission. Not to build just another streaming
+           Not to build just another streaming
             app, but to design a platform that follows the passenger, not the
             infrastructure. A platform that’s inclusive and works without
             internet—one that respects the limitations of fleets, the rhythms of
-            operators, and the attention of travellers.
-          </p>
-
-          <p>
+            operators, and the attention of travellers. <br />
             It didn’t come easy. It meant solving for inconsistent power
             supplies, syncing content without live connectivity, building
             interfaces so simple they need no explanation, and forming
@@ -137,12 +99,73 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+    </>
+  );
 
-      <TeamSection />
-      {/* <CompanyPartner heading="OUR CARRIER PARTNERS " /> */}
+  return (
+    <section className="w-full" id="know-us">
+      {/* ...your clipped section and intro here... */}
+
+      <ClippedSection
+        backgroundImage="/images/about-us.png"
+        headingWhite="Know"
+        headingYellow="us"
+        paragraph="We are on a journey to empower creators and delight streamers around the globe."
+      />
+      <div className="text-center max-w-5xl mx-auto px-4 py-16">
+        <h1 className="text-[#FEE300] heading-m mb-10 tracking-tight">
+          OUR STORY
+        </h1>
+
+        <div className="text-left space-y-8 text-gray-300 body-normal leading-relaxed">
+          <p>
+            <br />
+            <span className="italic text-white border-l-4 border-[#FEE300] pl-4">
+              It started with silence.
+            </span>{" "}
+            Not the peaceful kind but the kind you feel mid-journey, when the
+            Wi-Fi doesn't connect, your screen goes dark, and you're left
+            watching the world pass by without being part of it.
+          </p>
+
+          <p>
+            We saw that moment everywhere; families on buses with restless kids,
+            business travellers on planes staring at blank screens, commuters on
+            trains scrolling through offline photo galleries just to pass the
+            ride.
+          </p>
+
+          <p>
+            In a world bursting with content, the journey remained
+            disconnected—not just from the internet, but from experience. And we
+            thought:
+          </p>
+
+          <blockquote className="italic text-white border-l-4 border-[#FEE300] pl-4">
+            What if the journey itself became the destination?
+          </blockquote>
+        </div>
+
+        <div className="text-left space-y-8 text-gray-300 body-normal leading-relaxed">
+          <p className="mt-4">
+            That question became a mission.
+            <button
+              onClick={() => setModalOpen(true)}
+              className="ml-2 text-[#FEE300] underline hover:text-yellow-400"
+            >
+              …more
+            </button>
+          </p>
+        </div>
+      </div>
+      <StoryModal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        content={moreContent}
+      />
+      <TeamSection/>
     </section>
   );
 };
 
-export default AboutUs;
+export default AboutSection;

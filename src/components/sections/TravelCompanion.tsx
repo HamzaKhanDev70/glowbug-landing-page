@@ -15,34 +15,34 @@ export default function TravelCompanion() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const slides = [
     {
-      image: "/images/MainHeader2.png",
+      image: "/images/hero/s1-lady.png",
 
       heading: "DreamStream",
       description:
         "DreamStream exists to enable travellers across the world to find their moments of magic in motion.",
     },
     {
-      image: "/images/MainHeader3.png",
+      image: "/images/hero/s4-byod.png",
 
       heading: "Inlounge & Onboard ",
       description:
         "Offering an unforgettable experience offline, when there is no other service available.",
     },
     {
-      image: "/images/MainHeader.png",
+      image: "/images/hero/s2-train.png",
 
       heading: "Carrier-Agnostic by Design",
       description:
         "DreamStream delivers the same seamless experience— whether jet or train, bus or cruise we have it covered for you.",
     },
     {
-      image: "/images/byod-1.png",
+      image: "/images/s5-plane.png",
 
       heading: "Your Journey, Your Screen",
       description: "Watch, Listen, Read, Play and Meditate",
     },
     {
-      image: "/images/bus-slider.png",
+      image: "/images/hero/s3-bus.png",
 
       heading: "Passenger-First Entertainment Everywhere",
       description:
@@ -60,10 +60,9 @@ export default function TravelCompanion() {
 
   return (
     <div className="overflow-x-hidden w-full overflow-y-clip ">
-      <div className="">
         <div className="relative  overflow-hidden min-h-[calc(100v-100px)] ">
           {/* <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] "> */}
-          <div className="absolute inset-0 w-full h-full">
+          <div className="absolute inset-0 w-full h-full ">
             {slides.map((slide, index) => (
               <div
                 key={index}
@@ -72,7 +71,7 @@ export default function TravelCompanion() {
                 }`}
               >
                 <div
-                  className="w-full aspect-[2/9] md:aspect-[3/7] bg-no-repeat bg-center bg-cover"
+                  className="w-full h-[100%] bg-no-repeat bg-center bg-contain "
                   style={{
                     backgroundImage: `url('${slide.image}')`,
                     backgroundPosition: "top",
@@ -140,31 +139,30 @@ export default function TravelCompanion() {
                 <link key={index} rel="preload" as="image" />
               )
           )}
-
-          <section className="w-full py-16  flex items-center justify-center bg-dark-900/50 text-white relative z-10">
-            <div className="w-full flex flex-col">
+          <section className="w-full py-16  flex items-center justify-center bg-dark-900/50 text-white relative z-10 ">
+            <div className="w-full flex flex-col items-center justify-center">
               <TravelHero
                 heading={slides[currentImageIndex].heading}
                 description={slides[currentImageIndex].description}
               />
               <TravelIllustration />
-              {/* <SliderDots
+              <SliderDots
                 currentIndex={currentImageIndex}
                 total={slides.length}
                 onSelect={(index) => setCurrentImageIndex(index)}
-              /> */}
+              />
               <TravelFeatures />
+              <EntertainmentCTA />
               <SectionSeparator keyword="Where is" />
               <TravelTypes />
               {/* <EntertainmentCTA /> */}
             </div>
           </section>
-
           {/* <div className="relative h-[500px] lg:h-[650px] z-10 border-2 border-red-500">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
           </div> */}
         </div>
-      </div>
+ 
 
       {/* <div className="relative -mt-[500px] lg:-mt-[650px] border-2"> */}
       <div className="relative">
@@ -174,7 +172,7 @@ export default function TravelCompanion() {
       </div>
       <EntertainmentFeatures />
       <Entertainment />
-      <EntertainmentCTA />
+    
     </div>
   );
 }

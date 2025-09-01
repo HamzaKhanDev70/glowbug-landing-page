@@ -59,11 +59,11 @@ export default function EntertainmentFeatures() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 px-8 ">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-[24px] sm:rounded-[32px] p-4 sm:p-6 md:p-8 flex flex-col items-center text-center w-full"
+              className="rounded-[24px] sm:rounded-[32px] p-4 flex flex-col items-center text-center w-full "
               style={{
                 background: "linear-gradient(180deg, #4A1D00 0%, #2A1100 100%)",
               }}
@@ -75,7 +75,7 @@ export default function EntertainmentFeatures() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="heading-m  text-white  mb-2 sm:mb-4">
+              <h3 className="heading-m text-white mb-2 sm:mb-4 break-words text-wrap whitespace-normal">
                 {feature.title}
               </h3>
               <div className="flex flex-col gap-1 sm:gap-2">

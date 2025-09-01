@@ -144,7 +144,7 @@ export default function Entertainment() {
                     <div key={index} className="flex items-start gap-1.5">
                       <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-black shrink-0" />
                       <div>
-                        <div className="heading-xs font-bold">
+                        <div className="heading-xs font-bold break-words">
                           {info.heading}
                         </div>
                         <div className="body-normal">{info.description}</div>
