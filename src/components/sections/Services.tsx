@@ -63,7 +63,7 @@ const Services = () => {
                 headingYellow="services"
                 paragraph="We are on a journey to empower creators and delight streamers around the globe."
                 buttonLabel="Experience"
-                buttonLink="/experience"
+                buttonLink="https://dspk-sandbox.airfi.io/"
               />
             </div>
           </div>
@@ -72,7 +72,7 @@ const Services = () => {
 
       <div
         className="
-    relative z-10 mx-auto space-y-15  flex flex-col items-center justify-between 
+    relative z-10 mx-auto space-y-15  flex flex-col items-center justify-between overflow-x-hidden
   "
         style={{
           backgroundImage: "url('/images/vector-1.png')",
@@ -89,7 +89,7 @@ const Services = () => {
     <div
       key={index}
       className={`
-        grid grid-cols-1 md:grid-cols-2 md:gap-20 md:space-y-8 items-center px-8 overflow-x-hidden
+        grid grid-cols-1 md:grid-cols-2 md:gap-20 md:space-y-8 items-center px-8 
       `}
     >
       {/* Text Side */}

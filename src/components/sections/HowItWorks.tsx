@@ -5,13 +5,13 @@ import { url } from "inspector";
 const steps = [
   {
     number: "01",
-    title: "Step 1: Scan the DreamStream QR Code on your ticket",
+    title: `Step 1: Once onboard select the network “DreamStream” from your device’s WIFI settings menu.`,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus felis, hendrerit et viverra ac, mattis luctus nisl. Nulla eu bibendum enim. Proin lorem dapibus turpis ornare suscipit.",
   },
   {
     number: "02",
-    title: "Step 2: Login & Connect to DreamStream",
+    title: `Step 2: If not redirected automatically, type “dreamstream.aero” in your Chrome or Safari web browser to get started.`,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus felis, hendrerit et viverra ac, mattis luctus nisl. Nulla eu bibendum enim. Proin lorem dapibus turpis ornare suscipit.",
   },

@@ -28,7 +28,13 @@ export default function TravelSlider() {
       promo: "A moment of magic.",
       briefd:
         "You’re relaxing in the quiet lounge, flight still an hour away, but airport mobile internet is patchy and public Wi-Fi is scrappy. Then you spot a small sign: ",
-      description: `“Connect to DreamStream.” One tap or a quick scan of the QR code on your boarding pass, brings the offline network to life. A login screen appears; you choose a simple manual sign-in or let the QR code fill your details. Instantly, a full library of films, playlists, podcasts, and destination guides opens on your device. When boarding is called, you slip your phone into your pocket, stroll down the jet bridge, take your seat, and reconnect to the same DreamStream network aboard. No buffering, no searching—your movie continues exactly where you paused, a live map traces the route, and the soundtrack you queued hums softly through your headphones. From lounge to landing, DreamStream feels like magic: one invisible thread of entertainment that never asks for internet and never breaks the spell.
+      description: `“Connect to DreamStream.” 
+      
+      One tap or a quick scan of the QR code on your boarding pass, brings the offline network to life. A login screen appears; you choose a simple manual sign-in or let the QR code fill your details. Instantly, a full library of films, playlists, podcasts, and destination guides opens on your device. 
+      
+      When boarding is called, you slip your phone into your pocket, stroll down the jet bridge, take your seat, and reconnect to the same DreamStream network aboard. No buffering, no searching—your movie continues exactly where you paused, a live map traces the route, and the soundtrack you queued hums softly through your headphones. 
+      
+      From lounge to landing, DreamStream feels like magic: one invisible thread of entertainment that never asks for internet and never breaks the spell.
 `,
     },
     {
@@ -36,8 +42,12 @@ export default function TravelSlider() {
       image: "/images/slide2.png",
       promo: "Customer Satisfaction with Zero Drag",
       briefd:"DreamStream unlocks a new frontier in onboard experience, one where passengers are delighted, and operators don’t lift a finger. With a lightweight, plug-and-play appliance.",
-      description: `With a lightweight, plug-and-play appliance that fits seamlessly into aircraft, trains, coaches, ferries, and cruise fleets, DreamStream installs quickly, no capex, no structural changes, no content licensing burden. It switches on as part of your existing flow, offering instant access to entertainment and curated services with minimal setup and zero disruption.Behind the scenes, the platform quietly generates value, sharing in high-margin revenue streams from advertising, premium content, and ancillary services like F&B or mobility partnerships, all without adding crew or straining bandwidth.
+      description: `With a lightweight, plug-and-play appliance that fits seamlessly into aircraft, trains, coaches, ferries, and cruise fleets, DreamStream installs quickly, no capex, no structural changes, no content licensing burden. It switches on as part of your existing flow, offering instant access to entertainment and curated services with minimal setup and zero disruption.
+      
+      Behind the scenes, the platform quietly generates value, sharing in high-margin revenue streams from advertising, premium content, and ancillary services like F&B or mobility partnerships, all without adding crew or straining bandwidth.
+
 And as passengers explore, DreamStream captures rich behavioural insights, helping you refine service, drive smarter cross-sells, and build a fleet-wide experience that’s consistent, modern, and effortlessly scalable.
+
 This isn’t just another system, it’s your fast lane to satisfaction, loyalty, and long-term impact, with none of the drag.
 `,
     },
@@ -47,7 +57,13 @@ This isn’t just another system, it’s your fast lane to satisfaction, loyalty
       promo: "Captive Audiences, Clutter-Free Canvas",
       briefd: `A traveller leans back mid-journey, phone in hand, headphones on, immersed. There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus and time.
 `,
-      description: `This is where DreamStream delivers its magic for brands. In a calm, captive setting where travellers are most receptive, your story lands exactly where it should, before a film, between playlists, on splash screens or subtle banners. Every placement is curated, validated with carriers, and delivered in a low-clutter environment that studies show can drive 30–50% higher recall and conversion. You’re in full control. The self-serve VAST portal allows precise targeting, frequency capping, and transparent reporting, so your campaigns don’t just run, they perform. And in markets where cookies break down and policy fragments attention, DreamStream offers a clean, privacy-respecting lane to reach verified, geo-mapped audiences. All of this, at competitive RPMs that outpace crowded ground-based digital. In a world full of noise, DreamStream gives your brand a rare gift: a moment that travels further and lands deeper.
+      description: `This is where DreamStream delivers its magic for brands. In a calm, captive setting where travellers are most receptive, your story lands exactly where it should, before a film, between playlists, on splash screens or subtle banners. Every placement is curated, validated with carriers, and delivered in a low-clutter environment that studies show can drive 30–50% higher recall and conversion.
+      
+      You’re in full control. The self-serve VAST portal allows precise targeting, frequency capping, and transparent reporting, so your campaigns don’t just run, they perform. And in markets where cookies break down and policy fragments attention, DreamStream offers a clean, privacy-respecting lane to reach verified, geo-mapped audiences. 
+      
+      All of this, at competitive RPMs that outpace crowded ground-based digital. 
+      
+      In a world full of noise, DreamStream gives your brand a rare gift: a moment that travels further and lands deeper.
 `,
     },
     {
@@ -55,7 +71,13 @@ This isn’t just another system, it’s your fast lane to satisfaction, loyalty
       image: "/images/slide4.png",
       promo: "A New Stage for Stories",
       briefd: `A short film, an indie doc, or a local-language drama, ready to be seen, but buried under the noise of crowded OTT platforms.`,
-      description: `Now imagine that same story finding its way to a traveller on a train winding through the Alps, or a family settling into a ferry ride across the Aegean. No search bar, no algorithm walls; just your content, front and centre, in the quiet space where people are ready to watch.DreamStream is opening a new stage, one that travels. With a single ingest, your titles are distributed across subscribed carriers worldwide, reaching passengers in aircraft, buses, trains, cruises, and lounges where traditional OTTs often don’t go.The platform is built with creators in mind: DRM-secure, windowing-respectful, and designed to surface metadata and ratings that drive discovery and long-tail viewership. Each view counts, each stream generates revenue, and you stay in control.No reformatting for every operator. No extra licensing friction. Just your stories, streamed seamlessly to an audience that’s ready to engage whether it’s for 20 minutes or an entire journey. This isn’t about replacing the old stage, it’s about extending it. DreamStream invites you to travel further, without losing your creative footprint.
+      description: `Now imagine that same story finding its way to a traveller on a train winding through the Alps, or a family settling into a ferry ride across the Aegean. No search bar, no algorithm walls; just your content, front and centre, in the quiet space where people are ready to watch.
+      
+      DreamStream is opening a new stage, one that travels. With a single ingest, your titles are distributed across subscribed carriers worldwide, reaching passengers in aircraft, buses, trains, cruises, and lounges where traditional OTTs often don’t go.The platform is built with creators in mind: DRM-secure, windowing-respectful, and designed to surface metadata and ratings that drive discovery and long-tail viewership. Each view counts, each stream generates revenue, and you stay in control.
+      
+      No reformatting for every operator. No extra licensing friction. Just your stories, streamed seamlessly to an audience that’s ready to engage whether it’s for 20 minutes or an entire journey. 
+      
+      This isn’t about replacing the old stage, it’s about extending it. DreamStream invites you to travel further, without losing your creative footprint.
 `,
     },
   ];
