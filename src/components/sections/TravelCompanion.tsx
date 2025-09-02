@@ -29,7 +29,7 @@ export default function TravelCompanion() {
         "Offering an unforgettable experience offline, when there is no other service available.",
     },
     {
-      image: "/images/hero/s2-train.png",
+      image: "/images/hero/s2-train-short.png",
 
       heading: "Carrier-Agnostic by Design",
       description:
@@ -71,7 +71,7 @@ export default function TravelCompanion() {
                 }`}
               >
                 <div
-                  className="w-full h-[100%] bg-no-repeat bg-center bg-contain "
+                  className="w-[100%] min-h-screen h-[3021px] bg-no-repeat bg-center bg-cover"
                   style={{
                     backgroundImage: `url('${slide.image}')`,
                     backgroundPosition: "top",
@@ -81,7 +81,7 @@ export default function TravelCompanion() {
             ))}
           </div>
           {/* Arrows for Slider Navigation */}
-          <div className="absolute inset-0  sm:flex hidden  items-center justify-between px-4 md:px-10  mx-9">
+          <div className="absolute inset-0  sm:flex hidden  items-start justify-between px-4 md:px-10  mx-9 pt-[56%]">
             {/* Left Arrow */}
             {currentImageIndex > 0 && (
               <button

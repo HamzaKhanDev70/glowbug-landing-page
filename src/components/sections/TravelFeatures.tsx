@@ -2,18 +2,18 @@ export default function TravelFeatures() {
   return (
     <div className="w-full flex flex-col md:flex-row justify-between px-4 sm:px-8 md:px-12 lg:px-24 py-8 md:py-12 lg:py-16 gap-12 md:gap-10 ">
       {/* Left Section */}
-      <div className="flex-1 text-center md:text-right">
+      <div className="flex-1 text-center md:text-right flex flex-col justify-center items-center md:items-end">
         <h2 className="heading-l md:heading-l lg:heading-xl mb-4 whitespace-normal text-balance break-words" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
           Elevate your
           <br />
           entertainment
         </h2>
-        <p className="body-normal text-sm max-w-md md:ml-auto md:text-right">
+        <p className="body-normal  max-w-sm md:ml-auto  md:text-right ">
           DreamStream is the only engagement platform that’s ubiquitously available without download or the internet for travellers across the world who want freedom, choice and control of their entertainment where there’s no other service available.
         </p>
       </div>
       {/* Right Section */}
-      <div className="flex-1 text-center md:text-left">
+      <div className="flex-1 text-center md:text-left flex flex-col justify-center items-center md:items-start">
         <h2 className="heading-l md:heading-l lg:heading-xl mb-4" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
           Experience
           <br />

@@ -156,12 +156,12 @@ export default function TravelTypes() {
   };
 
   return (
-    // <section className="relative -mt-24 md:-mt-40 " >
+    
   <section className="relative w-full " id="where-is" >
       {/* Your existing background gradient */}
       <div className="absolute top-0 w-full h-full">
         <div
-          className="absolute top-0 left-0 right-0 h-[150%] bg-gradient-to-b from-[#4A1D00] to-black"
+          className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-[#4A1D00] to-black"
           style={{
             clipPath: "polygon(100px 0, 100% 0, 100% 100%, 0 100%, 0 0px)",
           }}
