@@ -4,11 +4,13 @@ import AccessDevice from "@/components/sections/AccessDevice";
 import SectionSeparator from '../components/sections/SectionSeperator';
 import AboutUs from './../components/sections/AboutUs';
 import ContactUs from './../components/sections/ContactUS';
+import Services from './../components/sections/Services';
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black ">
       <TravelCompanion />
       {/* <EntertainmentFeatures /> */}
+      <Services/>
       <AccessDevice />
       <AboutUs/>
       {/* <SectionSeparator keyword="What we offer" /> */}

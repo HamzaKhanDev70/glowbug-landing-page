@@ -27,16 +27,15 @@ export default function TravelSlider() {
       image: "/images/slide1.png",
       promo: "A moment of magic.",
       briefd:
-        "You’re relaxing in the quiet lounge, flight still an hour away, but airport mobile internet is patchy and public Wi-Fi is scrappy. Then you spot a small sign: “Connect to DreamStream.”",
-      description: `One tap or a quick scan of the QR code on your boarding pass, brings the offline network to life. A login screen appears; you choose a simple manual sign-in or let the QR code fill your details. Instantly, a full library of films, playlists, podcasts, and destination guides opens on your device. When boarding is called, you slip your phone into your pocket, stroll down the jet bridge, take your seat, and reconnect to the same DreamStream network aboard. No buffering, no searching—your movie continues exactly where you paused, a live map traces the route, and the soundtrack you queued hums softly through your headphones. From lounge to landing, DreamStream feels like magic: one invisible thread of entertainment that never asks for internet and never breaks the spell.
+        "You’re relaxing in the quiet lounge, flight still an hour away, but airport mobile internet is patchy and public Wi-Fi is scrappy. Then you spot a small sign: ",
+      description: `“Connect to DreamStream.” One tap or a quick scan of the QR code on your boarding pass, brings the offline network to life. A login screen appears; you choose a simple manual sign-in or let the QR code fill your details. Instantly, a full library of films, playlists, podcasts, and destination guides opens on your device. When boarding is called, you slip your phone into your pocket, stroll down the jet bridge, take your seat, and reconnect to the same DreamStream network aboard. No buffering, no searching—your movie continues exactly where you paused, a live map traces the route, and the soundtrack you queued hums softly through your headphones. From lounge to landing, DreamStream feels like magic: one invisible thread of entertainment that never asks for internet and never breaks the spell.
 `,
     },
     {
       title: "Operators",
       image: "/images/slide2.png",
       promo: "Customer Satisfaction with Zero Drag",
-      briefd:
-        "DreamStream unlocks a new frontier in onboard experience, one where passengers are delighted, and operators don’t lift a finger.",
+      briefd:"DreamStream unlocks a new frontier in onboard experience, one where passengers are delighted, and operators don’t lift a finger. With a lightweight, plug-and-play appliance.",
       description: `With a lightweight, plug-and-play appliance that fits seamlessly into aircraft, trains, coaches, ferries, and cruise fleets, DreamStream installs quickly, no capex, no structural changes, no content licensing burden. It switches on as part of your existing flow, offering instant access to entertainment and curated services with minimal setup and zero disruption.Behind the scenes, the platform quietly generates value, sharing in high-margin revenue streams from advertising, premium content, and ancillary services like F&B or mobility partnerships, all without adding crew or straining bandwidth.
 And as passengers explore, DreamStream captures rich behavioural insights, helping you refine service, drive smarter cross-sells, and build a fleet-wide experience that’s consistent, modern, and effortlessly scalable.
 This isn’t just another system, it’s your fast lane to satisfaction, loyalty, and long-term impact, with none of the drag.
@@ -46,8 +45,7 @@ This isn’t just another system, it’s your fast lane to satisfaction, loyalty
       title: "Advertisers",
       image: "/images/slide3.png",
       promo: "Captive Audiences, Clutter-Free Canvas",
-      briefd: `A traveller leans back mid-journey, phone in hand, headphones on, immersed.
-There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus and time.
+      briefd: `A traveller leans back mid-journey, phone in hand, headphones on, immersed. There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus and time.
 `,
       description: `This is where DreamStream delivers its magic for brands. In a calm, captive setting where travellers are most receptive, your story lands exactly where it should, before a film, between playlists, on splash screens or subtle banners. Every placement is curated, validated with carriers, and delivered in a low-clutter environment that studies show can drive 30–50% higher recall and conversion. You’re in full control. The self-serve VAST portal allows precise targeting, frequency capping, and transparent reporting, so your campaigns don’t just run, they perform. And in markets where cookies break down and policy fragments attention, DreamStream offers a clean, privacy-respecting lane to reach verified, geo-mapped audiences. All of this, at competitive RPMs that outpace crowded ground-based digital. In a world full of noise, DreamStream gives your brand a rare gift: a moment that travels further and lands deeper.
 `,
@@ -171,7 +169,7 @@ There are no pop-ups. No endless tabs. No doomscrolling distractions. Just focus
         onClose={closeModal}
         data={selectedSlide}
       />
-      <SectionDivider keyword="Where is" />
+      {/* <SectionDivider keyword="Where is" /> */}
     </motion.section>
   );
 }

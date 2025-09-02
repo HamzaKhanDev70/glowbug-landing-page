@@ -44,7 +44,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative"
+      className="relative py-12"
       style={{
         position: "relative",
       }}
@@ -89,7 +89,7 @@ const Services = () => {
     <div
       key={index}
       className={`
-        grid grid-cols-1 md:grid-cols-2 md:gap-20 md:space-y-8 items-center px-8
+        grid grid-cols-1 md:grid-cols-2 md:gap-20 md:space-y-8 items-center px-8 overflow-x-hidden
       `}
     >
       {/* Text Side */}

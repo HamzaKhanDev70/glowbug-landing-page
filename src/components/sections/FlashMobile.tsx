@@ -59,8 +59,8 @@ export default function MobileAppShowcase() {
     //   </div>
     // </section>
  <section className="relative w-full flex items-center justify-center bg-transparent z-20 px-4 md:px-8">
-  <div className="max-w-[1400px] w-full mx-auto">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 xl:gap-16 items-center">
+  <div className="max-w-[1200px] w-full mx-auto ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 xl:gap-16 items-center ">
 
       {/* Left Block */}
       <div className="text-white text-center md:text-left self-center">
