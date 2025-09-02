@@ -16,7 +16,7 @@ const SectionDivider: React.FC<SectionDividerProps> = ({
   keyword = "",
 }) => {
   return (
-    <div className={clsx("relative w-full flex items-center justify-around" , margin, className)}>
+    <div className={clsx("relative w-full flex items-center justify-start" , margin, className)}>
       {/* Left line */}
       {/* <div className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-[#FDE200] to-yellow-500" /> */}
 
@@ -27,7 +27,7 @@ const SectionDivider: React.FC<SectionDividerProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: false }}
-          className="mx-4 text-4xl font-bold text-[#FDE200] uppercase tracking-widest"
+          className="mx-6 md:mx-64 text-4xl font-bold text-[#FDE200] uppercase tracking-widest overflow-hidden "
           style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}
         >
           {keyword}
