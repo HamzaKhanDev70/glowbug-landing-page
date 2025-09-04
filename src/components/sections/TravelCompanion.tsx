@@ -59,7 +59,7 @@ export default function TravelCompanion() {
   }, [slides.length]);
 
   return (
-    <div className="overflow-x-hidden w-full overflow-y-clip">
+    <div className="overflow-x-hidden w-full overflow-y-clip ">
         <div className="relative overflow-hidden min-h-[calc(100v-100px)] ">
           {/* <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] "> */}
           <div className="absolute inset-0 w-full h-full ">
@@ -71,7 +71,7 @@ export default function TravelCompanion() {
                 }`}
               >
                 <div
-                  className="w-[100%] min-h-screen h-[3021px] bg-no-repeat bg-center bg-cover"
+                  className="w-[100%] min-h-[3021] h-[3021px] bg-no-repeat bg-center bg-cover"
                   style={{
                     backgroundImage: `url('${slide.image}')`,
                     backgroundPosition: "top",
@@ -160,11 +160,11 @@ export default function TravelCompanion() {
  
 
       <div className="relative">
-        <TravelTypes />
+        {/* <TravelTypes />
         <SectionSeparator keyword="What we offer" />
         <TravelSlider />
+      <EntertainmentFeatures /> */}
       </div>
-      <EntertainmentFeatures />
     
     </div>
   );

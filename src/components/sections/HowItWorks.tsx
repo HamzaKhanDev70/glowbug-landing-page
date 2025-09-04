@@ -11,13 +11,13 @@ const WebSteps = [
   },
   {
     number: "02",
-    title: `Step 2: If not redirected automatically, type “dreamstream.aero” in your Chrome or Safari web browser to get started.`,
+    title: `Step 2: If not redirected , type “dreamstream.aero” in your Chrome or Safari  to get started.`,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus felis, hendrerit et viverra ac, mattis luctus nisl. Nulla eu bibendum enim. Proin lorem dapibus turpis ornare suscipit.",
   },
   {
     number: "03",
-    title: "Step 3: Relax & Enjoy DreamStream",
+    title: "Step 3: Relax & Enjoy DreamStream.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus felis, hendrerit et viverra ac, mattis luctus nisl. Nulla eu bibendum enim. Proin lorem dapibus turpis ornare suscipit.",
   },
@@ -25,27 +25,27 @@ const WebSteps = [
 const MblSteps = [
   {
     number: "01",
-    title: `Step 1: Visit Web URL.`,
+    title: `Step 1:  Open your browser and go to the official DreamStream website.`,
     // title: `Step 1: Once onboard select the network “DreamStream” from your device’s WIFI settings menu.`,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus felis, hendrerit et viverra ac, mattis luctus nisl. Nulla eu bibendum enim. Proin lorem dapibus turpis ornare suscipit.",
   },
   {
     number: "02",
-    title: `Step 2: Download App.`,
+    title: `Step 2: Select the Download Mobile Application option for iOS or Android.`,
     // title: `Step 2: If not redirected automatically, type “dreamstream.aero” in your Chrome or Safari web browser to get started.`,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus felis, hendrerit et viverra ac, mattis luctus nisl. Nulla eu bibendum enim. Proin lorem dapibus turpis ornare suscipit.",
   },
   {
     number: "03",
-    title: "Step 3: Relax & Enjoy DreamStream",
+    title: "Step 3: Login to Application using your credentials.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus felis, hendrerit et viverra ac, mattis luctus nisl. Nulla eu bibendum enim. Proin lorem dapibus turpis ornare suscipit.",
   },
   {
     number: "04",
-    title: "Step 4: Relax & Enjoy DreamStream",
+    title: "Step 4: Relax & Enjoy DreamStream.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus felis, hendrerit et viverra ac, mattis luctus nisl. Nulla eu bibendum enim. Proin lorem dapibus turpis ornare suscipit.",
   },
@@ -79,7 +79,7 @@ export default function HowItWorks() {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-8 ">
-            <div className="left">
+            <div className="left  flex-1">
               <div
                 className=" pb-4 text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] leading-[1.1]"
                 style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}
@@ -115,7 +115,7 @@ export default function HowItWorks() {
                 ))}
               </div>
             </div>
-            <div className="right">
+            <div className="right flex-1">
               <div
                 className="pb-4 text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] leading-[1.1]"
                 style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}
