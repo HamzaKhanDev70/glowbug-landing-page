@@ -59,7 +59,7 @@ export default function TravelCompanion() {
   }, [slides.length]);
 
   return (
-    <div className="overflow-x-hidden w-full overflow-y-clip ">
+    <div className="overflow-x-hidden w-full overflow-y-clip">
         <div className="relative overflow-hidden min-h-[calc(100v-100px)] ">
           {/* <div className="relative rounded-3xl lg:rounded-[64px] overflow-hidden min-h-[calc(100v-100px)] "> */}
           <div className="absolute inset-0 w-full h-full ">
@@ -154,24 +154,17 @@ export default function TravelCompanion() {
               <TravelFeatures />
               <EntertainmentCTA />
               <SectionSeparator keyword="Where is" />
-              <TravelTypes />
-              {/* <EntertainmentCTA /> */}
             </div>
           </section>
-          {/* <div className="relative h-[500px] lg:h-[650px] z-10 border-2 border-red-500">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
-          </div> */}
         </div>
  
 
-      {/* <div className="relative -mt-[500px] lg:-mt-[650px] border-2"> */}
       <div className="relative">
+        <TravelTypes />
         <SectionSeparator keyword="What we offer" />
         <TravelSlider />
-        {/* <TravelTypes /> */}
       </div>
       <EntertainmentFeatures />
-      <Entertainment />
     
     </div>
   );

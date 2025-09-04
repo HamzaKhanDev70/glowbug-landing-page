@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import InfoModal from "./InfoModal";
 import { motion } from "framer-motion";

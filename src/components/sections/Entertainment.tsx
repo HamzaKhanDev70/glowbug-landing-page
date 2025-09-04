@@ -49,18 +49,18 @@ export default function Entertainment() {
 
   return (
     <>
-      <section className="relative w-full pt-20 md:pt-40 lg:pt-80 ">
+      <section className="relative w-full pt-20 md:pt-40 lg:pt-80">
         <img
           src="/images/bluebg.png"
           alt="Blue background"
           className="w-full h-[1800px] sm:h-[1600px] md:h-[1400px] lg:h-[1400px] object-fill "
         />
         <div className="absolute w-full h-auto inset-0 flex  justify-center px-4 md:px-8 lg:px-20 xl:px-40 2xl:px-60 top-[10%] ">
-          <div className="relative w-full  ">
+          <div className="relative w-full min-h-fit h-full ">
             <img
               src="/images/yellowbg.png"
               alt="Yellow background"
-              className="w-full h-[1600px] sm:h-[1300px] lg:h-[1600px] max-h-[1900px] object-fill object-top "
+              className="w-full  h-[1600px] sm:h-[1300px] lg:h-[1700px] max-h-[1900px] object-fill object-top over"
             />
             <div className="absolute top-20 left-0 right-0 ">
               <>

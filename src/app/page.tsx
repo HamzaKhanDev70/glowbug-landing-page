@@ -5,12 +5,13 @@ import SectionSeparator from '../components/sections/SectionSeperator';
 import AboutUs from './../components/sections/AboutUs';
 import ContactUs from './../components/sections/ContactUS';
 import Services from './../components/sections/Services';
+import Entertainment from "@/components/sections/Entertainment";
 export default function Home() {
   return (
     <main className="min-h-screen bg-black ">
       <TravelCompanion />
-      {/* <EntertainmentFeatures /> */}
-      {/* <SectionSeparator keyword="Why us?" /> */}
+     
+      <Entertainment />
       <Services/>
       <AccessDevice />
       <AboutUs/>
