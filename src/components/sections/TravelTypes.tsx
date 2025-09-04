@@ -161,10 +161,12 @@ export default function TravelTypes() {
       {/* Your existing background gradient */}
       <div className="absolute top-0 w-full h-full">
         <div
-          className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-[#4A1D00] to-black"
+          className="absolute top-0 left-0 right-0 h-full "
           style={{
             clipPath: "polygon(100px 0, 100% 0, 100% 100%, 0 100%, 0 0px)",
+            background: "linear-gradient(to bottom, #301400 0%, #000000 100%)",
           }}
+         
         />
       </div>
 

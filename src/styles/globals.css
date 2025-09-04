@@ -156,7 +156,7 @@ body {
 /* Firefox */
 .thin-scrollbar {
   scrollbar-width: thin; /* "auto" | "thin" | "none" */
-  scrollbar-color: #FDE200 transparent;
+  scrollbar-color: #FFE300 transparent;
 }
   @utility heading-xl {
     font-family: "Right Grotesk", sans-serif;

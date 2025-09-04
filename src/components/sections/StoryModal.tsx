@@ -43,7 +43,7 @@ const StoryModal: React.FC<StoryModalProps> = ({ isOpen, onClose, content }) => 
           <polygon
             points="0,9 100,2 100,98 0,90"
              fill="#040404B2"
-            stroke="#4B1D00"
+            stroke="#FFE300"
             strokeWidth="1"
           />
         </svg>

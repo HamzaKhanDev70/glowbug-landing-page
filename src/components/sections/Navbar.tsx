@@ -7,12 +7,12 @@ import { useState } from "react";
 import Experience from './Experience';
 
 const navItems = [
-  { name: "WHAT IS", href:"/"  },
-  { name: "WHERE IS", href:"/#where-is"  },
-  { name: "WHAT WE OFFER", href: "/#what-we-offer" },
+  { name: "WHAT IS?", href:"/"  },
+  { name: "WHERE IS?", href:"/#where-is"  },
+  { name: "WHAT WE OFFER?", href: "/#what-we-offer" },
   { name: "HOW IT WORKS?", href: "/#how-it-works" },
+  { name: "WHY US?", href: "/#services" },
   { name: "KNOW US", href: "/#know-us" },
-  { name: "FIND US", href: "/#find-us" },
 ];
 
 export default function Navbar() {
@@ -70,7 +70,7 @@ const router = useRouter();
               key={item.name}
               onClick={() => handleNavClick(item.href)}
               className={`body-normal transition-colors whitespace-nowrap bg-transparent ${
-                pathname === item.href ? 'text-[#FDE200] font-semibold' : 'text-white hover:text-[#FDE200]'
+                pathname === item.href ? 'text-[#FFE300] font-semibold' : 'text-white hover:text-[#FDE200]'
               }`}
             >
               {item.name}
@@ -91,7 +91,7 @@ const router = useRouter();
                  <button
             
               className={`body-normal transition-colors whitespace-nowrap bg-transparent 
-                text-white hover:text-[#FDE200]
+                text-white hover:text-[#FFE300]
               `}
             >
             Experience
@@ -107,7 +107,7 @@ const router = useRouter();
               key={item.name}
               onClick={() => handleNavClick(item.href)}
               className={`body-normal transition-colors whitespace-nowrap bg-transparent ${
-                pathname === item.href ? 'text-[#FDE200] font-semibold' : 'text-white hover:text-[#FDE200]'
+                pathname === item.href ? 'text-[#FFE300] font-semibold' : 'text-white hover:text-[#FDE200]'
               }`}
             >
               {item.name}

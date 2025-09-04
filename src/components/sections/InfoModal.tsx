@@ -20,7 +20,7 @@ interface InfoModalProps {
   layoutColor?:"string"
   teamMember?:boolean
 }
-const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,link = "/contact-us", buttonLabel = "Find Us",layoutColor = "#4B1D00" }) => {
+const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,link = "/contact-us", buttonLabel = "Find Us",layoutColor = "#FFE300" }) => {
  
    const modalRef = useRef<HTMLDivElement>(null);
 
@@ -39,7 +39,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
   if (!isOpen) return null;
 
  {return teamMember ?  (
-<div className=" fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50  overflow-auto p-4"  onClick={onClose}>
+<div className=" fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50 overflow-auto p-4"  onClick={onClose}>
       <div className="relative w-[90%] max-w-5xl h-[88%]"  ref={modalRef}
         onClick={(e) => e.stopPropagation()}
         >
@@ -80,7 +80,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
           </div>
           {/* Right Text */}
           <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[350px] overflow-auto  thin-scrollbar text-center sm:text-left">
-            <h2 className="heading-m sm:mb-2 text-[#FDE200] tracking-[.25rem] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
+            <h2 className="heading-m sm:mb-2 text-[#FFE300] tracking-[.25rem] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
               {data?.title}
               <span className=" text-xl md:text-2xl font-light mb-4">
                 {data?.type}
@@ -152,7 +152,7 @@ const InfoModal:React.FC<InfoModalProps> = ({ isOpen, onClose, data,teamMember,l
           </div>
           {/* Right Text */}
           <div className="w-full sm:w-1.5/2 h-60 sm:h-80  lg:h-[430px] overflow-y-auto thin-scrollbar text-center sm:text-left ">
-            <h2 className="heading-m sm:mb-2 text-yellow-300 ] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
+            <h2 className="heading-m sm:mb-2 text-[#FFE300] " style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>
               {data?.title} {" "}
               <span className="  ">
                 {data?.type}

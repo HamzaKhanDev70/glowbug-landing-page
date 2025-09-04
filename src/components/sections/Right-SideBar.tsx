@@ -1,8 +1,25 @@
+
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function RightSidebar() {
+  const [footerInView, setFooterInView] = useState(false);
+
+  useEffect(() => {
+    const footer = document.getElementById("footer");
+    if (!footer) return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        setFooterInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="fixed right-4 top-0 h-screen w-[120px] flex flex-col justify-between items-end pb-22 sm:pb-0 py-6 z-50 pointer-events-none ">
       {/* Centered Social Icons */}
@@ -12,7 +29,6 @@ export default function RightSidebar() {
             key={icon.href}
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-              // viewport={{ once: false }}
             transition={{ delay: index * 0.1, duration: 0.4, ease: "easeOut" }}
             whileHover={{ scale: 1.2 }}
           >
@@ -29,23 +45,27 @@ export default function RightSidebar() {
         ))}
       </div>
 
-      {/* Download Buttons at Bottom */}
-      <div className="flex flex-col items-center gap-2 pointer-events-auto">
-        {downloadButtons.map((btn, index) => (
-          <motion.div
-            key={btn.alt}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-              // viewport={{ once: false }}
-            transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <Link href={btn.href}>
-              <Image src={btn.src} alt={btn.alt} width={120} height={40} />
-            </Link>
-          </motion.div>
-        ))}
-      </div>
+      {/* Download Buttons at Bottom - hide if footer in view, with exit animation */}
+      <AnimatePresence>
+        {!footerInView && (
+          <div className="flex flex-col items-center gap-2 pointer-events-auto">
+            {downloadButtons.map((btn, index) => (
+              <motion.div
+                key={btn.alt}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Link href={btn.href}>
+                  <Image src={btn.src} alt={btn.alt} width={120} height={40} />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

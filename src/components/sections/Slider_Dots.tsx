@@ -23,7 +23,7 @@ const SliderDots: React.FC<SliderDotsProps> = ({
           onClick={() => onSelect(index)}
           className={`w-2.5 h-2.5 rounded-full inline-block mx-1 cursor-pointer transition-all duration-300 ${
             index === currentIndex
-              ? "bg-yellow-400 opacity-100"
+              ? "bg-[#FFE300] opacity-100"
               : "bg-purple-500 opacity-50 hover:opacity-80"
           }`}
           role="button"

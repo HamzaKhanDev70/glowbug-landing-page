@@ -83,9 +83,9 @@ export default function ContactUs() {
 
       {/* FORM MODAL */}
       {showFormModal && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50"  ref={modalRef}
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 "  ref={modalRef}
          >
-          <div className="relative w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl bg-[#2F2F2F] rounded-lg p-4 sm:p-6 shadow-lg min-h-fit h-[50%] thin-scrollbar overflow-y-auto chat-scrollbar">
+          <div className="relative w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl bg-[#2F2F2F] rounded-lg p-4 sm:p-6 shadow-lg min-h-fit h-[50%] thin-scrollbar overflow-y-auto chat-scrollbar p-20">
             {/* Close Button */}
             <button
               onClick={() => setShowFormModal(false)}
@@ -183,7 +183,7 @@ export default function ContactUs() {
                   <div>
                     <label className="body-normal">Phone Number</label>
                     <PhoneInput
-                      country={"pk"}
+                      country={"us"}
                       value={values.phone}
                       onChange={(phone) => setFieldValue("phone", phone)}
                       inputStyle={{

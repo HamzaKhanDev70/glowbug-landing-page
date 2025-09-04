@@ -99,10 +99,10 @@ export default function Entertainment() {
 
                 {/* Filtered section */}
                 <div
-                  className="overflow-hidden rounded-2xl px-10 sm:px-16"
+                  className="overflow-hidden rounded-2xl px-10 sm:px-20 py-10"
                   style={{ filter: "url(#goo)" }}
                 >
-                  <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] [clip-path:polygon(0_21%,100%_0,100%_100%,0_79%)]">
+                  <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] [clip-path:polygon(0_20%,99%_0,100%_100%,0_79%)]">
                     {/* Background Image */}
                     <img
                       src="/images/mbl.png"

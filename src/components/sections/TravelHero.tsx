@@ -14,7 +14,7 @@ const TravelHero:React.FC<TravelHeroProps>=({heading,description})=> {
         Your ulitmate 
       </h1>
      
-      <h1 className=" text-[#FFD300] heading-m md:heading-l lg:heading-xl font-normal mb-2 text-center leading-none">
+      <h1 className=" text-[#FFE300] heading-m md:heading-l lg:heading-xl font-normal mb-2 text-center leading-none">
         TRAVEL COMPANION
       </h1>
       <h1 className="heading-s md:heading-xl font-bold mb-4 text-center leading-none wrap-break-word" >

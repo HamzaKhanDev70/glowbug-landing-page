@@ -10,10 +10,10 @@ export default function Home() {
     <main className="min-h-screen bg-black ">
       <TravelCompanion />
       {/* <EntertainmentFeatures /> */}
+      {/* <SectionSeparator keyword="Why us?" /> */}
       <Services/>
       <AccessDevice />
       <AboutUs/>
-      {/* <SectionSeparator keyword="What we offer" /> */}
       <ContactUs/>
     </main>
   );

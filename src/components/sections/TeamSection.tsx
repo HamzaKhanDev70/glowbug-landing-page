@@ -42,7 +42,7 @@ const teamMembers = [
   {
     name: "Beenish Askari",
     title: "Director Products and Partnerships",
-    image: "/images/team4.png",
+    image: "/images/Beenish Askari.jpg",
     description: [
       "Meet Ms. Beenish Askari, a dynamic business leader and the Director for Products and Partnerships at DreamStream. With 15 years of experience in the technology industry, Ms. Beenish has a proven track record of driving innovation and growth in product development, partnership management, and market expansion. Her expertise lies in identifying market trends, understanding customer needs, and delivering exceptional solutions that meet and exceed expectations.",
       "As the Director for Products and Partnerships at DreamStream, Ms. Beenish leads a team of professionals to develop innovative products, drive strategic partnerships, and deliver value to customers. Her focus on customer satisfaction and her ability to understand partners' needs has helped DreamStream achieve exceptional growth and success. With her vision and leadership, Beenish drives DreamStream toward a future of continued growth and success."
@@ -51,7 +51,7 @@ const teamMembers = [
   {
     name: "Umar Haroon",
     title: "Director Customer Success",
-    image: "/images/team5.png",
+    image: "/images/UHK.jpg",
     description: [
       "Meet Mr. Umer Haroon Khan, a highly experienced telecom professional with over 18 years of experience in delivering complex projects related to access and bearer networks. As the Director for Delivery & Operations on the ground, Umer is responsible for ensuring that projects are delivered on time and within budget while meeting the highest quality standards.",
       "With his deep industry knowledge and technical expertise, Mr. Khan has successfully managed many telecom projects, including large-scale network expansions, upgrades, and maintenance. He has a proven track record of delivering projects that meet or exceed customer expectations while optimizing operational efficiency and reducing costs.",
@@ -61,7 +61,7 @@ const teamMembers = [
   {
     name: "David Kim",
     title: "Legal Counsel",
-    image: "/images/team6.png",
+    image: "/images/AJ.jpg",
     description: [
       "David Kim is a seasoned legal advisor with vast experience in corporate governance, international law, and technology-related legal frameworks. As the Legal Counsel at DreamStream, David provides critical legal oversight and ensures compliance across jurisdictions. His strong legal acumen and global perspective make him an essential part of DreamStream's leadership."
     ]
@@ -90,7 +90,7 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
     setSelectedType(null);
   };
   return (
-    <section className="relative w-full py-24 px-4  ">
+    <section className="relative w-full py-24  ">
       {/* 🔹 Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -109,9 +109,9 @@ const TeamSection: React.FC<TeamMemberProps> = () => {
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
             clipPath: "polygon(0 0, 100% 19%, 100% 100%, 0% 100%)",
-            background:
-              "linear-gradient(180deg, rgba(75, 29, 0, 0.35) 0%, rgba(28, 11, 2, 0) 100%)",
-            // transform: "matrix(-1, 0, 0, 1, 0, 0)",
+           
+                background: "linear-gradient(to bottom, #301400 0%, #000000 100%)",
+              
           }}
         />
 

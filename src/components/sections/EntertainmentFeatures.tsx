@@ -18,7 +18,7 @@ const features = [
     items: [ "E-Magazines", "E-Books","E-Bookazines"],
   },
   {
-    image: "/images/game.png",
+    image: "/images/play.png",
     title: "Play",
     items: ["Games"],
   },
@@ -37,7 +37,7 @@ const features = [
 
 export default function EntertainmentFeatures() {
   return (
-    <section className="relative w-full pt-16 md:pt-20">
+    <section className="relative w-full pt-16 md:pt-20 ">
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between mb-12 md:mb-20 gap-8 text-center lg:text-left mx-4 sm:mx-12 ">
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
@@ -65,7 +65,7 @@ export default function EntertainmentFeatures() {
               key={index}
               className="rounded-[24px] sm:rounded-[32px] p-4 flex flex-col items-center text-center w-full "
               style={{
-                background: "linear-gradient(180deg, #4A1D00 0%, #2A1100 100%)",
+                background: "linear-gradient(to bottom, #301400 0%, #000000 100%)",
               }}
             >
               <div className="mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
@@ -80,7 +80,7 @@ export default function EntertainmentFeatures() {
               </h3>
               <div className="flex flex-col gap-1 sm:gap-2">
                 {feature.items.map((item, idx) => (
-                  <p key={idx} className="text-[#FFD700] body-normal">
+                  <p key={idx} className="text-[#FFE300] body-normal">
                     {item}
                   </p>
                 ))}
