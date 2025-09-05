@@ -61,6 +61,12 @@ body {
   font-style: normal;
 }
 @font-face {
+  font-family: 'Right Grotesk Dark';
+  src: url('/fonts/right-grotesk/RightGrotesk-Dark.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Right Grotesk Medium';
   src: url('/fonts/right-grotesk/RightGrotesk-Medium.woff2') format('woff2');
   font-weight: 500;

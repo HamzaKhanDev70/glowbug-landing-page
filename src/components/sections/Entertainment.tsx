@@ -49,7 +49,7 @@ export default function Entertainment() {
 
   return (
     <>
-      <section className="relative w-full pt-20 md:pt-40 lg:pt-80">
+      <section className="relative w-full pt-20 md:pt-40 lg:pt-80 pb-20 md:pb-30 overflow-hidden">
         <img
           src="/images/bluebg.png"
           alt="Blue background"
@@ -60,7 +60,7 @@ export default function Entertainment() {
             <img
               src="/images/yellowbg.png"
               alt="Yellow background"
-              className="w-full  h-[1600px] sm:h-[1300px] lg:h-[1700px] max-h-[1900px] object-fill object-top over"
+              className="w-full  h-[1700px] sm:h-[1300px] lg:h-[1700px] max-h-[1900px] object-fill object-top over"
             />
             <div className="absolute top-20 left-0 right-0 ">
               <>

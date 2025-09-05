@@ -187,7 +187,7 @@ const x = useTransform(
           <HowItWorks />
         </div>
       </div>
-      <SectionDivider keyword="Know Us"/>
+      
     </section>
   );
 }

@@ -81,8 +81,8 @@ export default function HowItWorks() {
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-8 ">
             <div className="left  flex-1">
               <div
-                className=" pb-4 text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] leading-[1.1]"
-                style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}
+                className=" pb-4 text-[#FFE300] text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] leading-[1.1]"
+                style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}
               >
                 Web Experience
               </div>
@@ -117,8 +117,8 @@ export default function HowItWorks() {
             </div>
             <div className="right flex-1">
               <div
-                className="pb-4 text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] leading-[1.1]"
-                style={{ fontFamily: '"Right Grotesk Light", sans-serif' }}
+                className="pb-4 text-[#FFE300] text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] leading-[1.1]"
+                style={{ fontFamily: '"Right Grotesk Tight", sans-serif' }}
               >
                 Mobile Experience
               </div>

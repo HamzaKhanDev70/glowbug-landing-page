@@ -13,7 +13,7 @@ const teamMembers = [
   {
     name: "Zeeshan Bokhari",
     title: "CEO",
-    image: "/images/team1.png",
+    image: "/images/Zeeshan Bokhari (1).png",
     description: [
       "As a seasoned intrapreneur and business executive, Mr. Zeeshan Bokhari brings 19+ years of experience and a unique portfolio spanning vast techno-commercial and strategic international cooperation. With a proven track record of over $600 million, Mr. Bokhari has led and served multinational and reputed local ICT conglomerates and public sector organizations, optimizing their business operations and transforming them into successful endeavors.",
       "Through keen assessment of needs, collation of strategic objectives, and alignment of targets, Mr. Bokhari has defined commercial goals based on identified markets, developed new products/programs and services, and delivered impressive results.",
@@ -23,7 +23,7 @@ const teamMembers = [
   {
     name: "Zeeshan Abbasi",
     title: "CTO",
-    image: "/images/team2.png",
+    image: "/images/team/Artboard-1-copy-4.png",
     description: [
       "Introducing Mr. Zeeshan Abbasi, a distinguished technology lead, and expert in hardware and software R&D with over two decades of experience. With a remarkable track record of delivering cutting-edge technology solutions, Mr. Abbasi is known for his expertise in identifying emerging technologies, driving innovation and adoption, and delivering exceptional results.",
       "As a consultant for technology at DreamStream, Mr. Abbasi leads the development of advanced technology solutions that drive the company's growth and success. His extensive experience in hardware and software R&D, combined with his passion for innovation and problem-solving, has allowed DreamStream to embark on its journey to revolutionize the travel industry.",
@@ -33,7 +33,7 @@ const teamMembers = [
   {
     name: "Mustafa Khan",
     title: "Financial Council",
-    image: "/images/team3.png",
+    image: "/images/team/Artboard-1-copy-2.png",
     description: [
       "Mustafa Khan (MK) is a strategic advisor and an entrepreneur focusing on strengthening the digital landscape and infrastructure by providing thought leadership, policy formulation, and operational support in emerging economies. MK offers advisory services to start-up ecosystems, entrepreneurial ventures, and Small & Medium Enterprises (SMEs). MK offers consulting & mentoring services to aid them in transforming their ideas into workable business models.",
       "Mustafa is a Chartered Accountant from the Institute of Chartered Accountants of Pakistan & Institute of Chartered Accountants of England and Wales. He also holds a Bachelor of Laws (LLB) degree. He is a CEDR Accredited mediator- from the UK and a Balance Scorecard Professional (BSP) from the USA."
@@ -42,7 +42,7 @@ const teamMembers = [
   {
     name: "Beenish Askari",
     title: "Director Products and Partnerships",
-    image: "/images/Beenish Askari.jpg",
+    image: "/images/team/Artboard-1-copy-3.png",
     description: [
       "Meet Ms. Beenish Askari, a dynamic business leader and the Director for Products and Partnerships at DreamStream. With 15 years of experience in the technology industry, Ms. Beenish has a proven track record of driving innovation and growth in product development, partnership management, and market expansion. Her expertise lies in identifying market trends, understanding customer needs, and delivering exceptional solutions that meet and exceed expectations.",
       "As the Director for Products and Partnerships at DreamStream, Ms. Beenish leads a team of professionals to develop innovative products, drive strategic partnerships, and deliver value to customers. Her focus on customer satisfaction and her ability to understand partners' needs has helped DreamStream achieve exceptional growth and success. With her vision and leadership, Beenish drives DreamStream toward a future of continued growth and success."
@@ -51,7 +51,7 @@ const teamMembers = [
   {
     name: "Umar Haroon",
     title: "Director Customer Success",
-    image: "/images/UHK.jpg",
+    image: "/images/team/Artboard-1-copy-5.png",
     description: [
       "Meet Mr. Umer Haroon Khan, a highly experienced telecom professional with over 18 years of experience in delivering complex projects related to access and bearer networks. As the Director for Delivery & Operations on the ground, Umer is responsible for ensuring that projects are delivered on time and within budget while meeting the highest quality standards.",
       "With his deep industry knowledge and technical expertise, Mr. Khan has successfully managed many telecom projects, including large-scale network expansions, upgrades, and maintenance. He has a proven track record of delivering projects that meet or exceed customer expectations while optimizing operational efficiency and reducing costs.",
@@ -59,11 +59,11 @@ const teamMembers = [
     ]
   },
   {
-    name: "David Kim",
+    name: "Ahmed Uzair",
     title: "Legal Counsel",
-    image: "/images/AJ.jpg",
+    image: "/images/team/Artboard-1-copy.png",
     description: [
-      "David Kim is a seasoned legal advisor with vast experience in corporate governance, international law, and technology-related legal frameworks. As the Legal Counsel at DreamStream, David provides critical legal oversight and ensures compliance across jurisdictions. His strong legal acumen and global perspective make him an essential part of DreamStream's leadership."
+      "Ahmed Uzair is a seasoned legal advisor with vast experience in corporate governance, international law, and technology-related legal frameworks. As the Legal Counsel at DreamStream, David provides critical legal oversight and ensures compliance across jurisdictions. His strong legal acumen and global perspective make him an essential part of DreamStream's leadership."
     ]
   }
 ];

@@ -153,7 +153,7 @@ export default function TravelCompanion() {
               />
               <TravelFeatures />
               <EntertainmentCTA />
-              <SectionSeparator keyword="Where is" />
+              <SectionSeparator keyword="Where is?" />
             </div>
           </section>
         </div>

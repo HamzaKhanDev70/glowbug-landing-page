@@ -5,6 +5,7 @@ import SectionSeparator from '../components/sections/SectionSeperator';
 import AboutUs from './../components/sections/AboutUs';
 import ContactUs from './../components/sections/ContactUS';
 import Services from './../components/sections/Services';
+
 import Entertainment from "@/components/sections/Entertainment";
 import TravelTypes from "@/components/sections/TravelTypes";
 import TravelSlider from "@/components/sections/TravelSlider";
@@ -16,8 +17,8 @@ export default function Home() {
       <TravelSlider />
       <EntertainmentFeatures />
       <Entertainment />
-      <Services/>
       <AccessDevice />
+      <Services/>
       <AboutUs/>
       <ContactUs/>
     </main>
