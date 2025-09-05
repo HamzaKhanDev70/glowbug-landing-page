@@ -18,8 +18,8 @@ const siteLinks = [
   { name: "WHERE IS", href:"/#where-is"  },
   { name: "WHAT WE OFFER", href: "/#what-we-offer" },
   { name: "HOW IT WORKS?", href: "/#how-it-works" },
+{ name: "WHY US?", href: "/#services" },
   { name: "KNOW US", href: "/#know-us" },
-  { name: "FIND US", href: "/#find-us" },
 ];
 
 const socialLinks = [

@@ -13,7 +13,7 @@ const teamMembers = [
   {
     name: "Zeeshan Bokhari",
     title: "CEO",
-    image: "/images/Zeeshan Bokhari (1).png",
+    image: "/images/team/Artboard-1 (1).png",
     description: [
       "As a seasoned intrapreneur and business executive, Mr. Zeeshan Bokhari brings 19+ years of experience and a unique portfolio spanning vast techno-commercial and strategic international cooperation. With a proven track record of over $600 million, Mr. Bokhari has led and served multinational and reputed local ICT conglomerates and public sector organizations, optimizing their business operations and transforming them into successful endeavors.",
       "Through keen assessment of needs, collation of strategic objectives, and alignment of targets, Mr. Bokhari has defined commercial goals based on identified markets, developed new products/programs and services, and delivered impressive results.",

@@ -5,7 +5,7 @@
 // import SectionDivider from "./SectionSeperator";
 // import { motion, useInView } from "framer-motion";
 // import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination } from "swiper/modules";
+// import { Pagination,Autoplay } from "swiper/modules";
 // import "swiper/css";
 // import "swiper/css/pagination";
 
@@ -14,7 +14,7 @@
 //     title: "Entertainment Superhighway",
 //     description:
 //       "Indulge into the largest entertainment portfolio offering personalized experience, catering to your tastes and desires. With genre categories and ratings from IMDb and Rotten Tomatoes, hold the best of entertainment in the palm of your hand. No internet restrictions, just endless entertainment. Start your journey right after you check-in!",
-//     image: "/images/come-true.png",
+//     image: "/images/service-1-1.png",
 //   },
 //   {
 //     title: "Seamless Integration with Your Travel Journey - DreamPay",
@@ -111,46 +111,69 @@
 //             </motion.div>
 //           </motion.div>
 
-      
-//          {/* Slider with new design */}
-// {showSlider && (
-//   <motion.div
-//     key="slider"
-//     initial={{ x: 580, opacity: 0 }}
-//     animate={{ x: 0, opacity: 1 }}
-//     transition={{ duration: 1.2, ease: "easeOut" }}
-//     className="absolute inset-0 w-full px-8"
-//   >
-//     <Swiper
-//       spaceBetween={40}
-//       slidesPerView={1} // ✅ only one slide visible
-//       modules={[Pagination]}
-//       pagination={{ clickable: true }}
-//       className="h-[600px]" // ✅ fixes multiple slides showing
-//     >
-//       {servicesData.map((service, index) => (
-//         <SwiperSlide
-//           key={index}
-//           className="w-full relative min-h-[700px]" // ✅ ensures one per view
-//         >
-//           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center h-full border-red-300 border-4 w-full">
-//             {/* Text Side */}
-//             <div className="w-full max-w-[700px] border-2">
-//                 <h4 className="text-[#FFE300] heading-s xl:heading-m mb-4" style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}>{service.title}</h4>
-//               <p className="body-normal leading-relaxed lg:leading-loose">{service.description}</p>              </div>
+//           {/* Slider with fixed layout */}
+//           {showSlider && (
+//             <motion.div
+//               key="slider"
+//               initial={{ x: 580, opacity: 0 }}
+//               animate={{ x: 0, opacity: 1 }}
+//               transition={{ duration: 1.2, ease: "easeOut" }}
+//               className="absolute inset-0 w-full h-full px-8"
+//             >
+//               <Swiper
+//                 spaceBetween={30}
+//                 slidesPerView={1}
+//                 modules={[Pagination, Autoplay]}
+//                 autoplay={{
+//                   delay: 1000,
+//                   disableOnInteraction: false,
+//                   pauseOnMouseEnter: true,
+//                 }}
+//                 loop={true}
+//                 pagination={{ 
+//                   clickable: true,
+//                   bulletClass: 'swiper-pagination-bullet',
+//                   bulletActiveClass: 'swiper-pagination-bullet-active'
+//                 }}
+//                 className="h-full w-full !overflow-hidden"
+//                 style={{ width: '100%' }}
+//               >
+//                 {servicesData.map((service, index) => (
+//                   <SwiperSlide key={index}>
+//                     <div className="w-full h-full flex items-center justify-center">
+//                       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-6xl">
+//                         {/* Text Side */}
+//                         <div className="flex flex-col justify-center">
+//                           <div className="max-w-[600px]">
+//                             <h4 
+//                               className="text-[#FFE300] text-2xl lg:text-3xl mb-6" 
+//                               style={{ fontFamily: '"Right Grotesk Medium", sans-serif' }}
+//                             >
+//                               {service.title}
+//                             </h4>
+//                             <p className="text-gray-300 text-base lg:text-lg leading-relaxed">
+//                               {service.description}
+//                             </p>
+//                           </div>
+//                         </div>
 
-//             {/* Image Side */}
-           
-//             <div className="relative w-80 h-80 sm:w-[420px] sm:h-[420px] lg:w-[520px] lg:h-[580px] overflow-hidden border-2">
-//                 <img src={service.image} alt={service.title} className="w-full h-full object-contain" />
-//               </div>
-//           </div>
-//         </SwiperSlide>
-//       ))}
-//     </Swiper>
-//   </motion.div>
-// )}
-
+//                         {/* Image Side */}
+//                         <div className="flex justify-center items-center">
+//                           <div className="w-full max-w-[450px]">
+//                             <img 
+//                               src={service.image} 
+//                               alt={service.title} 
+//                               className="w-full h-auto object-contain max-h-[400px]" 
+//                             />
+//                           </div>
+//                         </div>
+//                       </div>
+//                     </div>
+//                   </SwiperSlide>
+//                 ))}
+//               </Swiper>
+//             </motion.div>
+//           )}
 //         </div>
 //       </div>
 
@@ -160,6 +183,7 @@
 // };
 
 // export default Services;
+
 
 // "use client";
 
@@ -305,7 +329,7 @@ import "swiper/css";
 
 const servicesData = [
   {
-    title: "Entertainment Superhighway",
+    title: "Entertainment Superhighway ",
     description:
       "Indulge into the largest entertainment portfolio offering personalized experience, catering to your tastes and desires. With genre categories and ratings from IMDb and Rotten Tomatoes, hold the best of entertainment in the palm of your hand. No internet restrictions, just endless entertainment. Start your journey right after you check-in!",
     image: "/images/come-true.png",
@@ -370,7 +394,7 @@ const Services = () => {
     }}
   >
     <div className="h-[120px]" />
-    <div className="w-full min-h-[700px] relative">
+    <div className="w-full min-h-[700px] relative ">
       {/* First service row (always mounted, fades out instead of being removed) */}
       <motion.div
         key="first-service"
@@ -381,7 +405,7 @@ const Services = () => {
           if (firstAnimationDone) setShowSlider(true);
           else setFirstAnimationDone(true);
         }}
-        className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-4 items-center px-8"
+        className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-4 items-center px-18 "
       >
         {/* Text Side */}
         <motion.div
@@ -391,11 +415,11 @@ const Services = () => {
           viewport={{ once: false }}
           className="flex justify-center"
         >
-          <div className="max-w-[700px]">
-            <h4 className="text-[#FFE300] text-xl font-semibold mb-4">
+          <div className="max-w-[800px] ">
+            <h4 className="text-[#FFE300] text-4xl font-semibold mb-4" >
               {firstService.title}
             </h4>
-            <p className="text-gray-300">{firstService.description}</p>
+            <p className="text-lg">{firstService.description}</p>
           </div>
         </motion.div>
 
@@ -404,12 +428,12 @@ const Services = () => {
           initial={{ x: 280, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex justify-center"
+          className="flex justify-center "
         >
           <img
             src={firstService.image}
             alt={firstService.title}
-            className="w-90 h-90 object-contain"
+            className="w-110 h-110 object-contain"
           />
         </motion.div>
       </motion.div>
@@ -433,16 +457,16 @@ const Services = () => {
           >
             {servicesData.map((service, index) => (
               <SwiperSlide key={index}>
-                <div className="p-6 bg-black/40 rounded-xl text-center flex flex-col items-center shadow-lg h-full overflow-y-visible ">
+                <div className="p-6 bg-black/40 rounded-xl text-start flex flex-col items-start justify-start shadow-lg h-full overflow-y-visible ">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-82 h-62 object-contain mb-4"
                   />
-                  <h4 className="text-[#FFE300] text-lg font-semibold mb-2 text-left">
+                  <h4 className="text-[#FFE300] text-lg font-semibold mb-2  ">
                     {service.title}
                   </h4>
-                  <p className="text-gray-300 text-sm text-left">
+                  <p className="text-gray-300 text-sm ">
                     {service.description}
                   </p>
                 </div>
@@ -457,12 +481,10 @@ const Services = () => {
   <SectionDivider keyword="Know Us" />
 </section>
 
-
   );
 };
 
 export default Services;
-
 
 
 // ---------------- animation and modal
@@ -806,3 +828,5 @@ export default Services;
 // };
 
 // export default Services;
+
+

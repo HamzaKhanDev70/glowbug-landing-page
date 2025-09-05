@@ -246,8 +246,11 @@ body {
   }
 
 
-
-
+/* 
+.swiper-slide {
+  width: 100% !important;
+  flex-shrink: 0 !important;
+} */
   /* Clip Path and Gradient Styling */
 .custom-clip {
   clip-path: polygon(0 6%, 100% 17%, 100% 84%, 1% 98%);
